@@ -1,0 +1,3 @@
+{"phase":"sample","station_id":"nan-latitude","station_index":0,"code":"invalid-station"}
+{"phase":"sample","station_id":"nan-longitude","station_index":1,"code":"invalid-station"}
+{"phase":"sample","station_id":"ordinary-outside","station_index":2,"code":"outside-grid"}

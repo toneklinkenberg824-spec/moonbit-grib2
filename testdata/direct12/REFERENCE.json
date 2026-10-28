@@ -1,0 +1,56 @@
+{
+  "real_baseline": {
+    "file": "testdata/export10/NOAA-IFS-stations.csv",
+    "sha256": "7478b9fa94a6e4b11d015a9209ed0417c8d0e6f41c0e9b51b95f498beed062b3",
+    "bytes": 4453,
+    "reference": "Archived independent SciPy values from export10; no new scientific/download run"
+  },
+  "synthetic": {
+    "keys": [
+      " 未指定,\"时效\"\r\n组😀 ",
+      "分析0",
+      "预报6",
+      "负时效"
+    ],
+    "stations": [
+      "站点,\"A\"\r\n第二行😀",
+      "",
+      "outside"
+    ],
+    "values": [
+      null,
+      111,
+      null,
+      222,
+      222,
+      null,
+      333,
+      333,
+      null,
+      444,
+      444,
+      null
+    ],
+    "forecast_times": [
+      null,
+      null,
+      null,
+      0,
+      0,
+      0,
+      6,
+      6,
+      6,
+      -6,
+      -6,
+      -6
+    ]
+  },
+  "prefix": {
+    "prepared_stations": 10000,
+    "consumed_records": 2,
+    "consumed_data_records": 1,
+    "value": 111,
+    "scope": "Prepared station list; source control flow confirms per-next sampling, no RSS or latency measurement"
+  }
+}

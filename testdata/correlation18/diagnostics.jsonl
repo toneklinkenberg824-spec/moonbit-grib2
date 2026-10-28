@@ -1,0 +1,4 @@
+{"phase":"sample","station_id":"dup","station_index":1,"code":"outside-grid"}
+{"phase":"sample","station_id":"","station_index":2,"code":"invalid-station"}
+{"phase":"sample","station_id":"dup","station_index":3,"code":"outside-grid"}
+{"phase":"sample","station_id":"","station_index":4,"code":"missing-data"}

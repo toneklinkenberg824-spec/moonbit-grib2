@@ -1,0 +1,244 @@
+{
+  "basis": "WMO FM92 regulation92.9.4 note4: Y*10^D=R+X*2^E, X=0 for zero bits",
+  "basis_url": "https://codes.ecmwf.int/grib/format/grib2/regulations/",
+  "independent_reference": "Python Decimal exact arithmetic on explicitly encoded headers, not product output",
+  "eccodes_version": "2.50.0",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "cases": [
+    {
+      "file": "constant-D1-no-bitmap.grib2",
+      "sha256": "8ce08cc565207df7983b10f3f26100f91a43279cb75bd0a2c93a2ef029c78829",
+      "R": "10",
+      "E": 3,
+      "D": 1,
+      "bits": 0,
+      "mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decimal_expected": "1.0",
+      "eccodes_observed": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "eccodes_matches_formula": false
+    },
+    {
+      "file": "constant-D1-mixed.grib2",
+      "sha256": "386fc36338f9e619f332364e68a49f9e0a3568a1967e55dc7053f0e6d501cc87",
+      "R": "10",
+      "E": 3,
+      "D": 1,
+      "bits": 0,
+      "mask": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "decimal_expected": "1.0",
+      "eccodes_observed": [
+        10.0,
+        9999.0,
+        10.0,
+        9999.0,
+        10.0,
+        9999.0
+      ],
+      "eccodes_matches_formula": false
+    },
+    {
+      "file": "constant-D1-all-missing.grib2",
+      "sha256": "0d6c30fb6c73c4b8f474b01b2ce47980bd08d5f8596691a304420555b50d0f92",
+      "R": "10",
+      "E": 3,
+      "D": 1,
+      "bits": 0,
+      "mask": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "decimal_expected": "1.0",
+      "eccodes_observed": [
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0
+      ],
+      "eccodes_matches_formula": true
+    },
+    {
+      "file": "constant-D0-no-bitmap.grib2",
+      "sha256": "d499a4a6881a646cbd82355c52535c330f7eec31105464b0421ca205429a1b1d",
+      "R": "10",
+      "E": 3,
+      "D": 0,
+      "bits": 0,
+      "mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decimal_expected": "10",
+      "eccodes_observed": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "eccodes_matches_formula": true
+    },
+    {
+      "file": "constant-D0-mixed.grib2",
+      "sha256": "6fc2a34d401a6ed9f4f830a4805646da37d5f3b44a845a5da51c469d7d65d095",
+      "R": "10",
+      "E": 3,
+      "D": 0,
+      "bits": 0,
+      "mask": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "decimal_expected": "10",
+      "eccodes_observed": [
+        10.0,
+        9999.0,
+        10.0,
+        9999.0,
+        10.0,
+        9999.0
+      ],
+      "eccodes_matches_formula": true
+    },
+    {
+      "file": "constant-D0-all-missing.grib2",
+      "sha256": "54ddc8c0b76e6f566db7b55bee7f1713008f18b0e31e050af1b65570634d746d",
+      "R": "10",
+      "E": 3,
+      "D": 0,
+      "bits": 0,
+      "mask": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "decimal_expected": "10",
+      "eccodes_observed": [
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0
+      ],
+      "eccodes_matches_formula": true
+    },
+    {
+      "file": "constant-D-1-no-bitmap.grib2",
+      "sha256": "a4516cd72ee6d9d3009a3ea01ecd95529b5b48aacd8a0d7e5ceaa558624b95da",
+      "R": "10",
+      "E": 3,
+      "D": -1,
+      "bits": 0,
+      "mask": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "decimal_expected": "100",
+      "eccodes_observed": [
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0
+      ],
+      "eccodes_matches_formula": false
+    },
+    {
+      "file": "constant-D-1-mixed.grib2",
+      "sha256": "7a99392f7b6ff7f35c96ef61901755e1bdd3300a1b5930ac111e4e9e14db0ee9",
+      "R": "10",
+      "E": 3,
+      "D": -1,
+      "bits": 0,
+      "mask": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "decimal_expected": "100",
+      "eccodes_observed": [
+        10.0,
+        9999.0,
+        10.0,
+        9999.0,
+        10.0,
+        9999.0
+      ],
+      "eccodes_matches_formula": false
+    },
+    {
+      "file": "constant-D-1-all-missing.grib2",
+      "sha256": "27b15dfc8e6a28ad4d26919038c695f2877706f3f3fcd87e48164aa6c8047348",
+      "R": "10",
+      "E": 3,
+      "D": -1,
+      "bits": 0,
+      "mask": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "decimal_expected": "100",
+      "eccodes_observed": [
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0,
+        9999.0
+      ],
+      "eccodes_matches_formula": true
+    }
+  ],
+  "notice": "ecCodes2.50.0 ignores D when bits=0; captures are observations, not the constant-scale expected oracle"
+}

@@ -1,0 +1,11 @@
+{
+  "existing_function_signatures_preserved": true,
+  "new_functions": [
+    "pub fn FieldQuery::forecast_time_filter(Self) -> ForecastTimeFilter",
+    "pub fn FieldQuery::with_forecast_time_filter(Self, ForecastTimeFilter) -> Self"
+  ],
+  "new_type": "ForecastTimeFilter",
+  "old_constructor_semantics": "omitted forecast_time=AnyTime; supplied integer=ExactTime",
+  "before_sha256": "b28d4356e164b216a1d26554b9b688332be564cd8449112661388a6ef2022cb3",
+  "after_sha256": "01dc5ba21fabc431ff217cdf32de3a18da334b46df45eb82bae552d5e690cd2f"
+}

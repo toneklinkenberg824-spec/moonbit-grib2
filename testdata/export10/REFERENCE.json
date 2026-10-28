@@ -1,0 +1,92 @@
+{
+  "header": [
+    "request_key",
+    "station_id",
+    "latitude",
+    "longitude",
+    "value",
+    "algorithm",
+    "message",
+    "field",
+    "byte_offset",
+    "product_json",
+    "contributors_json"
+  ],
+  "quoting": "RFC4180 quoted cells/doubled quotes/CRLF; UTF-8",
+  "synthetic": {
+    "key": " 未指定,\"时效\"\r\n组😀 ",
+    "station": "站点,\"A\"\r\n第二行😀",
+    "values": [
+      null,
+      111,
+      null,
+      222,
+      222,
+      null
+    ],
+    "numeric_bits": [
+      0,
+      1,
+      9223372036854775809
+    ]
+  },
+  "real": [
+    {
+      "file": "noaa-gfs-repacked.grib2",
+      "sha256": "e69245079ff183b934b343d7c0a43d0591e59b916ea80f8c695e64568f93464a",
+      "queries": [
+        [
+          68.25,
+          31.5
+        ],
+        [
+          67.0,
+          33.0
+        ]
+      ],
+      "values": [
+        253.6234765625,
+        255.6034765625
+      ],
+      "source": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260221/00/atmos/gfs.t00z.pgrb2.1p00.f000",
+      "license": "NOAA/NWS public domain unless noted; https://www.weather.gov/disclaimer"
+    },
+    {
+      "file": "ecmwf-ifs-repacked.grib2",
+      "sha256": "904c337ee2e1d7171f2997b199a9906e39b657c48de07d9b9d58748a43fd0977",
+      "queries": [
+        [
+          84.5625,
+          187.875
+        ],
+        [
+          84.25,
+          188.25
+        ]
+      ],
+      "values": [
+        239.85598754882812,
+        239.75051879882812
+      ],
+      "source": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20260221/00z/ifs/0p25/oper/20260221000000-0h-oper-fc.grib2",
+      "license": "ECMWF Open Data CC-BY-4.0 and ECMWF Terms; https://www.ecmwf.int/en/forecasts/datasets/open-data"
+    }
+  ],
+  "real_row_values": [
+    253.6234765625,
+    255.6034765625,
+    null,
+    null,
+    null,
+    null,
+    239.85598754882812,
+    239.75051879882812
+  ],
+  "golden_source": {
+    "file": "oracle_test.mbt",
+    "sha256": "e83a5c89bca0cc3948c1453ecaf181318d2535e297faf5d05ed3bf0cca1a498c",
+    "basis": "Previously captured independent SciPy expectations, not a new download/scientific reference run"
+  },
+  "example_rows": 8,
+  "metadata": "Existing per-Sample Product JSON and contributor schema retained"
+}

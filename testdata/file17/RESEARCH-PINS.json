@@ -1,0 +1,12 @@
+{
+  "receipts": "RESEARCH-RECEIPTS.json",
+  "sha256": "197361b6aac937a5cb2ff9a528c96efe770c18976e2e01f25b108ca546817a5a",
+  "moonbit_x_source_commit": "47057647bfe39cc1d419ded3ff53f6727663e32f",
+  "generic_api_observed": "moonbitlang/x/fs read_file_to_bytes supplies generic IO; no registry/compiler compatibility claim or dependency imported",
+  "ffi_docs": "https://docs.moonbitlang.com/zh-cn/stable/language/ffi.html",
+  "node_process_docs": "https://nodejs.org/api/process.html#processgetbuiltinmoduleid",
+  "node_fs_docs": "https://nodejs.org/api/fs.html#file-system-flags",
+  "difference": "Concrete own GRIB/station file to existing CSV host workflow, not a novel file/JSON/CSV API",
+  "actual_runtime": "v24.11.0",
+  "module_target": "Node JavaScript only"
+}

@@ -1,0 +1,35 @@
+{
+  "round": 20,
+  "producer": "Unchanged frozen18 Node binary reused via frozen19; one run before Python repair",
+  "producer_sha256": "45bed663b7720e414ee57e75539cdec4aa8ccfd88b89a80bcb442ee885e58b01",
+  "helper_sha256": "741e76f60dd95828ba5cf4a191409ec27c8841ee9f1b600747fa7a4cfd662e95",
+  "before": "Actual CLI ValueError: station coordinates do not match its CSV record",
+  "independent_numeric_expectation": "At2^53 spacing2, integer2^53+1 midpoint rounds to even2^53; symmetric negative. Decimal verifies exact actual CSV values.",
+  "final": {
+    "cases": 3,
+    "matched_file_successes": 1,
+    "expected_coordinate_errors": 2,
+    "joined_records": 4,
+    "original_integer_values_retained": true,
+    "indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "causes": [
+      "outside-grid",
+      "outside-grid",
+      "invalid-station",
+      "outside-grid"
+    ]
+  },
+  "files": {
+    "regional.grib2": "5063cce3aedd7462c54080a32f4f949079463bf05e6650077f9e5833fd33169e",
+    "stations.json": "c0c013a745041550898fef89d065c45ee3a004870392b7a45ae56414ce3bae91",
+    "result.csv": "80f00f544e4b5b1ad8083a89cf344fea820c19815bce882759165b76c63334b2",
+    "diagnostics.jsonl": "478b0590f23d75433fd161c15caca4b3203ed98bcd054c37c43d3e630bc81989",
+    "joined.expected.json": "f7ac0c201561eec6d37fdbb4b2c2d4f43c83d5cc09b5a3c737df83475cb3ba56"
+  },
+  "prior_suites_repeated": false
+}

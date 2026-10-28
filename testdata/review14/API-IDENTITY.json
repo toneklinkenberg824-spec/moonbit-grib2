@@ -1,0 +1,8 @@
+{
+  "before_sha256": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502",
+  "after_sha256": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502",
+  "all_source_config_api_byte_identical": true,
+  "new_functions": [],
+  "removed_functions": [],
+  "root_or_existing_example_tests_repeated": false
+}

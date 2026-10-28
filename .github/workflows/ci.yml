@@ -1,0 +1,64 @@
+name: MoonBit validation
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  core:
+    name: core (${{ matrix.target }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [js, wasm-gc]
+    env:
+      MOON_HOME: ${{ runner.temp }}/grib2-moon
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.11.0'
+      - name: Install pinned MoonBit
+        run: bash .github/scripts/setup-moonbit.sh
+      - name: Check
+        run: moon check --target ${{ matrix.target }} --warn-list +unnecessary_annotation
+      - name: Build
+        run: moon build --target ${{ matrix.target }}
+      - name: Test
+        run: moon test --target ${{ matrix.target }}
+      - name: Run public examples
+        run: |
+          moon run cmd/main --target ${{ matrix.target }}
+          moon run cmd/layers --target ${{ matrix.target }}
+          moon run cmd/forecast --target ${{ matrix.target }}
+          moon run cmd/direct --target ${{ matrix.target }}
+  consumers:
+    name: Node files and NyaCSV consumers
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      MOON_HOME: ${{ runner.temp }}/grib2-moon
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.11.0'
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14.4'
+      - name: Install pinned MoonBit
+        run: bash .github/scripts/setup-moonbit.sh
+      - name: Node file producer, inventory and diagnostic consumer
+        run: python .github/scripts/validate-consumers.py hosts --work "${{ runner.temp }}/grib2-hosts"
+      - name: Checkout compatible NyaCSV source
+        run: |
+          git clone --no-checkout https://github.com/moonbit-community/NyaCSV.git "${{ runner.temp }}/grib2-NyaCSV"
+          git -C "${{ runner.temp }}/grib2-NyaCSV" checkout --detach fe4448e1e45a25f6fca151320c766519e80162c9
+          test "$(git -C "${{ runner.temp }}/grib2-NyaCSV" rev-parse HEAD)" = fe4448e1e45a25f6fca151320c766519e80162c9
+      - name: NyaCSV semantic consumer on JS and Wasm-GC
+        run: python .github/scripts/validate-consumers.py nyacsv --work "${{ runner.temp }}/grib2-csv" --dependency "${{ runner.temp }}/grib2-NyaCSV"

@@ -1,0 +1,19 @@
+{
+  "by_target": {
+    "js": {
+      "records": 10001,
+      "serialized_units": 5410138,
+      "maximum_record_units": 541,
+      "prefix_records": 2
+    },
+    "wasm-gc": {
+      "records": 10001,
+      "serialized_units": 5410138,
+      "maximum_record_units": 541,
+      "prefix_records": 2
+    }
+  },
+  "units": "UTF-16 units for the ASCII bulk records; not bytes/RSS or latency",
+  "input_station_samples_materialized": 10000,
+  "serialized_collection": "Prefix2 records retained; remainder counted without collecting full CSV"
+}

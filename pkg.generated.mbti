@@ -1,0 +1,183 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "zhou-wei97/grib2"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn read_fields(Bytes, max_points? : Int) -> Result[Array[GriddedField], GribError]
+
+pub fn read_message(Bytes, max_points? : Int) -> Result[GriddedField, GribError]
+
+pub fn sample_requested_csv_records(ArrayView[GriddedField], ArrayView[FieldRequest], ArrayView[Station]) -> Result[Iter[String], GribError]
+
+pub fn sample_requested_fields(ArrayView[GriddedField], ArrayView[FieldRequest], ArrayView[Station]) -> Result[Array[FieldSamples], GribError]
+
+pub fn select_fields(ArrayView[GriddedField], Int, Int, Int, time_unit? : Int, forecast_time? : Int) -> Array[GriddedField]
+
+pub fn select_unique_field(ArrayView[GriddedField], FieldQuery) -> Result[GriddedField, GribError]
+
+pub fn station_csv_records(ArrayView[FieldSamples]) -> Iter[String]
+
+pub fn station_results_csv(ArrayView[FieldSamples]) -> String
+
+// Errors
+
+// Types and methods
+pub(all) struct BBox {
+  south : Double
+  north : Double
+  west : Double
+  east : Double
+} derive(ToJson, @debug.Debug)
+
+pub(all) struct Contributor {
+  row : Int
+  col : Int
+  source_index : Int
+  latitude : Double
+  longitude : Double
+  weight : Double
+  value : Double
+} derive(ToJson, @debug.Debug)
+
+pub struct FieldQuery {
+  discipline : Int
+  category : Int
+  parameter : Int
+  centre : Int?
+  subcentre : Int?
+  master_table : Int?
+  local_table : Int?
+  time_unit : Int?
+  forecast_time : Int?
+  first_surface : Surface?
+  second_surface : Surface?
+  // private fields
+}
+pub fn FieldQuery::forecast_time_filter(Self) -> ForecastTimeFilter
+pub fn FieldQuery::new(Int, Int, Int, centre? : Int, subcentre? : Int, master_table? : Int, local_table? : Int, time_unit? : Int, forecast_time? : Int, first_surface? : Surface, second_surface? : Surface, reference_time? : Array[Int]) -> Self
+pub fn FieldQuery::with_forecast_time_filter(Self, ForecastTimeFilter) -> Self
+
+pub(all) struct FieldRequest {
+  key : String
+  query : FieldQuery
+}
+
+pub(all) struct FieldSamples {
+  key : String
+  origin : Origin
+  product : Product
+  samples : Array[Sample]
+} derive(ToJson)
+
+pub(all) enum ForecastTimeFilter {
+  AnyTime
+  MissingTime
+  ExactTime(Int)
+} derive(Eq, @debug.Debug)
+
+pub(all) enum GribError {
+  UnsupportedTemplate(Int, Int)
+  CorruptedBitstream(String)
+  InvalidScanningMode(Int)
+  InvalidGrid(String)
+  InvalidRequest(String)
+} derive(Eq, @debug.Debug)
+
+pub(all) struct GridPoint {
+  row : Int
+  col : Int
+  source_index : Int
+  latitude : Double
+  longitude : Double
+  value : Double?
+} derive(@debug.Debug)
+pub impl ToJson for GridPoint
+
+pub struct GriddedField {
+  nrows : Int
+  ncols : Int
+  north : Double
+  west : Double
+  dx : Double
+  dy : Double
+  cyclic : Bool
+  unique_cols : Int
+  source : Origin
+  local_bytes : Bytes?
+  // private fields
+}
+pub fn GriddedField::cols(Self) -> Int
+pub fn GriddedField::crop(Self, BBox) -> Result[Array[GridPoint], GribError]
+pub fn GriddedField::get(Self, Int, Int) -> Double?
+pub fn GriddedField::interpolate_latlon(Self, Double, Double) -> Double?
+pub fn GriddedField::is_global(Self) -> Bool
+pub fn GriddedField::local_use(Self) -> Bytes?
+pub fn GriddedField::mask(Self) -> Array[Bool]
+pub fn GriddedField::origin(Self) -> Origin
+pub fn GriddedField::point(Self, Int, Int) -> GridPoint?
+pub fn GriddedField::product(Self) -> Product
+pub fn GriddedField::rows(Self) -> Int
+pub fn GriddedField::sample(Self, Station) -> Sample
+pub fn GriddedField::sample_result(Self, Station) -> Result[Sample, SampleFailure]
+pub fn GriddedField::sample_stations(Self, ArrayView[Station]) -> Array[Sample]
+pub fn GriddedField::values(Self) -> Array[Double]
+
+pub(all) struct Origin {
+  message : Int
+  field : Int
+  byte_offset : Int
+  scanning_mode : Int
+} derive(Eq, ToJson, @debug.Debug)
+
+pub(all) struct Product {
+  discipline : Int
+  category : Int
+  parameter : Int
+  centre : Int
+  subcentre : Int
+  master_table : Int
+  local_table : Int
+  reference_time : Array[Int]
+  time_unit : Int
+  forecast_time : Int?
+  first_surface : Surface
+  second_surface : Surface
+} derive(Eq, ToJson, @debug.Debug)
+
+pub(all) struct Sample {
+  station : Station
+  origin : Origin
+  product : Product
+  value : Double?
+  algorithm : String
+  contributors : Array[Contributor]
+} derive(@debug.Debug)
+pub impl ToJson for Sample
+
+pub(all) enum SampleFailure {
+  InvalidStation
+  OutsideGrid
+  MissingData
+  UnsupportedPolarVector
+  NonFiniteResult
+} derive(Eq, @debug.Debug)
+pub impl ToJson for SampleFailure
+
+pub(all) struct Station {
+  id : String
+  latitude : Double
+  longitude : Double
+} derive(ToJson, @debug.Debug)
+
+pub(all) struct Surface {
+  kind : Int
+  scale : Int?
+  scaled_value : UInt?
+} derive(Eq, ToJson, @debug.Debug)
+
+// Type aliases
+
+// Traits

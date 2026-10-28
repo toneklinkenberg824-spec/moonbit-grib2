@@ -1,0 +1,35 @@
+{
+  "round": 21,
+  "producer": "Unchanged frozen18 Node binary retained through frozen20; one run before Python-only repair",
+  "producer_sha256": "45bed663b7720e414ee57e75539cdec4aa8ccfd88b89a80bcb442ee885e58b01",
+  "helper_sha256": "d11d2e89fbc558ed49e9cc3c079a307fdf08992cfde6405b588759b73153181e",
+  "before": {
+    "error": "_csv.Error: field larger than field limit",
+    "default_limit": 131072,
+    "actual_cell_characters": 164381,
+    "actual_file_bytes": 185417
+  },
+  "independent_reader": {
+    "name": "PowerShell Import-Csv and ConvertFrom-Json",
+    "complete_contributors": 1440,
+    "CSV_rows": 2
+  },
+  "final": {
+    "checks": 3,
+    "actual_CLI_success": true,
+    "imported_success_restores_prior_limit": true,
+    "strict_CSV_error_restores_prior_limit": true,
+    "joined_index": 1,
+    "cause": "outside-grid"
+  },
+  "files": {
+    "polar1440.grib2": "bfe12c212188fd99fa3182c28c2d990096f26301f2f2e848139ab8dcb6d8cb46",
+    "stations.json": "7c9330c1922522ec3add7db0563ef79f59b53dfd4ca65a4ca4aaf2b1b1fc661e",
+    "result.csv": "2587c8b834570bb91e9da9a158efd149cf5b4bdd79807af360a117330068fd60",
+    "diagnostics.jsonl": "46ec796db153316de638c62b1962b0b203e19f8bd9e87d1030e72ffe3a85951c",
+    "joined.expected.json": "c110bc0442a5cc8ff118df396ef1e53755ea7abfdacdb1f5e56684e031b09f21",
+    "GRID-CONSTRUCTION.json": "bcb945202b1f891e6eeb69250cc1bfb988930a0eb8738c6e8f532b18ff69f028",
+    "INDEPENDENT-CSV-READBACK.json": "1f0f002cd8b97ccf97682d2dc2096af6a711125bd13b0013d1a19c9e4886c3d7"
+  },
+  "old_suites_repeated": false
+}

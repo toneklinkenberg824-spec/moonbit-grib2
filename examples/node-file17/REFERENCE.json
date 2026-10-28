@@ -1,0 +1,23 @@
+{
+  "input": "Existing licensed NOAA/IFS repacked5.0 bytes concatenated at runtime, original files kept in testdata",
+  "fields": [
+    {
+      "index": 0,
+      "centre": 7,
+      "example_numeric_value": 255.6034765625
+    },
+    {
+      "index": 1,
+      "centre": 98,
+      "example_numeric_value": 239.75051879882812
+    }
+  ],
+  "stations_json": "stations.example.json",
+  "station_file_sha256": "9ed60db0b1549ec8348ffcc77f09dc49421ce5d54706bd6070a87d1e2f4fefc9",
+  "scope": "Archived export10 expectations reused for the actual host file boundary, no new scientific reference run",
+  "target": "Node/JavaScript only",
+  "node_tested": "v24.11.0",
+  "node_minimum_declared": "22.3",
+  "cases": 8,
+  "root_tests_rerun": false
+}

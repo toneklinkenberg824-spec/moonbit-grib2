@@ -1,0 +1,38 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "zhou-wei97/grib2/internal/upstream_unpack"
+
+// Values
+pub fn ieee754_single_to_double(Int) -> Double
+
+pub fn u16_to_i16(Int) -> Int
+
+pub fn unpack_simple(Bytes, Int, Int, Int, Int, Int) -> Result[UnpackedGridData, UnpackError]
+
+// Errors
+pub(all) suberror UnpackError {
+  InvalidBitsPerValue(String)
+  InsufficientData(String)
+  UnsupportedTemplate(String)
+}
+
+// Types and methods
+pub(all) struct BitReader {
+  data : Bytes
+  mut bit_position : Int
+}
+pub fn BitReader::has_bits(Self, Int) -> Bool
+pub fn BitReader::new(Bytes) -> Self
+pub fn BitReader::read_bits(Self, Int) -> UInt
+pub fn BitReader::read_bits_signed(Self, Int) -> Int
+pub fn BitReader::remaining_bits(Self) -> Int
+pub fn BitReader::reset(Self) -> Unit
+pub fn BitReader::skip_bits(Self, Int) -> Unit
+
+pub(all) struct UnpackedGridData {
+  values : Array[Double]
+  num_points : Int
+}
+
+// Type aliases
+
+// Traits

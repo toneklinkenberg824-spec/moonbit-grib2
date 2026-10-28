@@ -1,0 +1,8 @@
+{
+  "existing_function_signatures_preserved": true,
+  "new_functions": [
+    "pub fn sample_requested_csv_records(ArrayView[GriddedField], ArrayView[FieldRequest], ArrayView[Station]) -> Result[Iter[String], GribError]"
+  ],
+  "before_sha256": "adffc771bb3a3012632eddcdccc10c528a12b906daebe0d280a5d1d483d44948",
+  "after_sha256": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502"
+}

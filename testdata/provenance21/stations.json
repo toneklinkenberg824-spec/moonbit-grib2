@@ -1,0 +1,12 @@
+[
+  {
+    "id": "polar-available",
+    "latitude": 90,
+    "longitude": 0
+  },
+  {
+    "id": "outside-domain",
+    "latitude": 88,
+    "longitude": 10
+  }
+]

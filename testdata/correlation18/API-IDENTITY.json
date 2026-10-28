@@ -1,0 +1,8 @@
+{
+  "all_old_sources_except_Node_main_byte_identical": true,
+  "root_api_sha256_before": "7809ba0e6828442f1f76e6fbb63aaf7626f585354614f88fb0af00749e800d7d",
+  "root_api_sha256_after": "7809ba0e6828442f1f76e6fbb63aaf7626f585354614f88fb0af00749e800d7d",
+  "library_API_and_all_metadata_configs_unchanged": true,
+  "diagnostic_change": "Add station_index in phase=sample only",
+  "CSV_schema_unchanged": true
+}

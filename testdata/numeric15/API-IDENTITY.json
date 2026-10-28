@@ -1,0 +1,7 @@
+{
+  "before_sha256": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502",
+  "after_sha256": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502",
+  "unchanged": true,
+  "new_functions": [],
+  "only_old_implementation_changed": "sampling.mbt"
+}

@@ -1,0 +1,7 @@
+{
+  "byte_identical": true,
+  "before_sha256": "b2359aad64fc659a7d80c1713d09a2eb7124735e182bb937ed8393e49797ca4e",
+  "after_sha256": "b2359aad64fc659a7d80c1713d09a2eb7124735e182bb937ed8393e49797ca4e",
+  "includes": "Ordinary/subnormal accumulation and15 overflow retry; excludes only final failure packaging",
+  "round15_extreme_suite_repeated": false
+}

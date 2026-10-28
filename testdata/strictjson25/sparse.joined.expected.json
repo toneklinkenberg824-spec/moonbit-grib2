@@ -1,0 +1,25 @@
+[
+  {"station_index": 0, "code": "outside-grid", "station": {
+    "id": "sidecar-overflow",
+    "latitude": 2,
+    "longitude": 11,
+    "metadata": {
+      "positive": 1e400,
+      "negative": -1e400,
+      "nested": [
+        {
+          "limit": 1e400
+        }
+      ],
+      "label": "\u9608\u503c\ud83d\ude00 ],{\"key\":1}"
+    }
+  }, "csv_record": {"request_key": "selected-field", "station_id": "sidecar-overflow", "latitude": "2", "longitude": "11", "value": "", "algorithm": "outside-or-missing", "message": "0", "field": "0", "byte_offset": "0", "product_json": "{\"discipline\":0,\"category\":0,\"parameter\":0,\"centre\":98,\"subcentre\":0,\"master_table\":4,\"local_table\":0,\"reference_time\":[2007,3,23,12,0,0],\"time_unit\":1,\"first_surface\":{\"kind\":103,\"scale\":0,\"scaled_value\":2},\"second_surface\":{\"kind\":255}}", "contributors_json": "[]"}},
+  {"station_index": 2, "code": "outside-grid", "station": {
+    "id": "finite-peer",
+    "latitude": 2.5,
+    "longitude": 11.25,
+    "metadata": {
+      "limit": 1.25
+    }
+  }, "csv_record": {"request_key": "selected-field", "station_id": "finite-peer", "latitude": "2.5", "longitude": "11.25", "value": "", "algorithm": "outside-or-missing", "message": "0", "field": "0", "byte_offset": "0", "product_json": "{\"discipline\":0,\"category\":0,\"parameter\":0,\"centre\":98,\"subcentre\":0,\"master_table\":4,\"local_table\":0,\"reference_time\":[2007,3,23,12,0,0],\"time_unit\":1,\"first_surface\":{\"kind\":103,\"scale\":0,\"scaled_value\":2},\"second_surface\":{\"kind\":255}}", "contributors_json": "[]"}}
+]

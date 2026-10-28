@@ -1,0 +1,12 @@
+{
+  "root_api_sha256_before": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502",
+  "root_api_sha256_after": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502",
+  "all_existing_moonbit_sources_and_configs_byte_identical": true,
+  "new_example_files": [
+    "examples/nyacsv13/main.mbt",
+    "examples/nyacsv13/moon.mod",
+    "examples/nyacsv13/moon.pkg",
+    "examples/nyacsv13/pkg.generated.mbti"
+  ],
+  "root_api_changes": []
+}

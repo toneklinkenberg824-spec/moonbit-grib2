@@ -1,0 +1,35 @@
+{
+  "round": 19,
+  "producer": "Unchanged frozen18 executable, one run before Python-only repair",
+  "producer_sha256": "45bed663b7720e414ee57e75539cdec4aa8ccfd88b89a80bcb442ee885e58b01",
+  "synthetic_source": "First complete message of testdata/forecast09/forecast-states.grib2; constant111 and bitmap gap",
+  "before": {
+    "valid_JSON_records": 3,
+    "splitlines_fragments": 6,
+    "framing_error": "JSONDecodeError",
+    "actual_default_pipe": "gbk",
+    "subsequent_output_error": "UnicodeEncodeError"
+  },
+  "final": {
+    "cases": 3,
+    "successes": 2,
+    "expected_malformed_JSON_errors": 1,
+    "LF_default_GBK_and_CRLF_UTF8_decoded_outputs_identical": true,
+    "decoded_IDs_preserved": true,
+    "indices": [
+      0,
+      1,
+      2
+    ],
+    "cause": "outside-grid"
+  },
+  "helper_sha256": "8eade1d18c0e50a9b0a3f2aed3a85aff76fe30a817061fb3541bf305ee16bead",
+  "files": {
+    "regional.grib2": "5063cce3aedd7462c54080a32f4f949079463bf05e6650077f9e5833fd33169e",
+    "stations.json": "27c63b6f088a414cdc4404c3c40d380b351b7af8ed0bef835563819780c83b2f",
+    "result.csv": "a3b71fec0b33ffc70c2b901f729310ba63e55e6e2b8149306e70ea252da673d5",
+    "diagnostics.jsonl": "d5fc0a46a568449045b304ad85c9fbaff99798eb87c3d091458d66d8e3e52f21",
+    "joined.expected.json": "bdabebe6ca325c6f5af2689ef732d5ae914960f1887ef509dea292527a38a4a7"
+  },
+  "old_suites_repeated": false
+}

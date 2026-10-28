@@ -1,0 +1,12 @@
+{
+  "round": "NaN-coordinate-identity26",
+  "current_source_identity": "testdata/VALIDATION-SOURCE-IDENTITY.json",
+  "all78_MoonBit_source_config_API_unchanged": true,
+  "post_verification_code_changes": false,
+  "optional_Python_sha256": "f5a53a8dc3ff0ee7f1a5c14d8f76e285915aeae0b33ff969780b9a450b0ba0a1",
+  "all25_serialization_functions_and_main_unchanged": true,
+  "old_producer_sha256": "45bed663b7720e414ee57e75539cdec4aa8ccfd88b89a80bcb442ee885e58b01",
+  "inventory24_binary_sha256": "21e7d40a14f9cb2cadeadbf9de6c41403a67a53b2e743f971b61ed21d6297a0c",
+  "new_compilation": false,
+  "note": "Only NaN-aware record coordinate identity repaired; invalid-station policy and coordinate values remain.3 final cases passed; later writes docs/matched artifacts/identities only."
+}

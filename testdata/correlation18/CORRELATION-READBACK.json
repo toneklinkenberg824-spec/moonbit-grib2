@@ -1,0 +1,64 @@
+{
+  "cases": [
+    {
+      "case": "mixed",
+      "input_sha256": "1a0b5d61108d235251a3812155094648e14389452d1b09c7ab46059f7a4d8c2b",
+      "csv_sha256": "ac8e918692bfdff0d0533c3ef019906e004d6c65b01c1df671082214437a78e8",
+      "station_count": 5,
+      "failure_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "codes": [
+        "outside-grid",
+        "invalid-station",
+        "outside-grid",
+        "missing-data"
+      ],
+      "actual_retry_join_passed": true,
+      "outside_retry_indices": [
+        1,
+        3
+      ]
+    },
+    {
+      "case": "all-available",
+      "input_sha256": "40601d2b4b41ab94ed61055fd37cc5939578ed58569c2d093dc87d49235ea0c2",
+      "csv_sha256": "070e2535ed026f2705c4fdac5064abd80aab79ea28d300185db3b962433ae07f",
+      "station_count": 3,
+      "failure_indices": [],
+      "codes": [],
+      "actual_retry_join_passed": true,
+      "outside_retry_indices": []
+    },
+    {
+      "case": "multiline-duplicates",
+      "input_sha256": "b4103c925562594c068b799ea677ba9841583070ff60dcbec26d6ceed51934ff",
+      "csv_sha256": "4f3b8e2087090f45c68ad2cfba5d7ee2b467b2bb51e75a99704c7d7d6ceb9d03",
+      "station_count": 3,
+      "failure_indices": [
+        0,
+        1,
+        2
+      ],
+      "codes": [
+        "outside-grid",
+        "outside-grid",
+        "outside-grid"
+      ],
+      "actual_retry_join_passed": true,
+      "outside_retry_indices": [
+        0,
+        1,
+        2
+      ]
+    }
+  ],
+  "mixed_csv_exactly_frozen17_baseline": true,
+  "old_diagnostic_fields_and_summary_values_preserved": true,
+  "available_duplicate_not_selected_for_retry": true,
+  "indices_are_original_input_and_logical_data_record_not_physical_line": true,
+  "old_log_locator_not_guessed": true
+}

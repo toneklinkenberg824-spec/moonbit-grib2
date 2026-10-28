@@ -1,0 +1,51 @@
+{
+  "cases": [
+    {
+      "case": "row-even",
+      "file": "fixtures/row-even.grib2",
+      "sha256": "d8feb36965b1e6d0e1e36c2bf56af8a28fb517141ea5f9e06aea229924429b5f",
+      "dimensions_Ni_Nj": [
+        3,
+        2
+      ],
+      "first_lat_lon": [
+        1,
+        10
+      ],
+      "proposed_last_scan_lat_lon": [
+        0,
+        10
+      ],
+      "opposite_corner_lat_lon": [
+        0,
+        12
+      ],
+      "classification": "New metadata interpretation variant; not established as a conforming GRIB message",
+      "provenance": "Only Section3 metadata changed from first existing forecast09 synthetic message; no reference regeneration"
+    },
+    {
+      "case": "column-even",
+      "file": "fixtures/column-even.grib2",
+      "sha256": "31cf62bdb303d7d7a98517cb768b60daa4d85b161248a16fe679481f472c3444",
+      "dimensions_Ni_Nj": [
+        2,
+        3
+      ],
+      "first_lat_lon": [
+        2,
+        10
+      ],
+      "proposed_last_scan_lat_lon": [
+        2,
+        11
+      ],
+      "opposite_corner_lat_lon": [
+        0,
+        11
+      ],
+      "classification": "New metadata interpretation variant; not established as a conforming GRIB message",
+      "provenance": "Only Section3 metadata changed from first existing forecast09 synthetic message; no reference regeneration"
+    }
+  ],
+  "purpose": "Observe current behavior only. Not a positive-validity oracle or expected-acceptance test."
+}

@@ -1,0 +1,12 @@
+{
+  "documented_function_signatures_unchanged": true,
+  "removed_readable_mutable_representation_fields": [
+    "data",
+    "valid",
+    "source_indices",
+    "product_info"
+  ],
+  "before_api_sha256": "5af2b67329dca89b0443e919bce44db82f82b6f7e01d6fdcffa276da2c2fa30c",
+  "after_api_sha256": "9c7cd22de70c4d0e391b10378bb3a6b7e2b8e42054329f4efe768264d9c5276a",
+  "external_proof": "Old mutation consumer ran and changed field state; same source now fails for all four fields on both targets; owned-copy consumer succeeds on both"
+}

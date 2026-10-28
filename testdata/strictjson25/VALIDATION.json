@@ -1,0 +1,34 @@
+{
+  "round": 25,
+  "confirmed_bug": "Valid input sidecar exponent became non-JSON Infinity in old CLI output",
+  "final_cases": 3,
+  "strict_Node_readers": 3,
+  "strict_Decimal_readers": 3,
+  "raw_numeric_tokens": [
+    "1e400",
+    "-1e400"
+  ],
+  "finite_stdout_byte_identical": true,
+  "sparse_original_indices": [
+    0,
+    2
+  ],
+  "no_null_or_string_replacement": true,
+  "helper_sha256": "7ab34fca5efe5184169473ec642711acc9df14215f39e84c2c73dee4b510261a",
+  "files": {
+    "regional.grib2": "5063cce3aedd7462c54080a32f4f949079463bf05e6650077f9e5833fd33169e",
+    "stations.json": "c8264b2338deecbd85321f58ca236add6b5fad039ee78989a50fdc19c5705fa0",
+    "result.csv": "af7d9f5c79ab49605ba686968829ec9a84ebd095b298985aaa443fb4115676dc",
+    "diagnostics.jsonl": "e87899d32a5a2cb082697b743107d06cd5282c7b01f6375775cea6149820addc",
+    "joined.expected.json": "12ddd7bb8fc95b24ff565aa813e5666bdde32ce91edb89883c67ca759c6a2534",
+    "finite-stations.json": "33ba32bad1b55296ac3cd2de519df096577107c784a85ee5a5082b4368092cb1",
+    "finite.csv": "af7d9f5c79ab49605ba686968829ec9a84ebd095b298985aaa443fb4115676dc",
+    "finite.diagnostics.jsonl": "e87899d32a5a2cb082697b743107d06cd5282c7b01f6375775cea6149820addc",
+    "finite.joined.expected.json": "ca451c86c4b5347ea6045d6556f39ed1cd5e2651ae624dc78d2e74a6c3dc2e07",
+    "sparse-stations.json": "e6788dfdcdcc5ffdb2845457f5243f4fc1d5fdcfdf05453d743b7a70e9fa54e3",
+    "sparse.csv": "f3a28c3feb324586db87cfa61a7b09a2b0899198e6692ac00947684384b1df0d",
+    "sparse.diagnostics.jsonl": "a92ce78429a51d9380508bb8627d04da741d77a952b4e3ab279b0bef35ff6258",
+    "sparse.joined.expected.json": "2814528ebc46610c2e2a56dca45362a7dd3a5ff9aea654721732051496bf7bfd"
+  },
+  "old_suites_repeated": false
+}

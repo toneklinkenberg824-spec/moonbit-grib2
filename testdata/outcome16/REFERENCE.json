@@ -1,0 +1,60 @@
+{
+  "fixtures": {
+    "regional": {
+      "file": "regional.grib2",
+      "sha256": "5063cce3aedd7462c54080a32f4f949079463bf05e6650077f9e5833fd33169e"
+    },
+    "two_fields": {
+      "file": "two_fields.grib2",
+      "sha256": "1b3c9e82e2abebcfe3dcc80b2a9689ea75d1a76439db65b32784c0502971b7fa"
+    },
+    "scalar_empty": {
+      "file": "scalar_empty.grib2",
+      "sha256": "2e4efbb7a579c6e7b429643e34f75e24e7b0906a0314fa83f212e00319ae83b4"
+    },
+    "wind": {
+      "file": "wind.grib2",
+      "sha256": "59adda81867d0db64388ec04a816c53d269b4fd2f164ab1c786fed18e7b989b2"
+    },
+    "south_wind_gap": {
+      "file": "south_wind_gap.grib2",
+      "sha256": "3fa8d27c8f4ba013110680f341e922fcf8ef3dc1bd65d41107da676244963fd5"
+    },
+    "unsupported_declaration": {
+      "file": "unsupported_declaration.grib2",
+      "sha256": "a96455370af17f7f87d9cec5faf7ed9026326963ee658c14b9d1a55da76f82be"
+    }
+  },
+  "fixture_origin": "Synthetic existing forecast09 constant111 frame; polar metadata/masks/categories adapted. Unsupported declaration is only an unsupported-template header test, not a valid5.3 sample.",
+  "sample_cases": {
+    "available": "available",
+    "bitmap": "missing-data",
+    "outside": "outside-grid",
+    "invalid": "invalid-station",
+    "wind-pole": "unsupported-polar-vector",
+    "empty-pole": "missing-data"
+  },
+  "available": {
+    "value": 111,
+    "contributors": [
+      3,
+      4
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ]
+  },
+  "selection_messages": [
+    "no field matches query",
+    "query matches multiple fields"
+  ],
+  "failure_codes": [
+    "invalid-station",
+    "outside-grid",
+    "missing-data",
+    "unsupported-polar-vector",
+    "nonfinite-result"
+  ],
+  "nonfinite_result_runtime_reproduction": false
+}

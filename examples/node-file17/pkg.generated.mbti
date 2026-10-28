@@ -1,0 +1,17 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "local/grib2-file17"
+
+import {
+  "moonbitlang/core/json",
+}
+
+// Values
+
+// Errors
+
+// Types and methods
+type InputStation derive(@json.FromJson)
+
+// Type aliases
+
+// Traits

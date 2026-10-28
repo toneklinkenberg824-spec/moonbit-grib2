@@ -1,0 +1,7 @@
+import {
+  "zhou-wei97/grib2/internal/upstream_core" @upcore,
+  "zhou-wei97/grib2/internal/upstream_context" @context,
+  "zhou-wei97/grib2/internal/upstream_unpack" @unpack,
+  "moonbitlang/core/cmp",
+  "moonbitlang/core/math",
+}

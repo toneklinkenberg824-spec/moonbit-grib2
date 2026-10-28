@@ -1,0 +1,25 @@
+[
+  {
+    "id": "sidecar-overflow",
+    "latitude": 2,
+    "longitude": 11,
+    "metadata": {
+      "positive": 1e400,
+      "negative": -1e400,
+      "nested": [
+        {
+          "limit": 1e400
+        }
+      ],
+      "label": "阈值😀 ],{\"key\":1}"
+    }
+  },
+  {
+    "id": "finite-peer",
+    "latitude": 2.5,
+    "longitude": 11.25,
+    "metadata": {
+      "limit": 1.25
+    }
+  }
+]

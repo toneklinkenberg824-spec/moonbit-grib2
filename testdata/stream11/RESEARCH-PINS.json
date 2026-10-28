@@ -1,0 +1,14 @@
+{
+  "registry": {
+    "source": "D:\\CodexLocal\\ban\\work\\isolated14-20261027\\reports\\grib2\\deep-repair-10-max-20261028\\mooncakes-csv.log",
+    "sha256": "bdafa94acee0cd25b788e3e1f8d4bf3de4946531d09ece53d029687831ab07c3",
+    "reuse": "Same-day20-module CSV search, read-only"
+  },
+  "additional_api": {
+    "file": "ECOSYSTEM-API.json",
+    "sha256": "6a433811a92e30e935262eb3b019fa8b3e8ee83871bec8d80749487e696d83ce",
+    "url": "https://github.com/moonbit-community/NyaCSV/blob/main/pkg.generated.mbti",
+    "blob": "fade6bbc99a625bc0982aad205ecbd199b14feaa",
+    "observed": "Root interface exposes CSV parse_buffer/parse_bytes/parse_string/data/header/Show; bounded public API review, no global absence/novelty claim"
+  }
+}

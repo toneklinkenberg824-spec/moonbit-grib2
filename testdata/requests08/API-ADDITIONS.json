@@ -1,0 +1,15 @@
+{
+  "existing_function_signatures_preserved": true,
+  "new_function_lines": [
+    "pub fn FieldQuery::new(Int, Int, Int, centre? : Int, subcentre? : Int, master_table? : Int, local_table? : Int, time_unit? : Int, forecast_time? : Int, first_surface? : Surface, second_surface? : Surface, reference_time? : Array[Int]) -> Self",
+    "pub fn sample_requested_fields(ArrayView[GriddedField], ArrayView[FieldRequest], ArrayView[Station]) -> Result[Array[FieldSamples], GribError]",
+    "pub fn select_unique_field(ArrayView[GriddedField], FieldQuery) -> Result[GriddedField, GribError]"
+  ],
+  "new_types": [
+    "FieldQuery",
+    "FieldRequest",
+    "FieldSamples"
+  ],
+  "before_sha256": "9c7cd22de70c4d0e391b10378bb3a6b7e2b8e42054329f4efe768264d9c5276a",
+  "after_sha256": "b28d4356e164b216a1d26554b9b688332be564cd8449112661388a6ef2022cb3"
+}

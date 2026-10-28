@@ -1,0 +1,297 @@
+{
+  "fixtures": [
+    {
+      "name": "t2m",
+      "value": 280,
+      "metadata_overrides": {
+        "kind": 103,
+        "level": 2
+      },
+      "sha256": "f2903ce998d60c50184b4fb775cdd3ec23ce7c5ae804eb7f2371e96ea2ba26bb"
+    },
+    {
+      "name": "t850",
+      "value": 270,
+      "metadata_overrides": {
+        "gap": true
+      },
+      "sha256": "aefd90416b9806db4e83923bf182f72f4e515be6143fa8ee8f8dfe56a56c264d"
+    },
+    {
+      "name": "t1000",
+      "value": 260,
+      "metadata_overrides": {
+        "level": 100000
+      },
+      "sha256": "763aa101cff03231fab8cbe208000141b5a6a8ef201039f23471f0f3b4f2dc83"
+    },
+    {
+      "name": "old_run",
+      "value": 265,
+      "metadata_overrides": {
+        "hour": 6
+      },
+      "sha256": "cea08014e030def83943344306a16dcf41863b0622cd55f681df0d08cd39c812"
+    },
+    {
+      "name": "later_lead",
+      "value": 275,
+      "metadata_overrides": {
+        "lead": 12
+      },
+      "sha256": "02a3f22e49d443b31b12fcd51f7537f079ad62a107723bc6e92951fa8647f448"
+    },
+    {
+      "name": "scaled_level",
+      "value": 271,
+      "metadata_overrides": {
+        "scale": 1,
+        "level": 850000
+      },
+      "sha256": "7077d2370a84143d354670a75ff98ee4915cf0b6245c3f240cf27e6b6c15e939"
+    },
+    {
+      "name": "other_centre",
+      "value": 272,
+      "metadata_overrides": {
+        "centre": 7
+      },
+      "sha256": "290f9ffae465513bfa0266aa04a06ae62043c5599fca26fd7ff0888e2928dd61"
+    },
+    {
+      "name": "bounded_layer",
+      "value": 269,
+      "metadata_overrides": {
+        "second": true
+      },
+      "sha256": "8714126eec6d37e034c0d69ab1490a667a7fa50bbcb84ced60dcd07af8fa302b"
+    },
+    {
+      "name": "other_subcentre",
+      "value": 273,
+      "metadata_overrides": {
+        "subcentre": 1
+      },
+      "sha256": "9a5dcc9f2f33700fd9be1e20adbe678d5be8c3d1aa10ab6404244a21417c3ddc"
+    },
+    {
+      "name": "other_master",
+      "value": 274,
+      "metadata_overrides": {
+        "master": 5
+      },
+      "sha256": "73178fc81ffbd917a680eb79b4843ea0e9c022befb470e844209626b78e6207e"
+    },
+    {
+      "name": "other_local",
+      "value": 276,
+      "metadata_overrides": {
+        "local": 1
+      },
+      "sha256": "d16b2cf59eccf7f26771765b12ab0974b8ec9f0b9f789112aa4c7bf27d1e188f"
+    }
+  ],
+  "oracle": "Manually encoded metadata tuple and constant values; ecCodes decode/metadata observations captured separately",
+  "eccodes": [
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 103,
+      "surface_scale": 0,
+      "surface_value": 2,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 280
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 270
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 100000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 260
+    },
+    {
+      "reference_time_hour": 6,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 265
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 12,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 275
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 1,
+      "surface_value": 850000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 271
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 272
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 269
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 273
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 274
+    },
+    {
+      "reference_time_hour": 12,
+      "forecast_time": 6,
+      "surface_kind": 100,
+      "surface_scale": 0,
+      "surface_value": 85000,
+      "mask": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "valid_constant": 276
+    }
+  ],
+  "demo_expected": {
+    "keys": [
+      "temperature_2m",
+      "temperature_850hPa"
+    ],
+    "values": [
+      [
+        280,
+        280
+      ],
+      [
+        null,
+        270
+      ]
+    ],
+    "inland_850_sources": [
+      3,
+      4
+    ],
+    "inland_850_weights": [
+      0.5,
+      0.5
+    ]
+  }
+}

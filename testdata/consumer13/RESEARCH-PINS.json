@@ -1,0 +1,23 @@
+{
+  "public_receipts": {
+    "file": "ECOSYSTEM-RECEIPTS.json",
+    "sha256": "724da93b74feee21e1adb9181e2b67863bfe3956f3dc35a4dcd95d84be5f01c5"
+  },
+  "current_source": {
+    "repository": "https://github.com/moonbit-community/NyaCSV",
+    "commit": "19ab9ca861f13a0663dc6e168b764507fa0e76ba",
+    "declared_version": "0.3.4",
+    "observed": "Int32 source does not compile with fixed SDK; source-probe-probe.stderr.txt retained"
+  },
+  "chosen_source": {
+    "commit": "fe4448e1e45a25f6fca151320c766519e80162c9",
+    "declared_version": "0.3.3",
+    "why": "Immediately preceding pre-Int32 source; actual multiline/Unicode probe and final consumer pass",
+    "source_identity": "DEPENDENCY-SOURCE-IDENTITY.json",
+    "source_identity_sha256": "79dd1ad315c2019ef1702af89205966cba0800ced3ba726ee33e06caaf03cedf",
+    "license_sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+  },
+  "registry_installation": "Not proven; local index did not resolve0.3.4. Fixed-source workspace used. No global registry update.",
+  "difference": "Use existing CSV parser for this producer complete records and explicit typed/JSON application cells; no generic parser or new library API",
+  "upstream_source_final_identity": "All pinned upstream checkout files restored after tooling-only formatting and match original before actual run; no parser implementation changes"
+}

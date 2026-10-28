@@ -1,0 +1,34 @@
+{
+  "round": 24,
+  "new_application_cases": 3,
+  "catalog_fields": 4,
+  "independent_expected": "Raw message framing and section1/3/4 metadata; original encoding values, no library-run oracle",
+  "forecast_states": [
+    "missing",
+    0,
+    6,
+    -6
+  ],
+  "selected_index": 2,
+  "selected_origin": {
+    "message": 2,
+    "field": 0,
+    "byte_offset": 359
+  },
+  "actual_CSV_values": [
+    333,
+    null
+  ],
+  "later_unsupported_and_truncated_stdout_empty": true,
+  "new_module_binary_sha256": "21e7d40a14f9cb2cadeadbf9de6c41403a67a53b2e743f971b61ed21d6297a0c",
+  "files": {
+    "forecast.grib2": "a69d1bf42f96d9d2ce40eecc8b8f1f9d12698b4f43595257e74bfa3cf60478fd",
+    "stations.json": "924247a0fb913117dda3254ff888dc303f686c7259fac57f4f9dc50d1596ab76",
+    "later-unsupported.grib2": "0c1dcd7b71d6cd9c0836839cd3d1e5c745455baa088d2238a3c896a093186f5e",
+    "later-truncated.grib2": "0f8d207d19a44a348be21e64d8c9355d95b3b77bec8a111fd3a49e8156d8ae4a",
+    "inventory.json": "315a2d78ddd6870c1703953953a4503100b10243dc68a20a252949701186cbf0",
+    "selected.csv": "0561c94be22d2b40d9e19d631cbb0c34d1e73fc65294c12725cd851fbcae873a",
+    "diagnostics.jsonl": "7de6a8c8267b18622c5e9ecb0f6ab2dd75b676e31117679a9a9647ec61e32ad0"
+  },
+  "old_suites_repeated": false
+}

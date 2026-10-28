@@ -1,0 +1,11 @@
+{
+  "old_function_signatures_preserved": true,
+  "new_functions": [
+    "pub fn GriddedField::sample_result(Self, Station) -> Result[Sample, SampleFailure]"
+  ],
+  "new_type": "SampleFailure",
+  "new_trait": "ToJson for SampleFailure",
+  "before_sha256": "d71030d2c377514407e468cbd797445c717ad5dff6bf716b451d394a39273502",
+  "after_sha256": "7809ba0e6828442f1f76e6fbb63aaf7626f585354614f88fb0af00749e800d7d",
+  "old_Sample_and_GribError_shapes_unchanged": true
+}

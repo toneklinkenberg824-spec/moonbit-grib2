@@ -1,0 +1,20 @@
+{
+  "source": "First existing synthetic forecast09 constant111 message, keeping sections1/4/7 and zero-bit packing reference",
+  "source_sha256": "5063cce3aedd7462c54080a32f4f949079463bf05e6650077f9e5833fd33169e",
+  "fixture_sha256": "bfe12c212188fd99fa3182c28c2d990096f26301f2f2e848139ab8dcb6d8cb46",
+  "grid_template": "3.0",
+  "product_template": "4.0",
+  "packing_template": "5.0 zero-bit constant111",
+  "points": 2880,
+  "Ni": 1440,
+  "Nj": 2,
+  "north": 90,
+  "south": 89,
+  "west": 0,
+  "east": 359.75,
+  "dx": 0.25,
+  "dy": 1,
+  "scan": 0,
+  "bitmap": 255,
+  "not_weather_or_new_scientific_acceptance": true
+}

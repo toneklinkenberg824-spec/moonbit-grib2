@@ -1,0 +1,25 @@
+{
+  "independent_reader": "PowerShell Import-Csv and ConvertFrom-Json; not Python csv",
+  "rows": 2,
+  "available_ID": "polar-available",
+  "unavailable_ID": "outside-domain",
+  "contributor_count": 1440,
+  "contributor_field_characters": 164381,
+  "first_source_index": 0,
+  "last_source_index": 1439,
+  "scalar_constant_sanity_value": "111.00000000000108",
+  "unavailable_value_empty": true,
+  "all_column_names": [
+    "request_key",
+    "station_id",
+    "latitude",
+    "longitude",
+    "value",
+    "algorithm",
+    "message",
+    "field",
+    "byte_offset",
+    "product_json",
+    "contributors_json"
+  ]
+}

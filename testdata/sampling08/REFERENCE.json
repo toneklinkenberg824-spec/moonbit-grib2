@@ -1,0 +1,320 @@
+{
+  "basis": "Accepted scalar coordinate bilinear/polar policy; WMO5.0 decode formula then exact analytic weighted mean",
+  "source": "https://codes.ecmwf.int/grib/format/grib2/regulations/",
+  "cases": [
+    {
+      "name": "constant_1_ulp",
+      "sha256": "ec9981763f2867b7650f56516d4c9c2bd7b59afa46b4aa942f5d911e01718f79",
+      "packed": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "packing": {},
+      "station": [
+        0.5,
+        10.5
+      ],
+      "exact_expected": "1/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784",
+      "rounded_expected": 5e-324,
+      "expected_binary64_bits": 1,
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "constant_2_ulp",
+      "sha256": "e76ec11f23e5b17619b2723be9423aa610d8dfc360b2ec9257899294b089d6dd",
+      "packed": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "packing": {},
+      "station": [
+        0.5,
+        10.5
+      ],
+      "exact_expected": "1/101201126653655309176247673359458653524778324882071059178450679013715169783997673445980191850718562247593538932158405955694904368692896738433506699970369254960758712138283180682233453871046608170619883839236372534281003741712346349309051677824579778170405028256179384776166707307615251266093163754323003131653853870546747392",
+      "rounded_expected": 1e-323,
+      "expected_binary64_bits": 2,
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "constant_3_ulp",
+      "sha256": "6fd4b69343c73868837adc5d422c19716456cf5d45cd473318f926f7a2d4e5dc",
+      "packed": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "packing": {},
+      "station": [
+        0.5,
+        10.5
+      ],
+      "exact_expected": "3/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784",
+      "rounded_expected": 1.5e-323,
+      "expected_binary64_bits": 3,
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "mixed_round_once",
+      "sha256": "1533999f1ecf23459a34a37baa08e756d1098c3a6c23c2ec7a9693c4a14bcc12",
+      "packed": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "packing": {},
+      "station": [
+        0.5,
+        10.5
+      ],
+      "exact_expected": "3/404804506614621236704990693437834614099113299528284236713802716054860679135990693783920767402874248990374155728633623822779617474771586953734026799881477019843034848553132722728933815484186432682479535356945490137124014966849385397236206711298319112681620113024717539104666829230461005064372655017292012526615415482186989568",
+      "rounded_expected": 1e-323,
+      "expected_binary64_bits": 2,
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "edge_zero_missing",
+      "sha256": "a33994413045f7990d31dbbe096d7c5fbf8eb3da0a50e7b86e19a4c559eba386",
+      "packed": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "packing": {
+        "mask": [
+          true,
+          true,
+          false,
+          false
+        ]
+      },
+      "station": [
+        1.0,
+        10.5
+      ],
+      "exact_expected": "1/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784",
+      "rounded_expected": 5e-324,
+      "expected_binary64_bits": 1,
+      "weights": [
+        "1/2",
+        "1/2"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "pole_equal",
+      "sha256": "afa8e0111a89f07743a22ae20af80089b2228ae97f8ad1022bbc14e35eefb8d1",
+      "packed": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        4
+      ],
+      "packing": {
+        "ni": 3,
+        "nj": 2,
+        "north": 90
+      },
+      "station": [
+        90.0,
+        10.5
+      ],
+      "exact_expected": "1/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784",
+      "rounded_expected": 5e-324,
+      "expected_binary64_bits": 1,
+      "weights": [
+        "1/3",
+        "1/3",
+        "1/3"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "pole_adjacent",
+      "sha256": "afa8e0111a89f07743a22ae20af80089b2228ae97f8ad1022bbc14e35eefb8d1",
+      "packed": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        4
+      ],
+      "packing": {
+        "ni": 3,
+        "nj": 2,
+        "north": 90
+      },
+      "station": [
+        89.5,
+        10.5
+      ],
+      "exact_expected": "7/809609013229242473409981386875669228198226599056568473427605432109721358271981387567841534805748497980748311457267247645559234949543173907468053599762954039686069697106265445457867630968372865364959070713890980274248029933698770794472413422596638225363240226049435078209333658460922010128745310034584025053230830964373979136",
+      "rounded_expected": 1e-323,
+      "expected_binary64_bits": 2,
+      "weights": [
+        "1/6",
+        "1/6",
+        "1/6",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "pole_masked",
+      "sha256": "8370f4647494fe7717bc50f2a6ecb28c55cb07e5a921ca17dcdfe28214272710",
+      "packed": [
+        1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "packing": {
+        "ni": 3,
+        "nj": 2,
+        "north": 90,
+        "mask": [
+          true,
+          false,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      "station": [
+        90.0,
+        10.5
+      ],
+      "exact_expected": "1/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784",
+      "rounded_expected": 5e-324,
+      "expected_binary64_bits": 1,
+      "weights": [
+        "1/2",
+        "1/2"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "negative_constant",
+      "sha256": "0d180f633ee18d66223b5bee7be24d1f6078cf53d115e9bc3de900ec79f3244d",
+      "packed": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "packing": {
+        "bits": 0,
+        "ref": -5.0,
+        "d": 324,
+        "e": 0
+      },
+      "station": [
+        0.5,
+        10.5
+      ],
+      "exact_expected": "-1/202402253307310618352495346718917307049556649764142118356901358027430339567995346891960383701437124495187077864316811911389808737385793476867013399940738509921517424276566361364466907742093216341239767678472745068562007483424692698618103355649159556340810056512358769552333414615230502532186327508646006263307707741093494784",
+      "rounded_expected": -5e-324,
+      "expected_binary64_bits": 9223372036854775809,
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "normal_constant",
+      "sha256": "9e8215bbea4b3bd6fdc988858c71ce00e9bc65d7944b2b9235b6add162fc2498",
+      "packed": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "packing": {
+        "e": -1022
+      },
+      "station": [
+        0.5,
+        10.5
+      ],
+      "exact_expected": "1/44942328371557897693232629769725618340449424473557664318357520289433168951375240783177119330601884005280028469967848339414697442203604155623211857659868531094441973356216371319075554900311523529863270738021251442209537670585615720368478277635206809290837627671146574559986811484619929076208839082406056034304",
+      "rounded_expected": 2.2250738585072014e-308,
+      "expected_binary64_bits": 4503599627370496,
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    },
+    {
+      "name": "ordinary_values",
+      "sha256": "d278e8c840f229f74eb5e2ba98fb862a07668b3d327d43db1a09f6bc5ba15f76",
+      "packed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "packing": {
+        "e": 0
+      },
+      "station": [
+        0.5,
+        10.5
+      ],
+      "exact_expected": "5/2",
+      "rounded_expected": 2.5,
+      "expected_binary64_bits": 4612811918334230528,
+      "weights": [
+        "1/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "oracle": "Exact Fraction sum of decoded binary64 field values and analytic rational weights, rounded once; no product output"
+    }
+  ],
+  "normal_path": "The minimum normal and ordinary-value regressions ensure the established arithmetic path remains valid"
+}

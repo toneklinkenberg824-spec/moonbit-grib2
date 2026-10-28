@@ -1,0 +1,42 @@
+[
+  {
+    "source": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20260221/00/atmos/gfs.t00z.pgrb2.1p00.f000",
+    "range": [
+      34156029,
+      34230824
+    ],
+    "license": "NOAA/NWS public domain unless noted; https://www.weather.gov/disclaimer",
+    "original_sha256": "897ba31146ae9cf1e9c2cdef6e8db00cafeb6a5afb88097773410da9efcdad57",
+    "original_templates": {
+      "gridDefinitionTemplateNumber": 0,
+      "productDefinitionTemplateNumber": 0,
+      "dataRepresentationTemplateNumber": 3,
+      "Ni": 360,
+      "Nj": 181,
+      "shortName": "2t"
+    },
+    "repacked_file": "noaa-gfs-repacked.grib2",
+    "repacked_sha256": "e69245079ff183b934b343d7c0a43d0591e59b916ea80f8c695e64568f93464a",
+    "transformation": "8x6 node window from original field, ecCodes packingType=grid_simple; no interpolation; not original packing support"
+  },
+  {
+    "source": "https://ecmwf-forecasts.s3.eu-central-1.amazonaws.com/20260221/00z/ifs/0p25/oper/20260221000000-0h-oper-fc.grib2",
+    "range": [
+      71724091,
+      72385874
+    ],
+    "license": "ECMWF Open Data CC-BY-4.0 and ECMWF Terms; https://www.ecmwf.int/en/forecasts/datasets/open-data",
+    "original_sha256": "e9e3dca1e17a44b5e2ef908883cbabaf58e5557a05d4650a86ae892fb5a1e7be",
+    "original_templates": {
+      "gridDefinitionTemplateNumber": 0,
+      "productDefinitionTemplateNumber": 0,
+      "dataRepresentationTemplateNumber": 42,
+      "Ni": 1440,
+      "Nj": 721,
+      "shortName": "2t"
+    },
+    "repacked_file": "ecmwf-ifs-repacked.grib2",
+    "repacked_sha256": "904c337ee2e1d7171f2997b199a9906e39b657c48de07d9b9d58748a43fd0977",
+    "transformation": "8x6 node window from original field, ecCodes packingType=grid_simple; no interpolation; not original packing support"
+  }
+]

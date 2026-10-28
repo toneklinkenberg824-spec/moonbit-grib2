@@ -1,0 +1,12 @@
+[
+  {
+    "id": "finite-control",
+    "latitude": 2.5,
+    "longitude": 11.25
+  },
+  {
+    "id": "infinity-control",
+    "latitude": "Infinity",
+    "longitude": 11
+  }
+]

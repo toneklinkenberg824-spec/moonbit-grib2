@@ -1,0 +1,74 @@
+{
+  "dependency": {
+    "repository": "https://github.com/moonbit-community/NyaCSV",
+    "commit": "fe4448e1e45a25f6fca151320c766519e80162c9",
+    "declared_version": "0.3.3",
+    "binding": "Fixed-source moon.work, no registry install claim"
+  },
+  "real": {
+    "keys": [
+      " GFS,\"温度\"\r\n原报😀 ",
+      "IFS"
+    ],
+    "station_ids": [
+      " 0012,\"港\"\r\n换行😀 \t",
+      ""
+    ],
+    "values": [
+      253.6234765625,
+      null,
+      null,
+      239.85598754882812
+    ],
+    "centres": [
+      7,
+      7,
+      98,
+      98
+    ],
+    "messages": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "byte_offsets": [
+      0,
+      0,
+      251,
+      251
+    ],
+    "reference": "Two archived export10 SciPy values reused for consumer conversion, no new sampling acceptance/download run"
+  },
+  "numeric": {
+    "keys": [
+      "missing-time",
+      "analysis0"
+    ],
+    "station_ids": [
+      "0007",
+      " \t,\"港\"\r\n内陆😀 "
+    ],
+    "values": [
+      null,
+      0,
+      222,
+      222
+    ],
+    "forecast_times": [
+      null,
+      null,
+      0,
+      0
+    ],
+    "fixture": "synthetic-zero-analysis.grib2",
+    "sha256": "2780f4e32d03a02c6d5deef7264c4e3e148b6c6153ceaf7414bb2a812decf4bc",
+    "derivation": "Existing forecast09 first two messages, change only first simple-packing reference IEEE754 R=111 to R=0; E=D=0 and width=0 verified; bitmap/metadata unchanged. Independently expected valid first-field value0 and bitmap gap None."
+  },
+  "summaries": {
+    "real": 4,
+    "preview": 1,
+    "numeric": 4,
+    "empty": 0
+  }
+}

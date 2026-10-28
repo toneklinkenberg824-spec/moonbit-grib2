@@ -1,0 +1,644 @@
+{
+  "numeric_oracle": "Exact fractions from float32 R + integer X, powers2 and10, rounded once by Python float; no product output",
+  "numeric_cases": [
+    {
+      "name": "normal-width-2-scale0",
+      "bits": 2,
+      "E": -5,
+      "D": -2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1
+      ],
+      "fraction_expected_float": [
+        -125.0,
+        -121.875,
+        -118.75,
+        -115.625,
+        -115.625,
+        -121.875
+      ],
+      "sha256": "957005b98985914d4adafa2137628f3129561267cc89d05f3c37c8099d2d6e9c"
+    },
+    {
+      "name": "normal-width-2-scale1",
+      "bits": 2,
+      "E": 0,
+      "D": 0,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1
+      ],
+      "fraction_expected_float": [
+        -1.25,
+        -0.25,
+        0.75,
+        1.75,
+        1.75,
+        -0.25
+      ],
+      "sha256": "c20393433c418a4d03d14386330d2a1fbca70fe58217ce3b6508d674562014dc"
+    },
+    {
+      "name": "normal-width-2-scale2",
+      "bits": 2,
+      "E": 7,
+      "D": 2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        3,
+        1
+      ],
+      "fraction_expected_float": [
+        -0.0125,
+        1.2675,
+        2.5475,
+        3.8275,
+        3.8275,
+        1.2675
+      ],
+      "sha256": "263259adf56f8a5b43b99bd2c73c3928cd36ec72b17fe87fc72bf2bce83cda6f"
+    },
+    {
+      "name": "normal-width-11-scale0",
+      "bits": 11,
+      "E": -5,
+      "D": -2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        2047,
+        1
+      ],
+      "fraction_expected_float": [
+        -125.0,
+        -121.875,
+        -118.75,
+        -115.625,
+        6271.875,
+        -121.875
+      ],
+      "sha256": "9e0cc13316cae94f19b6dfa836cfe3701fe987cd117950f2347151f70153a4ce"
+    },
+    {
+      "name": "normal-width-11-scale1",
+      "bits": 11,
+      "E": 0,
+      "D": 0,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        2047,
+        1
+      ],
+      "fraction_expected_float": [
+        -1.25,
+        -0.25,
+        0.75,
+        1.75,
+        2045.75,
+        -0.25
+      ],
+      "sha256": "bae402fefeab9e222339fbe950f5b0d18e69d47bd5ca4edf8dd74fd51ff361a3"
+    },
+    {
+      "name": "normal-width-11-scale2",
+      "bits": 11,
+      "E": 7,
+      "D": 2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        2047,
+        1
+      ],
+      "fraction_expected_float": [
+        -0.0125,
+        1.2675,
+        2.5475,
+        3.8275,
+        2620.1475,
+        1.2675
+      ],
+      "sha256": "6f301234169186ec55c4313fb0fd62a4a271e6409367d4022b51c50a80c86a96"
+    },
+    {
+      "name": "normal-width-13-scale0",
+      "bits": 13,
+      "E": -5,
+      "D": -2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        8191,
+        1
+      ],
+      "fraction_expected_float": [
+        -125.0,
+        -121.875,
+        -118.75,
+        -115.625,
+        25471.875,
+        -121.875
+      ],
+      "sha256": "d83472fa1374b22bffedf20f30e668ad104c68e6b4cbb65635b86ab8cc06fba8"
+    },
+    {
+      "name": "normal-width-13-scale1",
+      "bits": 13,
+      "E": 0,
+      "D": 0,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        8191,
+        1
+      ],
+      "fraction_expected_float": [
+        -1.25,
+        -0.25,
+        0.75,
+        1.75,
+        8189.75,
+        -0.25
+      ],
+      "sha256": "0ecb485ad3792b3a75686d1e5ca028bf0f3f85fbe60d864a5871acea4a931150"
+    },
+    {
+      "name": "normal-width-13-scale2",
+      "bits": 13,
+      "E": 7,
+      "D": 2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        8191,
+        1
+      ],
+      "fraction_expected_float": [
+        -0.0125,
+        1.2675,
+        2.5475,
+        3.8275,
+        10484.4675,
+        1.2675
+      ],
+      "sha256": "2c8d02c3f8732c6e664bf393bebcc24e05f124d7de481abf7fcc9b87085f8fbe"
+    },
+    {
+      "name": "normal-width-17-scale0",
+      "bits": 17,
+      "E": -5,
+      "D": -2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        131071,
+        1
+      ],
+      "fraction_expected_float": [
+        -125.0,
+        -121.875,
+        -118.75,
+        -115.625,
+        409471.875,
+        -121.875
+      ],
+      "sha256": "0916990ec6bae31a92c1ef7ea9bd46f004d5ad962cbfad5083e91fe78b041416"
+    },
+    {
+      "name": "normal-width-17-scale1",
+      "bits": 17,
+      "E": 0,
+      "D": 0,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        131071,
+        1
+      ],
+      "fraction_expected_float": [
+        -1.25,
+        -0.25,
+        0.75,
+        1.75,
+        131069.75,
+        -0.25
+      ],
+      "sha256": "83b80d3825b6f5b2ff1f355017fdfd477d38ff8e070d51ae9616f57331c328a7"
+    },
+    {
+      "name": "normal-width-17-scale2",
+      "bits": 17,
+      "E": 7,
+      "D": 2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        131071,
+        1
+      ],
+      "fraction_expected_float": [
+        -0.0125,
+        1.2675,
+        2.5475,
+        3.8275,
+        167770.8675,
+        1.2675
+      ],
+      "sha256": "254dfba9dc83b187477859f5163da4dfd2625ccd257fa86d251c5d7f37c426f1"
+    },
+    {
+      "name": "normal-width-31-scale0",
+      "bits": 31,
+      "E": -5,
+      "D": -2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        2147483647,
+        1
+      ],
+      "fraction_expected_float": [
+        -125.0,
+        -121.875,
+        -118.75,
+        -115.625,
+        6710886271.875,
+        -121.875
+      ],
+      "sha256": "d7b069b808e0602dcea1121e12401f32b4daa96e50fde37b36dcb2a453f2235e"
+    },
+    {
+      "name": "normal-width-31-scale1",
+      "bits": 31,
+      "E": 0,
+      "D": 0,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        2147483647,
+        1
+      ],
+      "fraction_expected_float": [
+        -1.25,
+        -0.25,
+        0.75,
+        1.75,
+        2147483645.75,
+        -0.25
+      ],
+      "sha256": "e74a77871064e5fb2ac8e2409fbfa8b82dff2f51b0d5e6020e966bb209f53001"
+    },
+    {
+      "name": "normal-width-31-scale2",
+      "bits": 31,
+      "E": 7,
+      "D": 2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        2147483647,
+        1
+      ],
+      "fraction_expected_float": [
+        -0.0125,
+        1.2675,
+        2.5475,
+        3.8275,
+        2748779068.1475,
+        1.2675
+      ],
+      "sha256": "b73f7ad759fa1ccc09df2f371d50881a5a65a006d7ee515e1954d1fe794883b8"
+    },
+    {
+      "name": "normal-width-32-scale0",
+      "bits": 32,
+      "E": -5,
+      "D": -2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        4294967295,
+        1
+      ],
+      "fraction_expected_float": [
+        -125.0,
+        -121.875,
+        -118.75,
+        -115.625,
+        13421772671.875,
+        -121.875
+      ],
+      "sha256": "2b116143570e64a6815337c083856a7c7f847031c538ce236ef8bf62a245f6e9"
+    },
+    {
+      "name": "normal-width-32-scale1",
+      "bits": 32,
+      "E": 0,
+      "D": 0,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        4294967295,
+        1
+      ],
+      "fraction_expected_float": [
+        -1.25,
+        -0.25,
+        0.75,
+        1.75,
+        4294967293.75,
+        -0.25
+      ],
+      "sha256": "e79e449759afe3cc2e795a38e0e54ebe113670a90e8fed07bad7fef0ce7f48c1"
+    },
+    {
+      "name": "normal-width-32-scale2",
+      "bits": 32,
+      "E": 7,
+      "D": 2,
+      "R_float32": -1.25,
+      "X": [
+        0,
+        1,
+        2,
+        3,
+        4294967295,
+        1
+      ],
+      "fraction_expected_float": [
+        -0.0125,
+        1.2675,
+        2.5475,
+        3.8275,
+        5497558137.5875,
+        1.2675
+      ],
+      "sha256": "52076c8d913921eef2f7808ad28340b3a4f2039d0a2a384bd1087186453a049d"
+    },
+    {
+      "name": "balanced-1024",
+      "bits": 1,
+      "E": 1024,
+      "D": 308,
+      "R_float32": 0.0,
+      "X": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fraction_expected_float": [
+        1.797693134862316,
+        1.797693134862316,
+        1.797693134862316,
+        1.797693134862316,
+        1.797693134862316,
+        1.797693134862316
+      ],
+      "sha256": "48fda5ccf07592e516ee56eb382114acca17d97765de94a6abeb8cc17b977eb5"
+    },
+    {
+      "name": "small-term-recovered",
+      "bits": 1,
+      "E": -1075,
+      "D": -308,
+      "R_float32": 0.0,
+      "X": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fraction_expected_float": [
+        2.4703282292062327e-16,
+        2.4703282292062327e-16,
+        2.4703282292062327e-16,
+        2.4703282292062327e-16,
+        2.4703282292062327e-16,
+        2.4703282292062327e-16
+      ],
+      "sha256": "3e7705d83907f1d5dc386bb42dd816ed090a5d352b052a3a6f6410c4939c9f19"
+    },
+    {
+      "name": "subnormal-recovered",
+      "bits": 1,
+      "E": 0,
+      "D": 324,
+      "R_float32": 10.0,
+      "X": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fraction_expected_float": [
+        1e-323,
+        1e-323,
+        1e-323,
+        1e-323,
+        1e-323,
+        1e-323
+      ],
+      "sha256": "2bb73e060414402cb33fadc04df47be0f6b128e07af3d65b9ea750751de0a387"
+    },
+    {
+      "name": "small-reference-recovered",
+      "bits": 1,
+      "E": 0,
+      "D": -324,
+      "R_float32": 1.0000000031710769e-30,
+      "X": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fraction_expected_float": [
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294
+      ],
+      "sha256": "87d50f07bb8a63d9f76107b7c412ce40dd3d91d39c0c2c5e778da130db153075"
+    },
+    {
+      "name": "balanced-max-positive",
+      "bits": 1,
+      "E": 32766,
+      "D": 9863,
+      "R_float32": 0.0,
+      "X": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fraction_expected_float": [
+        3.538652577612387,
+        3.538652577612387,
+        3.538652577612387,
+        3.538652577612387,
+        3.538652577612387,
+        3.538652577612387
+      ],
+      "sha256": "bfe991a7e81c9664cd9a0c9cadc6680cae1899d470e8ee934cba0c0e87d57a99"
+    },
+    {
+      "name": "balanced-max-negative",
+      "bits": 1,
+      "E": -32766,
+      "D": -9863,
+      "R_float32": 0.0,
+      "X": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "fraction_expected_float": [
+        0.28259343862310543,
+        0.28259343862310543,
+        0.28259343862310543,
+        0.28259343862310543,
+        0.28259343862310543,
+        0.28259343862310543
+      ],
+      "sha256": "9dba9967ad90d3d102f3c2b636e3cc34003629c447627f1f9378a5b95aa4ac0d"
+    },
+    {
+      "name": "subnormal-constant-same-formula",
+      "bits": 0,
+      "E": 3,
+      "D": 324,
+      "R_float32": 10.0,
+      "X": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fraction_expected_float": [
+        1e-323,
+        1e-323,
+        1e-323,
+        1e-323,
+        1e-323,
+        1e-323
+      ],
+      "sha256": "e52c00374e4eda8cdc7530fe14dea911e7fb8404187b3e00a6772aa05bd60e19"
+    },
+    {
+      "name": "large-constant-same-formula",
+      "bits": 0,
+      "E": 3,
+      "D": -324,
+      "R_float32": 1.0000000031710769e-30,
+      "X": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fraction_expected_float": [
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294,
+        1.0000000031710768e+294
+      ],
+      "sha256": "8a1b65a78bb5eee57b1c91161b609b8fd4610e0891b2c4ee12514df04b700a6c"
+    }
+  ],
+  "longitude_oracle": "Python math.fmod + independent numpy.interp periodic values",
+  "queries": [
+    1e+20,
+    -1e+20,
+    1e+308,
+    -1e+308
+  ],
+  "longitude_expected": [
+    15.666666666666666,
+    13.88888888888889,
+    15.133333333333333,
+    13.71111111111111
+  ],
+  "pole_oracle": "89.999999 is one encoded microdegree below90; exact node remains1",
+  "node_oracle": "Only center node valid5; public point must sample back to5"
+}

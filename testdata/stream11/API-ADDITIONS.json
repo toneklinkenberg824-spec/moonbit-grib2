@@ -1,0 +1,8 @@
+{
+  "existing_function_signatures_preserved": true,
+  "new_functions": [
+    "pub fn station_csv_records(ArrayView[FieldSamples]) -> Iter[String]"
+  ],
+  "before_sha256": "7cba772e80d7300c97737d4978fa0afe39006dac2d4625955f1554e49313c96b",
+  "after_sha256": "adffc771bb3a3012632eddcdccc10c528a12b906daebe0d280a5d1d483d44948"
+}

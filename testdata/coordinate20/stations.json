@@ -1,0 +1,22 @@
+[
+  {
+    "id": "large-positive-longitude",
+    "latitude": 2,
+    "longitude": 9007199254740993
+  },
+  {
+    "id": "large-negative-longitude",
+    "latitude": 2,
+    "longitude": -9007199254740993
+  },
+  {
+    "id": "invalid-large-latitude",
+    "latitude": 9007199254740993,
+    "longitude": 11
+  },
+  {
+    "id": "ordinary-decimal-outside",
+    "latitude": 2.5,
+    "longitude": 11.25
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "basis": "WMO92.1.4 all-one missing and92.1.5 sign-magnitude; no calendar conversion",
+  "cases": [
+    {
+      "raw_forecast": 4294967295,
+      "expected_forecast": null,
+      "value": 111,
+      "gap": true,
+      "sha256": "5063cce3aedd7462c54080a32f4f949079463bf05e6650077f9e5833fd33169e",
+      "length": 180
+    },
+    {
+      "raw_forecast": 0,
+      "expected_forecast": 0,
+      "value": 222,
+      "gap": false,
+      "sha256": "a12d6da2e2120ef0339d6c8b2a55dd5eb22cffca8c3e40bae617c7f7c32fa621",
+      "length": 179
+    },
+    {
+      "raw_forecast": 6,
+      "expected_forecast": 6,
+      "value": 333,
+      "gap": false,
+      "sha256": "bd00d4c123e1d26609dfe976028a04b14222ae1e2a6ee5c9943838c74402ab73",
+      "length": 179
+    },
+    {
+      "raw_forecast": 2147483654,
+      "expected_forecast": -6,
+      "value": 444,
+      "gap": false,
+      "sha256": "c928a8b63f21fe852fa6f99688809dd514e7f0d8e6af10cc0621df8cd09801e8",
+      "length": 179
+    }
+  ],
+  "sources": [
+    "https://codes.ecmwf.int/grib/format/grib2/regulations/"
+  ],
+  "example_expected": {
+    "keys": [
+      "未指定时效",
+      "分析0",
+      "预报6"
+    ],
+    "values": [
+      [
+        null,
+        111
+      ],
+      [
+        222,
+        222
+      ],
+      [
+        333,
+        333
+      ]
+    ],
+    "messages": [
+      0,
+      1,
+      2
+    ],
+    "forecast_metadata": [
+      null,
+      0,
+      6
+    ]
+  }
+}

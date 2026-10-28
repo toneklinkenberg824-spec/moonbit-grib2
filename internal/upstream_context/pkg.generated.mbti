@@ -1,0 +1,66 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "zhou-wei97/grib2/internal/upstream_context"
+
+// Values
+pub fn reindex_message(Grib2MessageContext, Int) -> Grib2MessageContext
+
+pub fn reindex_messages(Array[Grib2MessageContext]) -> Array[Grib2MessageContext]
+
+pub fn shift_section_frame(Grib2SectionFrame, Int) -> Grib2SectionFrame
+
+// Errors
+pub(all) suberror Grib2ContextEditError {
+  InvalidMessageIndex(String)
+  InvalidRawMessage(String)
+  ParseError(Grib2ParseError)
+} derive(Show)
+
+pub(all) suberror Grib2ParseError {
+  UnexpectedEof(String)
+  InvalidMagic(String)
+  InvalidSectionLength(String)
+  InvalidSectionNumber(String)
+  InvalidMessageLength(String)
+  InvalidSectionOrder(String)
+} derive(Show)
+
+// Types and methods
+pub(all) struct Grib2FileContext {
+  messages : Array[Grib2MessageContext]
+}
+pub fn Grib2FileContext::message_count(Self) -> Int
+pub fn Grib2FileContext::record_count(Self) -> Int
+pub fn Grib2FileContext::reindex_offsets(Self) -> Self
+
+pub(all) struct Grib2MessageContext {
+  offset : Int
+  total_length : Int
+  discipline : Int
+  edition : Int
+  section1 : Grib2SectionFrame
+  section8_offset : Int
+  sections : Array[Grib2SectionFrame]
+  submessages : Array[Grib2SubmessageFrame]
+  raw : Bytes
+}
+pub fn Grib2MessageContext::submessage_count(Self) -> Int
+
+pub(all) struct Grib2SectionFrame {
+  section_number : Int
+  start : Int
+  length : Int
+}
+pub fn Grib2SectionFrame::end_offset(Self) -> Int
+
+pub(all) struct Grib2SubmessageFrame {
+  section2 : Grib2SectionFrame?
+  section3 : Grib2SectionFrame
+  section4 : Grib2SectionFrame
+  section5 : Grib2SectionFrame
+  section6 : Grib2SectionFrame
+  section7 : Grib2SectionFrame
+}
+
+// Type aliases
+
+// Traits

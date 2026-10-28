@@ -1,0 +1,59 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "zhou-wei97/grib2/internal/upstream_core"
+
+import {
+  "zhou-wei97/grib2/internal/upstream_context",
+}
+
+// Values
+pub fn binary_bytes_with_u16_be_at(Bytes, Int, Int) -> Bytes
+
+pub fn binary_bytes_with_u32_be_at(Bytes, Int, Int) -> Bytes
+
+pub fn binary_bytes_with_u8_at(Bytes, Int, Int) -> Bytes
+
+pub fn binary_encode_f32le_latin1(Array[Double]) -> String
+
+pub fn binary_has_magic_at(Bytes, Int, Byte, Byte, Byte, Byte) -> Bool
+
+pub fn binary_has_magic_tail(Bytes, Byte, Byte, Byte, Byte) -> Bool
+
+pub fn binary_read_u16_be(Bytes, Int) -> Int
+
+pub fn binary_read_u16_be_view(BytesView, Int) -> Int
+
+pub fn binary_read_u32_be_uint(Bytes, Int) -> UInt
+
+pub fn binary_read_u32_be_view(BytesView, Int) -> Int
+
+pub fn binary_read_u8_as_int(Bytes, Int) -> Int
+
+pub fn context_append_message_raw(@upstream_context.Grib2FileContext, Bytes) -> Result[@upstream_context.Grib2FileContext, @upstream_context.Grib2ContextEditError]
+
+pub fn context_insert_message_raw(@upstream_context.Grib2FileContext, Int, Bytes) -> Result[@upstream_context.Grib2FileContext, @upstream_context.Grib2ContextEditError]
+
+pub fn context_remove_message(@upstream_context.Grib2FileContext, Int) -> Result[@upstream_context.Grib2FileContext, @upstream_context.Grib2ContextEditError]
+
+pub fn context_replace_message_raw(@upstream_context.Grib2FileContext, Int, Bytes) -> Result[@upstream_context.Grib2FileContext, @upstream_context.Grib2ContextEditError]
+
+pub fn datetime_to_unix(Int, Int, Int, Int, Int, Int) -> Int64
+
+pub fn days_in_month(Int, Int) -> Int
+
+pub fn hex_byte(Byte) -> String
+
+pub fn hex_digit(Int) -> String
+
+pub fn is_leap_year(Int) -> Bool
+
+pub fn pad_zero(Int, Int) -> String
+
+pub fn parse_grib2_file(Bytes) -> Result[@upstream_context.Grib2FileContext, @upstream_context.Grib2ParseError]
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits

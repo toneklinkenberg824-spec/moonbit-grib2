@@ -1,0 +1,9 @@
+{
+  "receipts": "ECOSYSTEM-RECEIPTS.json",
+  "sha256": "6a333fe1833d605dc14968e185fbd9ec46ac9223b0059cb94e5278dd995f2449",
+  "nyacsv_api_blob": "fade6bbc99a625bc0982aad205ecbd199b14feaa",
+  "missingness_diagnose_api_blob": "c19b327c7ea526c6cd582f230cf0c5844b84c93e",
+  "observed": "CSV header/data arrays and row-index operations already exist; no row-addressing novelty claim",
+  "difference": "Producer annotates original station ordinal while executing, then standard-library consumer joins exact input/logical CSV record; no ID uniqueness restriction or copied parser",
+  "new_dependencies": false
+}

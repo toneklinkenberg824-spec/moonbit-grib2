@@ -1,0 +1,12 @@
+{
+  "all_existing_source_config_api_byte_identical": true,
+  "root_api_before": "7809ba0e6828442f1f76e6fbb63aaf7626f585354614f88fb0af00749e800d7d",
+  "root_api_after": "7809ba0e6828442f1f76e6fbb63aaf7626f585354614f88fb0af00749e800d7d",
+  "source_additions": [
+    "examples/node-file17/main.mbt",
+    "examples/node-file17/moon.mod",
+    "examples/node-file17/moon.pkg",
+    "examples/node-file17/pkg.generated.mbti"
+  ],
+  "root_api_changes": []
+}

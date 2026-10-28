@@ -1,0 +1,8 @@
+{
+  "factory": "Resolves all requests and snapshots key/field pairs; no sampling call before closure",
+  "header": "Returns before the only sampling call",
+  "data_next": "One field.sample(stations[station_index]) then one CSV row return",
+  "no_sample_arrays_or_whole_csv": "No FieldSamples/sample_stations/sample_requested_fields call in new factory",
+  "reviewed_source_sha256": "7f026a7761723505f738722c7c543be9108bc0b1517adeff36c94c56a3d70616",
+  "observation_limit": "Source control-flow review plus prefix functional test, not measured allocations/RSS/latency"
+}

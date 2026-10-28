@@ -1,0 +1,8 @@
+{
+  "receipts": "PRIMARY-SOURCES.json",
+  "receipt_sha256": "bed8526fd2b2e82680c604382e2216685a2c9ac9bf77086a8ff4e498fe73c8c8",
+  "eccodes_commit": "1ab79d05145abed0b461566b0c1d593acf1ad66f",
+  "wgrib2_commit": "46676e16bcb800044da412abe1135927758aed24",
+  "review": "PRIMARY-REVIEW.md",
+  "disposition": "Interpretation not established; no implementation change or conforming-input bug claim"
+}

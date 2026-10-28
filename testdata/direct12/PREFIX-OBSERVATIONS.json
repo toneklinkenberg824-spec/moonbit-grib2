@@ -1,0 +1,21 @@
+{
+  "by_target": {
+    "js": {
+      "prepared_stations": 10000,
+      "consumed_records_per_iterator": 2,
+      "consumed_data_records_per_iterator": 1
+    },
+    "wasm-gc": {
+      "prepared_stations": 10000,
+      "consumed_records_per_iterator": 2,
+      "consumed_data_records_per_iterator": 1
+    }
+  },
+  "before_control": {
+    "target": "js",
+    "materialized_samples_before_prefix": 10000,
+    "stdout": "before-control-js.stdout.txt"
+  },
+  "scope": "Each new iterator deliberately stops after header+one station;10000 station objects are still prepared; no sampling allocation/RSS/latency measurement",
+  "source_control_flow_review": "CONTROL-FLOW-REVIEW.json"
+}

@@ -1,0 +1,14 @@
+{
+  "receipts": "ECOSYSTEM-RECEIPTS.json",
+  "sha256": "b8cfa5a53ccd0fa0c2241874a34a0f9cdec5b10db100c5a9169c70509fdea083",
+  "registry": "One live Mooncakes grib query returned no modules; not a global absence/novelty claim",
+  "comparison": {
+    "repository": "https://github.com/liuminyuan/moon-missingness",
+    "readme_blob": "6a7cb9ca429357e9841ab738ffb5048c1fd74427",
+    "diagnose_api_blob": "c19b327c7ea526c6cd582f230cf0c5844b84c93e",
+    "observed": "Nullable numeric-table diagnosis/imputation; bounded public API excerpt, not original spatial-policy execution context"
+  },
+  "prior_generic_csv": "Round13 NyaCSV capabilities retained read-only; no parser rerun/new dependency",
+  "delivered_difference": "Typed first per-station blocker while field context exists; no data inference/imputation or CSV framework",
+  "imported_code_or_dependencies": false
+}

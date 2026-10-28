@@ -1,0 +1,34 @@
+{
+  "round": 26,
+  "confirmed_bug": "NaN numeric non-reflexivity wrongly used for source-record identity",
+  "final_cases": 3,
+  "strict_Node_readers": 2,
+  "source_indices": [
+    0,
+    1,
+    2
+  ],
+  "causes": [
+    "invalid-station",
+    "invalid-station",
+    "outside-grid"
+  ],
+  "finite_Infinity_control_stdout_byte_identical": true,
+  "wrong_kind_NaN_to_Infinity_rejected": true,
+  "NaN_not_valid_sampling_or_wildcard": true,
+  "serializer25_source_unchanged": true,
+  "helper_sha256": "f5a53a8dc3ff0ee7f1a5c14d8f76e285915aeae0b33ff969780b9a450b0ba0a1",
+  "files": {
+    "regional.grib2": "5063cce3aedd7462c54080a32f4f949079463bf05e6650077f9e5833fd33169e",
+    "stations.json": "6129ff603d0f18af7b715bd2f013fdfb0a7fb3d7950ddc4e46a07bb114c21a12",
+    "result.csv": "39a8cf0a2989bbcb1d836ce44436773ba6f01c81856a304db62db149cf5c63a7",
+    "diagnostics.jsonl": "a11236bce99cbd1a0dcfcd171daf93f646d26cb09d96f71e1aae9f5c95e15aa3",
+    "joined.expected.json": "302a49cbb425ceb4d6c32459a93f3e80c56a3c1ebb2e1500bd14cceb59900cc7",
+    "control-stations.json": "f89a77cd5ec483f6a8daadda1569784a9d6f6a03cd5192bd6dc14378d9de5913",
+    "control.csv": "1d4ac6f3d434d38c515006e3a878a1801d2a656db4de512cdf68a855edae74b6",
+    "control.diagnostics.jsonl": "ba424aaa38e472fb1de79d4d64326167d7173fd76ff98f8a528e7c122ce128e4",
+    "control.joined.expected.json": "2e7223112f9be7e67b40ada17cc53c0d048c8b9a61b4938f556bc320846e52a1",
+    "wrong-kind.csv": "124ffca5e60a2a9b1570274a97b6eb9c116939e88f100724c278584697756f22"
+  },
+  "old_suites_repeated": false
+}

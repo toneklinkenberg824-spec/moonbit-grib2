@@ -1,0 +1,186 @@
+{
+  "basis": [
+    "https://codes.ecmwf.int/grib/format/grib2/regulations/",
+    "https://codes.ecmwf.int/grib/format/grib2/overview/",
+    "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_temp3-0.shtml",
+    "https://raw.githubusercontent.com/ecmwf/eccodes/2.50.0/definitions/grib2/templates/template.4.horizontal.def"
+  ],
+  "geometry": [
+    {
+      "name": "encoded_longitude361",
+      "sha256": "f1832917aa588b2487619c5a1da80e858e019d0d57da8062cb5b42cf48d9464a",
+      "raw": {
+        "lon1": 361000000,
+        "lon2": 363000000
+      },
+      "expected": "InvalidGrid",
+      "basis": "WMO92.1.7/8 physical domain; integer angular extents, not binary64 slack"
+    },
+    {
+      "name": "encoded_last_longitude372",
+      "sha256": "06750ec2297eaa7703df5ec6f58afa25aad240e64f679b2899d1eb6701a77616",
+      "raw": {
+        "lon2": 372000000
+      },
+      "expected": "InvalidGrid",
+      "basis": "WMO92.1.7/8 physical domain; integer angular extents, not binary64 slack"
+    },
+    {
+      "name": "encoded_north_over90",
+      "sha256": "038868f8d0d19b7c9eed339a1fd4d03c718b6e71443739a9e86581a08d54436e",
+      "raw": {
+        "lat1": 90000001,
+        "lat2": 89000001
+      },
+      "expected": "InvalidGrid",
+      "basis": "WMO92.1.7/8 physical domain; integer angular extents, not binary64 slack"
+    },
+    {
+      "name": "encoded_south_below90",
+      "sha256": "57fdb6580a956846a8c860036ee030fbcacc1bcb7e713b4f7c02294285f279bb",
+      "raw": {
+        "lat1": -89000001,
+        "lat2": -90000001
+      },
+      "expected": "InvalidGrid",
+      "basis": "WMO92.1.7/8 physical domain; integer angular extents, not binary64 slack"
+    },
+    {
+      "name": "inferred_north_over90",
+      "sha256": "f8d029b9a5ba94655e161bbfe755104c764917a07c093ed425934987b7a933c3",
+      "raw": {
+        "scan": 64,
+        "lat1": 89000001,
+        "lat2": 90000000
+      },
+      "expected": "InvalidGrid",
+      "basis": "WMO92.1.7/8 physical domain; integer angular extents, not binary64 slack"
+    },
+    {
+      "name": "inferred_south_below90",
+      "sha256": "944899450b5c4b360b38b26954e07abe493bf8c8ced49d0346a89fa428ae39ea",
+      "raw": {
+        "lat1": -89000001,
+        "lat2": -90000000
+      },
+      "expected": "InvalidGrid",
+      "basis": "WMO92.1.7/8 physical domain; integer angular extents, not binary64 slack"
+    },
+    {
+      "name": "extent_over360",
+      "sha256": "4497e5a707cedac71b058e31e996cbcb083e02ecefc615cc80b90c36cd29c84a",
+      "raw": {
+        "basic": 1,
+        "subdiv": 2000000,
+        "lat1": 2000000,
+        "lat2": 0,
+        "lon1": 0,
+        "lon2": 0,
+        "dx": 360000001,
+        "dy": 2000000
+      },
+      "expected": "InvalidGrid",
+      "basis": "WMO92.1.7/8 physical domain; integer angular extents, not binary64 slack"
+    },
+    {
+      "name": "exact_north",
+      "sha256": "298ee5821cda91b052dff1b7fc14b517fca6f2717b99c24a0fe8393ea1e9f5f2",
+      "unit": "1/93",
+      "exact_latitude": 90.0,
+      "premultiplied_double": 90.00000000000001
+    },
+    {
+      "name": "exact_south",
+      "sha256": "4cfc30789e9d8b190603a317ee43ab84426e8a141622c74babb6889aa8adbb42",
+      "unit": "1/93",
+      "exact_latitude": -90.0,
+      "premultiplied_double": 90.00000000000001
+    }
+  ],
+  "pole_denominator": 93,
+  "metadata": [
+    {
+      "forecast_time": 0,
+      "scale": 0,
+      "scaled_value": 2147483649,
+      "raw": [
+        2147483648,
+        128,
+        2147483649
+      ]
+    },
+    {
+      "forecast_time": -6,
+      "scale": -126,
+      "scaled_value": 4294967294,
+      "raw": [
+        2147483654,
+        254,
+        4294967294
+      ]
+    },
+    {
+      "forecast_time": 2147483647,
+      "scale": 127,
+      "scaled_value": 0,
+      "raw": [
+        2147483647,
+        127,
+        0
+      ]
+    },
+    {
+      "forecast_time": -2147483646,
+      "scale": null,
+      "scaled_value": null,
+      "raw": [
+        4294967294,
+        255,
+        4294967295
+      ]
+    },
+    {
+      "forecast_time": null,
+      "scale": 0,
+      "scaled_value": 42,
+      "raw": [
+        4294967295,
+        0,
+        42
+      ]
+    }
+  ],
+  "eccodes_observations": [
+    {
+      "forecastTime": 0,
+      "scaleFactorOfFirstFixedSurface": 0,
+      "unsigned_default_integer_matches": false,
+      "unsigned_double_accessor": -2147483647.0,
+      "scaledValueOfFirstFixedSurface": -2147483647
+    },
+    {
+      "forecastTime": -6,
+      "scaleFactorOfFirstFixedSurface": -126,
+      "unsigned_default_integer_matches": false,
+      "unsigned_double_accessor": -2.0,
+      "scaledValueOfFirstFixedSurface": -2
+    },
+    {
+      "forecastTime": 2147483647,
+      "scaleFactorOfFirstFixedSurface": 127,
+      "scaledValueOfFirstFixedSurface": 0
+    },
+    {
+      "forecastTime": -2147483646,
+      "scaleFactorOfFirstFixedSurface": null,
+      "scaledValueOfFirstFixedSurface": null
+    },
+    {
+      "all_ones_missing_matches_regulation": false,
+      "forecastTime": -2147483647,
+      "scaleFactorOfFirstFixedSurface": 0,
+      "scaledValueOfFirstFixedSurface": 42
+    }
+  ],
+  "empty_message": "Section0+Section1+Section8; required3\u20137 absent; every concatenation position must error"
+}

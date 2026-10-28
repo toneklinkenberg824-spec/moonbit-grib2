@@ -1,0 +1,17 @@
+[
+  {
+    "id": "nan-latitude",
+    "latitude": "NaN",
+    "longitude": 11
+  },
+  {
+    "id": "nan-longitude",
+    "latitude": 0,
+    "longitude": "NaN"
+  },
+  {
+    "id": "ordinary-outside",
+    "latitude": 2.5,
+    "longitude": 11.25
+  }
+]

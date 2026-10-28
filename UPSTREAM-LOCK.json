@@ -1,0 +1,68 @@
+{
+  "repository": "https://github.com/trkbt10/grib2_mbt",
+  "commit": "00c30ee9a31adca0a15157f1b93ac7269415b9d3",
+  "license": "Apache-2.0",
+  "files": [
+    {
+      "file": "internal/upstream_context/grib2_context.mbt",
+      "source_path": "context/grib2_context.mbt",
+      "original_sha256": "426bafd3c00302773f31aed103cee92473b5e179b8b1b4c2e3230aa39f702e64",
+      "adapted_sha256": "95bcf967809bcff9c4532fcc063b24db0febef82d7638c7d58713d5248b2f248",
+      "modified": true
+    },
+    {
+      "file": "internal/upstream_core/binary.mbt",
+      "source_path": "core/binary.mbt",
+      "original_sha256": "111eace0493d2732f4f337c0aebd8326dddede0ee84f65c647b2eb7e7a15382d",
+      "adapted_sha256": "a840f5d1da652ae1d54f77514a38bd4673247c02eae40c57fb9016275c52a5e1",
+      "modified": true
+    },
+    {
+      "file": "internal/upstream_core/context_ops.mbt",
+      "source_path": "core/context_ops.mbt",
+      "original_sha256": "3b90d0cbe06431603857cf36b9a126f23fd9f0f51dea7e9a6a170ddc833b006c",
+      "adapted_sha256": "fed9288cecf16a37a14522293a4d9a903bb0c906bb66ccb7f46f05ae1370aa0b",
+      "modified": true
+    },
+    {
+      "file": "internal/upstream_core/format_helpers.mbt",
+      "source_path": "core/format_helpers.mbt",
+      "original_sha256": "95ed69f5c414bec9983b653eef7ef7a1be43498ac5f82eb4482a197297adaae8",
+      "adapted_sha256": "e709716d6c5fb396d2842bbbbe94f0f5b4482d0df474a091b3553cf97422013f",
+      "modified": true
+    },
+    {
+      "file": "internal/upstream_core/parser.mbt",
+      "source_path": "core/parser.mbt",
+      "original_sha256": "d536cd07000c25a718bfd34ff0f32bf73063976e92e33e18aff4c36e03db31c8",
+      "adapted_sha256": "4ca83a16641b76f9f33ebe36119b38dbb2e45b27a49f7e9e95da90faa3a8d224",
+      "modified": true
+    },
+    {
+      "file": "internal/upstream_unpack/grib2_bitstream_reader.mbt",
+      "source_path": "typed/section7/grib2_bitstream_reader.mbt",
+      "original_sha256": "4b40c27967ba9ac030a7c2c44996a1a299f1c7c49170bd6143c12c6dcf91d599",
+      "adapted_sha256": "07ab15e49c4203c37da600dffb6908c5a85de8e9dd3359ae5b8541628b6070b6",
+      "modified": true
+    },
+    {
+      "file": "internal/upstream_unpack/grib2_data_unpacker_simple.mbt",
+      "source_path": "typed/section7/grib2_data_unpacker_simple.mbt",
+      "original_sha256": "6d7b228c3a04286fed4e7a9acae9d51c0f8b7eb6fd903f48971d6a5a8a05f8c0",
+      "adapted_sha256": "1e7d807d1d8aa9c62e109ef39668808359fd6f1138da4d747fe114ed1bb9de03",
+      "modified": true
+    }
+  ],
+  "local_repairs": [
+    "Parser bounds/diagnostic adaptations documented in THIRD_PARTY.md",
+    "bits=0 constant returns R / 10^sign_magnitude(D), rather than unscaled R; independent WMO/Decimal reference",
+    "Extreme-scale simple unpacking uses a local balanced binary evaluation fallback; original normal-range path and zero-bit formula retained"
+  ],
+  "local_helpers": [
+    {
+      "file": "internal/upstream_unpack/scaled_value.mbt",
+      "origin": "locally authored numeric adaptation, not copied from upstream",
+      "sha256": "43da928b411073fe0e2ec9a1a63b449c6e04d0796f742ed0ee555b616fe23ff9"
+    }
+  ]
+}

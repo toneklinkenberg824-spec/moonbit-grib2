@@ -1,0 +1,64 @@
+{
+  "geometry_basis": "NOAA template3.0 note1; ratio basic angle/subdivisions, default1e-6",
+  "url": "https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_temp3-0.shtml",
+  "fixtures": [
+    {
+      "name": "microdegree",
+      "sha256": "a4fe5116615b629c5745f6687e419f88a2a76f09d556b18b97da5e224802c0ff",
+      "unit": "1/1000000",
+      "north": "10",
+      "west": "10",
+      "canonical_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "oracle": "Exact integer angular ticks and canonical1..9; API point/sample round trip must preserve node value"
+    },
+    {
+      "name": "nanodegree",
+      "sha256": "2bca840bdf8e01143951dc0a02fbd150dcd517bf3f85b6d2d40a84dbbff1bb0c",
+      "unit": "1/1000000000",
+      "north": "1",
+      "west": "1",
+      "canonical_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "oracle": "Exact integer angular ticks and canonical1..9; API point/sample round trip must preserve node value"
+    },
+    {
+      "name": "fine_reverse",
+      "sha256": "29b252ba594b4953aee93e0be5fb9ba6716f6bc76ad2e6de781ac350e85c1ed7",
+      "unit": "1/4000000000",
+      "north": "1/4",
+      "west": "1/4",
+      "canonical_values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "oracle": "Exact integer angular ticks and canonical1..9; API point/sample round trip must preserve node value"
+    }
+  ],
+  "acceptance": "Exact public node samples keep their valid value and single contributor; zero-width meridians select only that column, empty intervals remain empty, nearby outside/missing points stay None"
+}

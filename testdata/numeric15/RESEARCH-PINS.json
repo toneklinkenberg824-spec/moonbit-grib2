@@ -1,0 +1,12 @@
+{
+  "file": "ECOSYSTEM-RECEIPTS.json",
+  "sha256": "d88738e7a64bd0854d4cad717af6fbc2bfca8d46618fccb8c08854d5bcbbfc38",
+  "considered_feature": "Typed station missing-cause report, deferred after numeric defect reproduction",
+  "comparison": {
+    "repository": "https://github.com/liuminyuan/moon-missingness",
+    "readme_blob": "6a7cb9ca429357e9841ab738ffb5048c1fd74427",
+    "diagnose_api_blob": "c19b327c7ea526c6cd582f230cf0c5844b84c93e",
+    "observed": "Nullable-table missingness diagnosis/imputation. Bounded API excerpt, not global ecosystem absence claim."
+  },
+  "imported_code_or_dependencies": false
+}
