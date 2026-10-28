@@ -68,7 +68,18 @@ fn main raise {
   if args.length() != 4 {
     fail("usage: GRIB_PATH STATIONS_JSON OUTPUT_CSV FIELD_INDEX")
   }
-  let index = @string.parse_int(args[3][:])
+  let index = @string.parse_int(args[3][:]) catch {
+    Failure(_) => {
+      let event : Json = {
+        "phase": "selection",
+        "code": "invalid-field-index",
+        "argument": "FIELD_INDEX",
+      }
+      diagnostic(event.stringify())
+      fail("FIELD_INDEX must parse as a supported Int")
+    }
+    error => raise error
+  }
   let input : Array[InputStation] = @json.from_json(
     @json.parse(read_text(args[1])[:]),
   )

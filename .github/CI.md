@@ -18,6 +18,9 @@ on a developer's global SDK or use paid services.
   CSV and joins diagnostics. Committed expectations cover metadata, missing
   values, the NaN identity repair, strict JSON number representation, later-field
   decode failures and preservation of an existing output file.
+  A separate real-process selection contract checks malformed Int arguments,
+  all observed accepted integer spellings, literal diagnostics, original
+  decode/IO failures and absent/pre-existing output guards.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

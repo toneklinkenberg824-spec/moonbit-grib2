@@ -256,6 +256,8 @@ JS/Wasm-GC各18项相关测试通过（4项新增、12项小量值/普通值回�
 
 独立例程 examples/node-file17 接收已有支持范围内的GRIB文件、站点JSON数组、CSV输出路径和从0开始的字段索引。它读完整文件后明确选择一个字段，保留所有站点行；覆盖域外或无效坐标仍写原有空数值CSV行，同时把sample_result原因写到stderr。成功stdout给出选中字段的来源、产品和行数。
 
+FIELD_INDEX解析失败时，首条stderr事件为selection / invalid-field-index，并标明argument=FIELD_INDEX；随后仍可能有运行时失败栈，退出码非零、stdout为空、输出文件保持未创建或原字节不变。原SDK支持的整数写法继续可用；可解析但超出字段范围的整数保持field-index-out-of-range诊断。完整事件、示例与其它异常边界见examples/node-file17/README.md。
+
 例程限定Node/JavaScript，要求Node22.3+，已在本机Node24.11.0验证；主库仍保持原有JS/Wasm-GC及core依赖合同。站点JSON沿用id/latitude/longitude，接受UTF8和可选BOM；输出保持UTF8、CRLF和原11列，目标已存在时报错，不覆盖。完整工作区命令见 examples/node-file17/README.md。
 
 本轮8个实际文件场景通过，包括真实派生NOAA/IFS输入的两种字段选择、空表、输入错误和原输出保护。读取并独立核对了实际磁盘CSV及既有文件字节；使用历史数值预期，没有重新下载或运行科学参考，也没有重复16轮分流套件。全部旧实现、配置和API哈希保持不变。

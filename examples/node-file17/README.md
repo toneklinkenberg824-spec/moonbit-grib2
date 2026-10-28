@@ -4,6 +4,12 @@
 
     GRIB_PATH STATIONS_JSON OUTPUT_CSV FIELD_INDEX
 
+FIELD_INDEX仍交给项目SDK原有整数解析器处理，包括已验证的+2、02、0x2、0b10、0o2、0_2和-0写法。无法解析为SDK Int的文本（包括小数写法和Int溢出）会在读取输入文件前，以非零退出码终止，stdout为空；首条stderr事件为：
+
+    {"phase":"selection","code":"invalid-field-index","argument":"FIELD_INDEX"}
+
+其后仍可能有MoonBit运行时失败栈。消费者应读取首条JSON事件并检查退出码；目标CSV保持未创建或原字节不变。已解析但为负/超出字段数量的整数继续使用原field-index-out-of-range诊断。参数数量、输入I/O/JSON、解码和写入异常沿用原路径；这个事件只分类索引解析失败。
+
 字段索引从0开始，按read_fields返回顺序。成功stdout是包含产品/来源/行数的JSON摘要；CSV写入指定文件。stderr保留站点失败原因，解码与索引错误留在外层。JSON数组中每项需要id字符串、latitude/longitude数字；UTF8和可选BOM均支持。固定SDK也解码非有限Double的特殊JSON字符串"NaN"、"Infinity"、"-Infinity"；它们仍按无效坐标处理，不表示可用采样。坐标无效/区域外仍保留对应空数值CSV行，JSON缺字段则整次失败。
 
 需要固定项目SDK可用及Node22.3+（实际Node24.11.0通过）。这是Node/JavaScript专用宿主例程；主库依赖/API未改，不是浏览器或Wasm文件I/O程序，也不增加GRIB格式支持。

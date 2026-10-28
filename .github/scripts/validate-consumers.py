@@ -65,6 +65,8 @@ def hosts(work):
     for module in (sampler, inventory):
         build(module, "js")
     producer, listing = binary(work, sampler), binary(work, inventory)
+    command([sys.executable, ROOT / ".github/scripts/check-selection-errors.py",
+             "--producer", producer, "--work", work / "selection-contract"], work)
     source = ROOT / "testdata/inventory24"
     fields = strict_json(command(["node", listing, source / "forecast.grib2"], work).stdout)
     assert fields["field_count"] == 4
