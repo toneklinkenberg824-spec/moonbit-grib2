@@ -21,6 +21,10 @@ on a developer's global SDK or use paid services.
   A separate real-process selection contract checks malformed Int arguments,
   all observed accepted integer spellings, literal diagnostics, original
   decode/IO failures and absent/pre-existing output guards.
+- A public FieldQuery catalogue consumer runs on both JS and Wasm-GC. Its
+  independent raw-section oracle checks a six-field/five-message fixture,
+  complete original identities, matching flags, encoded time/surface distinctions,
+  original unique/batch error contracts and detached metadata snapshots.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

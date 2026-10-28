@@ -52,6 +52,8 @@ jobs:
         run: bash .github/scripts/setup-moonbit.sh
       - name: Node file producer, inventory and diagnostic consumer
         run: python .github/scripts/validate-consumers.py hosts --work "${{ runner.temp }}/grib2-hosts"
+      - name: FieldQuery catalogue on JS and Wasm-GC
+        run: python .github/scripts/check-query-catalog.py --output "${{ runner.temp }}/grib2-query-catalog"
       - name: Checkout compatible NyaCSV source
         run: |
           git clone --no-checkout https://github.com/moonbit-community/NyaCSV.git "${{ runner.temp }}/grib2-NyaCSV"

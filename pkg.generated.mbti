@@ -6,6 +6,8 @@ import {
 }
 
 // Values
+pub fn inspect_field_query(ArrayView[GriddedField], FieldQuery) -> Result[FieldQueryReport, GribError]
+
 pub fn read_fields(Bytes, max_points? : Int) -> Result[Array[GriddedField], GribError]
 
 pub fn read_message(Bytes, max_points? : Int) -> Result[GriddedField, GribError]
@@ -59,6 +61,19 @@ pub struct FieldQuery {
 pub fn FieldQuery::forecast_time_filter(Self) -> ForecastTimeFilter
 pub fn FieldQuery::new(Int, Int, Int, centre? : Int, subcentre? : Int, master_table? : Int, local_table? : Int, time_unit? : Int, forecast_time? : Int, first_surface? : Surface, second_surface? : Surface, reference_time? : Array[Int]) -> Self
 pub fn FieldQuery::with_forecast_time_filter(Self, ForecastTimeFilter) -> Self
+
+pub(all) struct FieldQueryEntry {
+  index : Int
+  matches : Bool
+  origin : Origin
+  product : Product
+} derive(ToJson, @debug.Debug)
+
+pub(all) struct FieldQueryReport {
+  field_count : Int
+  match_count : Int
+  entries : Array[FieldQueryEntry]
+} derive(ToJson, @debug.Debug)
 
 pub(all) struct FieldRequest {
   key : String

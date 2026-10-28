@@ -117,6 +117,19 @@ println(rows.to_json().stringify())
 
 省略可选筛选项表示通配；Surface按原始kind/scale/scaled_value精确比较，85000×10^0与850000×10^-1即使物理值相同，也属于不同编码查询。无时间/层单位换算；forecast_time省略为通配；显式缺失、任意或指定整数可用下面的ForecastTimeFilter。旧`select_fields`接口保留。
 
+### 查看完整查询候选目录
+
+inspect_field_query(fields, query)返回FieldQueryReport：field_count、match_count和entries。每个entry含index、matches、原Origin及Product快照；无匹配或多匹配时也返回完整目录，便于查看现有层、起报和时效原码，再细化查询。非法reference_time长度仍返回原InvalidRequest。
+
+    let report = @grib2.inspect_field_query(fields, query).unwrap()
+    println(report.to_json().stringify(indent=2))
+
+入口直接复用本库完整FieldQuery匹配规则，不省略、排序、去重或截断字段，没有输出预算。entries按传入视图顺序排列；index相对该视图，从完整read_fields数组传入时才对应全文件位置。原消息/消息内字段/byte_offset始终看origin。即使match_count=0，目录仍列出全部可用字段及false标记。
+
+Product保留原始Surface(kind/scale/scaled_value)、起报分量、时效单位/整数；缺失forecast_time沿原Product JSON规则省略，0保留。等物理值但原缩放编码不同的层仍不匹配，不做层单位、日历或时效换算。返回的reference_time数组与字段内部状态分离。该目录只给整体匹配标记，不逐条件生成失败原因，也不替代原select_unique_field或命名批量入口；原缺场/歧义错误保持。
+
+运行moon run cmd/query-catalog --target js或--target wasm-gc，可查看同一6字段/5消息人工文件上的缺场、唯一、歧义、missing/0、不同Surface编码及视图/非法查询。原始字节、手工身份和独立验收见testdata/query-inspection。输入仍是已完整解码的字段；该元数据快照不是文件头扫描、流式读取或全量气象认证。
+
 ### 显式区分时效缺失与分析时效0
 
 同一参数、层和起报批次可能同时存在时效缺失、0、6或负时效。`ForecastTimeFilter`提供`AnyTime`、`MissingTime`和`ExactTime(Int)`；`with_forecast_time_filter`返回细化后的新查询，保留原查询和其它筛选条件。

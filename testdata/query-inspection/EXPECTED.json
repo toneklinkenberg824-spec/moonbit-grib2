@@ -1,0 +1,300 @@
+{
+  "fixtureSHA256": "3d71132ac72aeca9adab467c4f4dc2d669e75ca01e9e1008db525317663b9c18",
+  "fixtureBytes": 967,
+  "messageLengths": [
+    180,
+    247,
+    180,
+    180,
+    180
+  ],
+  "entries": [
+    {
+      "index": 0,
+      "origin": {
+        "message": 0,
+        "field": 0,
+        "byte_offset": 0,
+        "scanning_mode": 0
+      },
+      "product": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 98,
+        "subcentre": 0,
+        "master_table": 4,
+        "local_table": 0,
+        "reference_time": [
+          2007,
+          3,
+          23,
+          12,
+          0,
+          0
+        ],
+        "time_unit": 1,
+        "first_surface": {
+          "kind": 103,
+          "scale": 0,
+          "scaled_value": 2
+        },
+        "second_surface": {
+          "kind": 255
+        }
+      },
+      "constantValue": 101
+    },
+    {
+      "index": 1,
+      "origin": {
+        "message": 1,
+        "field": 0,
+        "byte_offset": 180,
+        "scanning_mode": 0
+      },
+      "product": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 98,
+        "subcentre": 0,
+        "master_table": 4,
+        "local_table": 0,
+        "reference_time": [
+          2007,
+          3,
+          23,
+          12,
+          0,
+          0
+        ],
+        "time_unit": 1,
+        "first_surface": {
+          "kind": 103,
+          "scale": 0,
+          "scaled_value": 2
+        },
+        "second_surface": {
+          "kind": 255
+        },
+        "forecast_time": 0
+      },
+      "constantValue": 202
+    },
+    {
+      "index": 2,
+      "origin": {
+        "message": 1,
+        "field": 1,
+        "byte_offset": 180,
+        "scanning_mode": 0
+      },
+      "product": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 98,
+        "subcentre": 0,
+        "master_table": 4,
+        "local_table": 0,
+        "reference_time": [
+          2007,
+          3,
+          23,
+          12,
+          0,
+          0
+        ],
+        "time_unit": 1,
+        "first_surface": {
+          "kind": 100,
+          "scale": 0,
+          "scaled_value": 85000
+        },
+        "second_surface": {
+          "kind": 255
+        },
+        "forecast_time": 6
+      },
+      "constantValue": 303
+    },
+    {
+      "index": 3,
+      "origin": {
+        "message": 2,
+        "field": 0,
+        "byte_offset": 427,
+        "scanning_mode": 0
+      },
+      "product": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 98,
+        "subcentre": 0,
+        "master_table": 4,
+        "local_table": 0,
+        "reference_time": [
+          2007,
+          3,
+          23,
+          12,
+          0,
+          0
+        ],
+        "time_unit": 1,
+        "first_surface": {
+          "kind": 100,
+          "scale": 1,
+          "scaled_value": 850000
+        },
+        "second_surface": {
+          "kind": 255
+        },
+        "forecast_time": 6
+      },
+      "constantValue": 404
+    },
+    {
+      "index": 4,
+      "origin": {
+        "message": 3,
+        "field": 0,
+        "byte_offset": 607,
+        "scanning_mode": 0
+      },
+      "product": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 98,
+        "subcentre": 0,
+        "master_table": 4,
+        "local_table": 0,
+        "reference_time": [
+          2007,
+          3,
+          23,
+          18,
+          0,
+          0
+        ],
+        "time_unit": 1,
+        "first_surface": {
+          "kind": 100,
+          "scale": 0,
+          "scaled_value": 85000
+        },
+        "second_surface": {
+          "kind": 255
+        },
+        "forecast_time": 6
+      },
+      "constantValue": 505
+    },
+    {
+      "index": 5,
+      "origin": {
+        "message": 4,
+        "field": 0,
+        "byte_offset": 787,
+        "scanning_mode": 0
+      },
+      "product": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 1,
+        "centre": 98,
+        "subcentre": 0,
+        "master_table": 4,
+        "local_table": 0,
+        "reference_time": [
+          2007,
+          3,
+          23,
+          12,
+          0,
+          0
+        ],
+        "time_unit": 0,
+        "first_surface": {
+          "kind": 100,
+          "scale": 0,
+          "scaled_value": 85000
+        },
+        "second_surface": {
+          "kind": 255
+        },
+        "forecast_time": 360
+      },
+      "constantValue": 606
+    }
+  ],
+  "queries": {
+    "absent-level-time": [],
+    "unique-encoded-A": [
+      2
+    ],
+    "ambiguous-A-any-run": [
+      2,
+      4
+    ],
+    "forecast-six-any-layer": [
+      2,
+      3,
+      4
+    ],
+    "missing-time": [
+      0
+    ],
+    "analysis-zero": [
+      1
+    ],
+    "encoded-B": [
+      3
+    ],
+    "same-parameter-any": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "other-parameter-minutes": [
+      5
+    ],
+    "no-unit-conversion": [],
+    "different-centre": [],
+    "time-unit-mismatch": []
+  },
+  "equalPhysicalSurface": {
+    "kind": 100,
+    "first": [
+      0,
+      85000
+    ],
+    "second": [
+      1,
+      850000
+    ],
+    "exactPhysicalValue": 85000
+  },
+  "slice": {
+    "wholeFileIndices": [
+      1,
+      2,
+      3
+    ],
+    "matchedLocalIndices": [
+      1,
+      2
+    ]
+  },
+  "emptyReport": {
+    "field_count": 0,
+    "match_count": 0,
+    "entries": []
+  },
+  "invalidReferenceMessage": "reference_time must contain six components"
+}
