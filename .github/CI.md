@@ -25,6 +25,10 @@ on a developer's global SDK or use paid services.
   independent raw-section oracle checks a six-field/five-message fixture,
   complete original identities, matching flags, encoded time/surface distinctions,
   original unique/batch error contracts and detached metadata snapshots.
+- A public regional-node iterator consumer runs on JS and Wasm-GC. Independent
+  raw bits and hand-written node tables check dateline boxes, duplicate endpoints,
+  scan identities, null/zero values, old crop/error compatibility and pull cursors;
+  a million-point constant field is consumed only for its first two nodes.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

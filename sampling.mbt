@@ -222,32 +222,10 @@ pub fn GriddedField::crop(
   self : GriddedField,
   bbox : BBox,
 ) -> Result[Array[GridPoint], GribError] {
-  if !finite(bbox.south) ||
-    !finite(bbox.north) ||
-    !finite(bbox.west) ||
-    !finite(bbox.east) ||
-    bbox.south > bbox.north ||
-    bbox.south < -90.0 ||
-    bbox.north > 90.0 {
-    return Err(InvalidRequest("invalid bbox"))
+  match self.crop_iter(bbox) {
+    Ok(points) => Ok(points.collect())
+    Err(error) => Err(error)
   }
-  let full = (bbox.east - bbox.west).abs() >= 360.0
-  let west = wrap(bbox.west)
-  let span = wrap(wrap(bbox.east) - west)
-  let out : Array[GridPoint] = []
-  for r in 0..<self.nrows {
-    let lat = self.north - r.to_double() * self.dy
-    if lat < bbox.south || lat > bbox.north {
-      continue
-    }
-    for c in 0..<self.unique_cols {
-      let lon = wrap(self.west + c.to_double() * self.dx)
-      if full || wrap(lon - west) <= span {
-        out.push(self.point(r, c).unwrap())
-      }
-    }
-  }
-  Ok(out)
 }
 
 ///|

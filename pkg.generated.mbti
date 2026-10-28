@@ -126,6 +126,7 @@ pub struct GriddedField {
 }
 pub fn GriddedField::cols(Self) -> Int
 pub fn GriddedField::crop(Self, BBox) -> Result[Array[GridPoint], GribError]
+pub fn GriddedField::crop_iter(Self, BBox) -> Result[Iter[GridPoint], GribError]
 pub fn GriddedField::get(Self, Int, Int) -> Double?
 pub fn GriddedField::interpolate_latlon(Self, Double, Double) -> Double?
 pub fn GriddedField::is_global(Self) -> Bool
