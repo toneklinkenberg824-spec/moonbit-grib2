@@ -6,6 +6,8 @@ import {
 }
 
 // Values
+pub fn index_message_spans(Bytes) -> Result[Array[MessageSpan], MessageFrameError]
+
 pub fn inspect_field_query(ArrayView[GriddedField], FieldQuery) -> Result[FieldQueryReport, GribError]
 
 pub fn read_fields(Bytes, max_points? : Int) -> Result[Array[GriddedField], GribError]
@@ -140,6 +142,30 @@ pub fn GriddedField::sample(Self, Station) -> Sample
 pub fn GriddedField::sample_result(Self, Station) -> Result[Sample, SampleFailure]
 pub fn GriddedField::sample_stations(Self, ArrayView[Station]) -> Array[Sample]
 pub fn GriddedField::values(Self) -> Array[Double]
+
+pub(all) enum MessageFrameError {
+  EmptyInput
+  InvalidMagic(Int)
+  TruncatedHeader(Int)
+  UnsupportedEdition(Int)
+  ShortMessageLength(Int)
+  MessageLengthOutOfBounds(Int)
+  InvalidEndMarker(Int)
+  MissingSection(Int)
+  TruncatedSectionHeader(Int)
+  ShortSectionLength(Int)
+  SectionLengthOutOfBounds(Int)
+  InvalidSectionNumber(Int)
+  InvalidFirstSection(Int)
+} derive(Eq, @debug.Debug)
+
+pub(all) struct MessageSpan {
+  index : Int
+  byte_offset : Int
+  length : Int
+  edition : Int
+  discipline : Int
+} derive(Eq, ToJson, @debug.Debug)
 
 pub(all) struct Origin {
   message : Int

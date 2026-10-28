@@ -93,6 +93,45 @@ bytes由宿主提供。完整准确签名见pkg.generated.mbti。
 - sample/sample_stations保留贡献格点与权重；缺测JSON显式null。
 - 每字段默认最多10,000,000点，可用max_points调整；坏次序/长度/点数和预算超限均显式报错。
 
+### 在解码前索引原消息
+
+`index_message_spans(bytes)` 返回 `MessageSpan` 数组，每项只有原消息的 `index`、
+`byte_offset`、`length`、`edition` 和原始 `discipline`。当上游manifest已经给出原消息序号时，
+可从含支持及不支持模板的容器交付该消息的精确原字节，再交给原解码器：
+
+```mbt nocheck
+///|
+let spans = @grib2.index_message_spans(bytes).unwrap()
+
+///|
+let original = spans[1] // 示例：manifest已确认第1号原消息是所需消息
+
+///|
+let selected = bytes[original.byte_offset:original.byte_offset + original.length].to_owned()
+
+///|
+let fields = @grib2.read_fields(selected).unwrap()
+// 把original与fields一起保存；fields的Origin仍相对于selected，不偷换全文件身份。
+```
+
+这是原消息序号，不能当作字段序号；多字段原消息只有一个span，`read_message()` 仍要求恰一字段。
+span不包含field_count、参数、时效或模板支持标记，不能代替解码或查询目录。
+选出的不支持模板仍返回原 `UnsupportedTemplate` 错误；全容器 `read_fields()` 仍整体失败。
+
+此接口严格从0按声明长度走到EOF：空输入失败；预期边界必须有GRIB及edition2；
+unsigned64总长至少20且不超过剩余字节，在转Int及加法前检查；声明尾必须是7777。
+section区域非空且首段为1，各段header至少5字节，声明段长至少5且不跨尾界，编号限1..7。
+段内容、重复段的语义顺序及完整科学有效性不作检查，因此framing成功仍可能被旧解码器拒绝。
+失败以 `MessageFrameError` 返回原始字节位置，不返回成功前缀，不跳垃圾、不搜索payload里的GRIB/7777。
+不足16字节但匹配magic前缀是 `TruncatedHeader`，不匹配则是 `InvalidMagic`；
+检查顺序和其它错误变体见生成接口与 `testdata/message-spans`。
+
+仓库已有 `pub internal/upstream_core::parse_grib2_file` 技术路线，不解网格即可取得offset/length/raw，
+但会物化section/submessage上下文；混合容器的部分范围raw会复制，整输入view可能复用Bytes。
+新根接口直接读原Bytes，只生成span元数据，不调用或映射该上下文解析器，不复制每消息raw。
+输入仍常驻内存，元数据随消息数量增长；选片 `to_owned()` 可能复制，不声称恒定总内存或已测提速。
+`moon run cmd/message-spans --target js`（或 `wasm-gc`）运行手字节接收方，展示原span与局部解码身份。
+
 ### 按需提取区域原始节点
 
 导出或预览一个大区域时，可用 `crop_iter()` 逐个产生节点，取到所需前缀后停止，

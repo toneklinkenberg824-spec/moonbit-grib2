@@ -29,6 +29,10 @@ on a developer's global SDK or use paid services.
   raw bits and hand-written node tables check dateline boxes, duplicate endpoints,
   scan identities, null/zero values, old crop/error compatibility and pull cursors;
   a million-point constant field is consumed only for its first two nodes.
+- A stable root message-span index and exact-byte decoder receiver run on JS and
+  Wasm-GC against51 pre-frozen literal framing vectors. Checks include mixed
+  supported/unsupported messages, unsigned bounds, section boundaries, payload
+  magic, original span context and unchanged slice-local decoder identities.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture
