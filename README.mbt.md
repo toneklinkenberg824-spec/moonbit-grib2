@@ -132,6 +132,16 @@ section区域非空且首段为1，各段header至少5字节，声明段长至�
 输入仍常驻内存，元数据随消息数量增长；选片 `to_owned()` 可能复制，不声称恒定总内存或已测提速。
 `moon run cmd/message-spans --target js`（或 `wasm-gc`）运行手字节接收方，展示原span与局部解码身份。
 
+### 从混合容器交付原消息文件
+
+独立Node例程 `examples/node-message-extract` 接收 `INPUT_GRIB OUTPUT_GRIB MESSAGE_INDEX`，
+把manifest已知的原消息序号交付为新文件。它先检查完整输入framing，以wx独占创建目标，
+写完重新读回逐字节比较，成功JSON记录原span、实际读入输入及读回输出的SHA-256。
+原消息中的多字段、opaque payload与原字节保持不变；不支持模板也可交付，下游仍按旧支持范围解码。
+下游Origin相对选片文件，外部原span/哈希记录单独保留；MESSAGE_INDEX不是下游FIELD_INDEX。
+校验失败不创建输出，已有目标/输入不覆盖；宿主写入或读回失败可能留下新建文件供检查，
+不承诺原子回滚或解码流式化。构建、错误事件与实文件步骤见该例程README。
+
 ### 按需提取区域原始节点
 
 导出或预览一个大区域时，可用 `crop_iter()` 逐个产生节点，取到所需前缀后停止，

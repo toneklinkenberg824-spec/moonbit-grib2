@@ -1,0 +1,6 @@
+import {
+  "zhou-wei97/grib2",
+  "moonbitlang/core/string",
+}
+
+pkgtype(kind: "executable")

@@ -58,6 +58,8 @@ jobs:
         run: python .github/scripts/check-crop-iter.py --output "${{ runner.temp }}/grib2-crop-iter"
       - name: Framed message spans and exact-byte handoff on JS and Wasm-GC
         run: python .github/scripts/check-message-spans.py --output "${{ runner.temp }}/grib2-message-spans"
+      - name: Node original-message file delivery and receiver
+        run: python .github/scripts/check-message-extract.py --work "${{ runner.temp }}/grib2-message-extract"
       - name: Checkout compatible NyaCSV source
         run: |
           git clone --no-checkout https://github.com/moonbit-community/NyaCSV.git "${{ runner.temp }}/grib2-NyaCSV"

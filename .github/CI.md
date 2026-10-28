@@ -33,6 +33,10 @@ on a developer's global SDK or use paid services.
   Wasm-GC against51 pre-frozen literal framing vectors. Checks include mixed
   supported/unsupported messages, unsigned bounds, section boundaries, payload
   magic, original span context and unchanged slice-local decoder identities.
+- A Node binary file receiver extracts original messages from a961-byte mixed
+  container, exclusively creates output, verifies physical readback and hashes,
+  and hands NOAA/IFS/multi-field outputs to existing inventory/11-column CSV hosts.
+  Filesystem/error controls include an externally injected readback mismatch.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture
