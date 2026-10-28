@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Official archive layout/bundling interface: https://cli.moonbitlang.com/install/unix.sh
 set -euo pipefail
-test -n "$MOON_HOME"
 test -d "$RUNNER_TEMP"
+export MOON_HOME="$RUNNER_TEMP/grib2-moon"
 test "$(uname -ms)" = "Linux x86_64"
 test ! -e "$MOON_HOME/bin/moon"
 version='0.10.12%2B1634b282e'
@@ -21,4 +21,5 @@ export PATH="$MOON_HOME/bin:$PATH"
 moon -C "$MOON_HOME/lib/core" bundle --target js --warn-list -a
 moon -C "$MOON_HOME/lib/core" bundle --target wasm-gc --warn-list -a
 printf '%s\n' "$MOON_HOME/bin" >> "$GITHUB_PATH"
+printf 'MOON_HOME=%s\n' "$MOON_HOME" >> "$GITHUB_ENV"
 moon version --all

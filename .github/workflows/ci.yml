@@ -11,8 +11,6 @@ jobs:
       fail-fast: false
       matrix:
         target: [js, wasm-gc]
-    env:
-      MOON_HOME: ${{ runner.temp }}/grib2-moon
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
         with:
@@ -39,7 +37,6 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
-      MOON_HOME: ${{ runner.temp }}/grib2-moon
       PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
