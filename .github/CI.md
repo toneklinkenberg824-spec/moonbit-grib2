@@ -67,6 +67,12 @@ on a developer's global SDK or use paid services.
   crops, narrow support and old positive-step/polar/budget/error behavior.
   It accepts0/missing increments only on an endpoint-consistent singleton axis,
   never infers unused coverage or extrapolates off that represented point/line.
+- A diagnostic receiver gate freshly builds the unchanged Node file adapter and
+  consumes four actual CSV rows with positive/negative nested5002-digit ancillary
+  integers. It verifies all11columns, exact source values, standard JSON numeric
+  output, strict coordinate/NaN rejection and the unchanged global integer limit.
+  Only the optional Python station JSON parser changes; no coordinate, grid or
+  core-library range is extended by this gate.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

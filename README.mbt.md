@@ -459,6 +459,13 @@ Node 文件例程原本就把输入坐标读为 Double。JSON 中的整数900719
 
 可运行输入与实际标准JSON输出见testdata/strictjson25，命令见examples/node-file17/README.md。24轮字段清单及原采样入口、CSV格式和核心API均保持。
 
+站点附带信息中的超长整数字面量也可由该Python消费者保留。原Node入口正常忽略这些应用字段，
+但Python默认的整数字符串转换位数限制曾使5002位附带整数在关联前报错。现在只在读取站点JSON及
+回取原片段时使用本地精确整数解析：join()仍返回原值的int，CLI保留全部数字、符号及嵌套位置，
+不转成Double、字符串或null，不修改进程的全局整数位数限制。坐标和其余严格校验仍走原路径。
+实际4行CSV、3条失败记录及正/负嵌套大整数的完整消费步骤见testdata/ancillary-integer；
+原11列、Product/Origin/贡献者、已有1e400片段输出和非JSON数值拒绝均保留。主库及Node源码不变。
+
 ### 非有限坐标的失败关联
 
 固定SDK的Double JSON解码除了普通数值，也接受特殊字符串"NaN"、"Infinity"、"-Infinity"。这些表示仍是无效坐标：原文件生产器保留空值CSV行并报告invalid-station，不把它们采样成有效数据。普通数字字符串不因此成为新的坐标输入格式。

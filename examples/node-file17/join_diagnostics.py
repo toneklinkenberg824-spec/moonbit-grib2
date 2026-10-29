@@ -1,6 +1,7 @@
 """Join successful file-adapter stderr to original input and logical CSV rows."""
 import argparse
 import csv
+from decimal import Decimal
 import json
 import math
 from pathlib import Path
@@ -11,8 +12,14 @@ def _same_coordinate(csv_value, original_value):
     return actual == expected or (math.isnan(actual) and math.isnan(expected))
 
 
+def _json_integer(text):
+    # Valid ancillary JSON integers may exceed Python's text-to-int limit.
+    # Decimal construction and integer conversion are exact and local.
+    return int(Decimal(text))
+
+
 def join(station_path, csv_path, diagnostic_path):
-    stations = json.loads(Path(station_path).read_text(encoding="utf-8-sig"))
+    stations = json.loads(Path(station_path).read_text(encoding="utf-8-sig"), parse_int=_json_integer)
     # UTF8 file bytes bound any field's characters; restore the caller's limit.
     previous_limit = csv.field_size_limit()
     try:
@@ -63,10 +70,10 @@ def _original_station_fragments(station_path):
     def reject_constant(value):
         raise ValueError("non-JSON numeric token in original stations: " + value)
 
-    stations = json.loads(text, parse_constant=reject_constant)
+    stations = json.loads(text, parse_int=_json_integer, parse_constant=reject_constant)
     if not isinstance(stations, list):
         raise ValueError("original station JSON must be an array")
-    decoder = json.JSONDecoder(parse_constant=reject_constant)
+    decoder = json.JSONDecoder(parse_int=_json_integer, parse_constant=reject_constant)
     position = text.index("[") + 1
     fragments = []
     for _ in stations:

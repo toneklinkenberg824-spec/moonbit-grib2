@@ -123,6 +123,18 @@ sparse-stations.json配套样例中，成功站点在输入1，返回对象使�
 严格CSV、JSON解析和先前的字段上限恢复、坐标比较、LF诊断边界均未改动。
 主库、Node生产器和字段清单也未改动，没有新增依赖或编码设置。
 
+## 附带整数字面量的完整保留
+
+应用附带字段可以使用超过Python默认整数文本转换位数的合法JSON整数。
+原Node生产器可以正常处理必需坐标并保留失败行，但旧关联器在读取5002位
+附带整数时先报ValueError，无法交付已成功运行的配套关联结果。
+
+现在只在站点JSON及回取原片段的解码器中提供本地精确整数解析，join()仍
+保留正/负/嵌套整数的Python int值；CLI保持原数字文本，不转成Double、
+字符串或null。不修改sys的全局整数位数限制，也不改变坐标消费或采样规则。
+完整可运行门及输入见testdata/ancillary-integer。它真实生成4行CSV并读回
+3条关联记录，另确认坏坐标和非JSON NaN仍拒绝；Node和MoonBit源码不变。
+
 ## 非有限坐标的原失败行关联
 
 固定SDK的Double FromJson已有特殊字符串NaN/Infinity/-Infinity表示；生产器
