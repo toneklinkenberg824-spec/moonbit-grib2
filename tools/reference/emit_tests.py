@@ -153,5 +153,5 @@ fn main {{
   println(results.to_json().stringify(indent=2))
 }}
 ''')
-(P/'cmd/main/moon.pkg').write_text('import { "zhou-wei97/grib2" @grib2, }\noptions("is-main": true)\n')
+(P/'cmd/main/moon.pkg').write_text('import { "toneklinkenberg824-spec/grib2" @grib2, }\noptions("is-main": true)\n')
 print('Emitted',len(ref['fields'])+sum('error' not in v for v in real),'field references and independent sampling tests')

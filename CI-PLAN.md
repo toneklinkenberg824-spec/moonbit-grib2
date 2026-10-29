@@ -1,5 +1,9 @@
 # 必要 CI 与验收边界
 
+当前主模块为`toneklinkenberg824-spec/grib2`，仓库为`toneklinkenberg824-spec/moonbit-grib2`。
+自有依赖、生成接口及公共消费者配置使用此命名空间；`local/`示例身份及第三方NyaCSV依赖保持各自含义。
+现有完整产品workflow负责新命名空间下的双目标核心与全部必要消费者，命名空间调整不更改算法/格式或参考数据。
+
 本计划描述必要门；结论以对应最终Git head的真实GitHub Actions run/jobs/steps为准。
 workflow为`.github/workflows/ci.yml`，保留固定MoonBit工具链、Node24.11.0、Python3.14.4和只读权限。
 

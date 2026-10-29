@@ -99,7 +99,7 @@ test "forecast09 missing-only absent duplicate and ambiguous batch fail" {{
 ''')
 (P/'forecast09_test.mbt').write_text(header+'\n'.join(tests),encoding='utf-8')
 E=P/'cmd/forecast';E.mkdir(exist_ok=True)
-(E/'moon.pkg').write_text('import {\n  "zhou-wei97/grib2" @grib2,\n}\n\noptions("is-main": true)\n',encoding='utf-8')
+(E/'moon.pkg').write_text('import {\n  "toneklinkenberg824-spec/grib2" @grib2,\n}\n\noptions("is-main": true)\n',encoding='utf-8')
 (E/'main.mbt').write_text(f'''///|
 // Synthetic forecast identity example, not an operational forecast.
 fn main {{

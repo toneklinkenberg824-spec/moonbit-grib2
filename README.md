@@ -1,6 +1,8 @@
 # grib2 — 可追溯气象网格采样
 
-源码仓库：[github.com/toneklinkenberg824-spec/moonbit-grib2](https://github.com/toneklinkenberg824-spec/moonbit-grib2)。源码署名与Mooncakes模块名`zhou-wei97/grib2`保留；本次发布没有改写原作者或上游归属。
+当前维护与申报账户：`toneklinkenberg824-spec`；MoonBit模块：`toneklinkenberg824-spec/grib2`。源码仓库：[github.com/toneklinkenberg824-spec/moonbit-grib2](https://github.com/toneklinkenberg824-spec/moonbit-grib2)。
+
+原源码署名：zhou-wei97。原作者版权及上游解析组件的来源、许可证和适配记录保留。
 
 纯MoonBit库：读取GRIB2字节，将值、坐标和bitmap规整为北→南、西→东矩阵，进行站点批量采样及区域节点提取。每条结果保留PDT4.0产品信息、消息/字段身份、原扫描点索引和贡献权重。
 实际复用[trkbt10/grib2_mbt](https://github.com/trkbt10/grib2_mbt)固定提交的解析器与解包器；新增贡献是缺测可解释的高层采样完整链，详见THIRD_PARTY.md。
@@ -24,8 +26,8 @@ moon run cmd/main --target wasm-gc
 
 ## 使用API
 
-消费者moon.pkg导入：`import { "zhou-wei97/grib2" @grib2, }`。
-本模块尚未发布Mooncakes，当前须使用本地模块/源码依赖；不表示包名已可在线安装。
+消费者moon.pkg导入：`import { "toneklinkenberg824-spec/grib2" @grib2, }`。
+以下接入使用源码工作区，将版本依赖绑定到本地模块，不依赖注册表包的可用性。
 
 ### 首次接入一个独立本地消费者
 
@@ -40,12 +42,12 @@ cat > consumer/moon.mod <<'EOF'
 name = "local/grib2-consumer"
 
 import {
-  "zhou-wei97/grib2@0.1.0",
+  "toneklinkenberg824-spec/grib2@0.1.0",
 }
 EOF
 cat > consumer/moon.pkg <<'EOF'
 import {
-  "zhou-wei97/grib2" @grib2,
+  "toneklinkenberg824-spec/grib2" @grib2,
 }
 
 pkgtype(kind: "executable")
@@ -71,8 +73,7 @@ moon -C consumer run . --target js
 
 这组本地依赖配置及JS消费者已用上述固定SDK实际check/run通过，退出码均为0。
 上游组件在该SDK下仍有弃用警告；这里验证首次源码接入，不声称零警告或重新执行完整库验收。
-将来发布后才能改用注册表安装流程，当前不要单独执行 `moon add zhou-wei97/grib2`
-来代替此工作区绑定。
+源码工作区绑定与注册表安装是各自独立的接入方式；本文命令验证的是完整本地源码依赖。
 
 ### 在应用中提供自己的字节
 

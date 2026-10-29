@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "zhou-wei97/grib2/internal/upstream_unpack"
+package "toneklinkenberg824-spec/grib2/internal/upstream_unpack"
 
 // Values
 pub fn ieee754_single_to_double(Int) -> Double

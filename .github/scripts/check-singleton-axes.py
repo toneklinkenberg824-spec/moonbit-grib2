@@ -178,7 +178,7 @@ def main():
     assert wanted[by_name['point-zero']]['samples'][0]['sample']['value']==7 and wanted[by_name['global-row']]['samples'][-1]['sample']['value']==25
     assert wanted[by_name['pole-row']]['samples'][0]['sample']['value']==25 and wanted[by_name['pole-vector']]['samples'][0]=={'failure':'unsupported-polar-vector'}
     write(work/'INDEPENDENT-EXPECTED.json',wanted)
-    consumer=work/'consumer';consumer.mkdir();(consumer/'moon.mod').write_text('name = "local/singleton-public"\nimport { "zhou-wei97/grib2@0.1.0", }\n',encoding='utf-8');(consumer/'moon.pkg').write_text('import { "zhou-wei97/grib2", }\npkgtype(kind: "executable")\n',encoding='utf-8');(consumer/'main.mbt').write_text(source(fixture,supported,bad),encoding='utf-8')
+    consumer=work/'consumer';consumer.mkdir();(consumer/'moon.mod').write_text('name = "local/singleton-public"\nimport { "toneklinkenberg824-spec/grib2@0.1.0", }\n',encoding='utf-8');(consumer/'moon.pkg').write_text('import { "toneklinkenberg824-spec/grib2", }\npkgtype(kind: "executable")\n',encoding='utf-8');(consumer/'main.mbt').write_text(source(fixture,supported,bad),encoding='utf-8')
     receiver=work/'receiver';receiver.mkdir()
     for name in ('main.mbt','moon.mod','moon.pkg','pkg.generated.mbti'):shutil.copyfile(ROOT/'examples/node-file17'/name,receiver/name)
     (work/'moon.work').write_text('members = '+json.dumps([str(ROOT),str(consumer),str(receiver)])+'\n',encoding='utf-8');outputs={}

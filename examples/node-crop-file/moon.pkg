@@ -1,5 +1,5 @@
 import {
-  "zhou-wei97/grib2",
+  "toneklinkenberg824-spec/grib2",
   "moonbitlang/core/json",
   "moonbitlang/core/string",
 }

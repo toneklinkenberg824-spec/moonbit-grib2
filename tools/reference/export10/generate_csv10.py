@@ -77,7 +77,7 @@ stations=[]
 for provider,g in zip(['GFS','IFS'],gold):
     stations.extend(f'{{id:"{provider}{i}",latitude:{lat},longitude:{lon}}}' for i,(lat,lon) in enumerate(g['queries']))
 E=P/'cmd/export';E.mkdir(exist_ok=True)
-(E/'moon.pkg').write_text('import {\n  "zhou-wei97/grib2" @grib2,\n}\n\noptions("is-main": true)\n',encoding='utf-8')
+(E/'moon.pkg').write_text('import {\n  "toneklinkenberg824-spec/grib2" @grib2,\n}\n\noptions("is-main": true)\n',encoding='utf-8')
 main=f'''///|
 fn export_query(p : @grib2.Product) -> @grib2.FieldQuery {{
   let criterion : @grib2.ForecastTimeFilter=match p.forecast_time {{

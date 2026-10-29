@@ -9,7 +9,7 @@
 //   "moonbitlang/x@0.4.6",
 // }
 
-name = "zhou-wei97/grib2"
+name = "toneklinkenberg824-spec/grib2"
 
 version = "0.1.0"
 

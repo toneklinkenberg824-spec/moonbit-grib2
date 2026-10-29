@@ -119,8 +119,8 @@ fn main raise {
 '''
 consume=consume.replace('REAL_BYTES',mb_bytes(real)).replace('SYNTHETIC_BYTES',mb_bytes(synthetic))
 (E/'main.mbt').write_text(query+consume,encoding='utf-8')
-(E/'moon.mod').write_text('name = "local/grib2-nyacsv13-consumer"\n\nimport {\n  "zhou-wei97/grib2@0.1.0",\n  "moonbit-community/NyaCSV@0.3.3",\n}\n',encoding='utf-8')
-(E/'moon.pkg').write_text('import {\n  "zhou-wei97/grib2" @grib2,\n  "moonbit-community/NyaCSV" @csv,\n  "moonbitlang/core/json",\n  "moonbitlang/core/string",\n}\n\npkgtype(kind: "executable")\n',encoding='utf-8')
+(E/'moon.mod').write_text('name = "local/grib2-nyacsv13-consumer"\n\nimport {\n  "toneklinkenberg824-spec/grib2@0.1.0",\n  "moonbit-community/NyaCSV@0.3.3",\n}\n',encoding='utf-8')
+(E/'moon.pkg').write_text('import {\n  "toneklinkenberg824-spec/grib2" @grib2,\n  "moonbit-community/NyaCSV" @csv,\n  "moonbitlang/core/json",\n  "moonbitlang/core/string",\n}\n\npkgtype(kind: "executable")\n',encoding='utf-8')
 reference={
   'dependency':{'repository':'https://github.com/moonbit-community/NyaCSV','commit':'fe4448e1e45a25f6fca151320c766519e80162c9','declared_version':'0.3.3','binding':'Fixed-source moon.work, no registry install claim'},
   'real':{'keys':[' GFS,"温度"\r\n原报😀 ','IFS'],'station_ids':[' 0012,"港"\r\n换行😀 \t',''],'values':[253.6234765625,None,None,239.85598754882812],'centres':[7,7,98,98],'messages':[0,0,1,1],'byte_offsets':[0,0,len((P/'testdata/noaa-gfs-repacked.grib2').read_bytes()),len((P/'testdata/noaa-gfs-repacked.grib2').read_bytes())],'reference':'Two archived export10 SciPy values reused for consumer conversion, no new sampling acceptance/download run'},

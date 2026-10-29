@@ -111,7 +111,7 @@ test "requests08 empty dimensions and named aliases" {{
 ''')
 (P/'requests08_test.mbt').write_text('\n'.join(tests),encoding='utf-8')
 E=P/'cmd/layers';E.mkdir(exist_ok=True)
-(E/'moon.pkg').write_text('import {\n  "zhou-wei97/grib2" @grib2,\n}\n\noptions("is-main": true)\n',encoding='utf-8')
+(E/'moon.pkg').write_text('import {\n  "toneklinkenberg824-spec/grib2" @grib2,\n}\n\noptions("is-main": true)\n',encoding='utf-8')
 main=f'''///|
 // Synthetic layer/run inputs: illustrative constants, not an operational forecast.
 fn main {{

@@ -142,8 +142,8 @@ def main():
     raw=raw_products(fixture);by_name={c['name']:c for c in cases};selected=[by_name[name] for name in expected['fileCases']];assert len(raw)==len(selected)==43
     for actual,c in zip(raw,selected,strict=True):
         assert actual['origin']==c['origin'] and actual['product']['reference_time']==c['reference'] and actual['product']['time_unit']==c['unit'] and actual['product'].get('forecast_time')==c['lead']
-    module=work/'consumer';module.mkdir();(module/'moon.mod').write_text('name = "local/valid-time-consumer"\nimport { "zhou-wei97/grib2@0.1.0", }\n',encoding='utf-8')
-    (module/'moon.pkg').write_text('import { "zhou-wei97/grib2", }\npkgtype(kind: "executable")\n',encoding='utf-8');(module/'main.mbt').write_text(portable_source(fixture,cases),encoding='utf-8')
+    module=work/'consumer';module.mkdir();(module/'moon.mod').write_text('name = "local/valid-time-consumer"\nimport { "toneklinkenberg824-spec/grib2@0.1.0", }\n',encoding='utf-8')
+    (module/'moon.pkg').write_text('import { "toneklinkenberg824-spec/grib2", }\npkgtype(kind: "executable")\n',encoding='utf-8');(module/'main.mbt').write_text(portable_source(fixture,cases),encoding='utf-8')
     receiver=work/'receiver';receiver.mkdir()
     for name in ('main.mbt','moon.mod','moon.pkg','pkg.generated.mbti'):shutil.copyfile(ROOT/'examples/node-valid-time'/name,receiver/name)
     (work/'moon.work').write_text('members = '+json.dumps([str(ROOT),str(module),str(receiver)])+'\n',encoding='utf-8')

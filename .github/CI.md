@@ -1,5 +1,11 @@
 # Reproducible validation
 
+The maintained main module is `toneklinkenberg824-spec/grib2`, in repository
+`toneklinkenberg824-spec/moonbit-grib2`. Local example module names stay under
+`local/` while their dependencies and generated public-consumer imports use the
+maintained namespace. Upstream names, copyright and frozen historical evidence
+retain their original provenance. Build paths follow actual module declarations.
+
 The workflow runs on ordinary Ubuntu 24.04 GitHub runners with a 15/20 minute
 job limit and read-only repository permissions. It does not install anything
 on a developer's global SDK or use paid services.

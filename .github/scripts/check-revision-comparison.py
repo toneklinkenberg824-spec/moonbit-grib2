@@ -145,7 +145,7 @@ def main():
         if 'interiorHandDifference' in c:assert rows[3]['difference']['value']==c['interiorHandDifference']
     assert all('nonfinite-difference'==r['difference'].get('error') for r in want['difference-overflow']['rows'] if 'sample' in r['left'] and 'sample' in r['right'])
     write(work/'INDEPENDENT-EXPECTED.json',want)
-    module=work/'consumer';module.mkdir();(module/'moon.mod').write_text('name = "local/revision-public"\nimport { "zhou-wei97/grib2@0.1.0", }\n',encoding='utf-8');(module/'moon.pkg').write_text('import { "zhou-wei97/grib2", }\npkgtype(kind: "executable")\n',encoding='utf-8');(module/'main.mbt').write_text(public_source(fixture,cases,stations),encoding='utf-8')
+    module=work/'consumer';module.mkdir();(module/'moon.mod').write_text('name = "local/revision-public"\nimport { "toneklinkenberg824-spec/grib2@0.1.0", }\n',encoding='utf-8');(module/'moon.pkg').write_text('import { "toneklinkenberg824-spec/grib2", }\npkgtype(kind: "executable")\n',encoding='utf-8');(module/'main.mbt').write_text(public_source(fixture,cases,stations),encoding='utf-8')
     receiver=work/'receiver';receiver.mkdir()
     for name in ('main.mbt','moon.mod','moon.pkg','pkg.generated.mbti'):shutil.copyfile(ROOT/'examples/node-revision-compare'/name,receiver/name)
     (work/'moon.work').write_text('members = '+json.dumps([str(ROOT),str(module),str(receiver)])+'\n',encoding='utf-8');outputs={}
