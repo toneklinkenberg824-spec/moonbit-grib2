@@ -1,0 +1,231 @@
+{
+  "weather": [
+    {
+      "path": "testdata/noaa-gfs-repacked.grib2",
+      "bytes": 251,
+      "sha256": "e69245079ff183b934b343d7c0a43d0591e59b916ea80f8c695e64568f93464a",
+      "centre": 7
+    },
+    {
+      "path": "testdata/ecmwf-ifs-repacked.grib2",
+      "bytes": 268,
+      "sha256": "904c337ee2e1d7171f2997b199a9906e39b657c48de07d9b9d58748a43fd0977",
+      "centre": 98
+    }
+  ],
+  "weatherRequests": [
+    {
+      "key": " GFS,\"温度\"\r\n😀 ",
+      "query": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 7
+      }
+    },
+    {
+      "key": " IFS ",
+      "query": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 98
+      }
+    }
+  ],
+  "weatherStations": [
+    {
+      "id": " 0012,\"港\"\r\n😀\t",
+      "latitude": 68.25,
+      "longitude": 31.5
+    },
+    {
+      "id": "",
+      "latitude": 84.5625,
+      "longitude": 187.875
+    }
+  ],
+  "weatherValues": [
+    253.6234765625,
+    null,
+    null,
+    239.85598754882812
+  ],
+  "weatherOrders": [
+    {
+      "name": "weather-a",
+      "parts": [
+        0,
+        1
+      ],
+      "origins": [
+        {
+          "message": 0,
+          "field": 0,
+          "byte_offset": 0,
+          "scanning_mode": 0
+        },
+        {
+          "message": 1,
+          "field": 0,
+          "byte_offset": 251,
+          "scanning_mode": 0
+        }
+      ]
+    },
+    {
+      "name": "weather-b",
+      "parts": [
+        1,
+        0
+      ],
+      "origins": [
+        {
+          "message": 1,
+          "field": 0,
+          "byte_offset": 268,
+          "scanning_mode": 0
+        },
+        {
+          "message": 0,
+          "field": 0,
+          "byte_offset": 0,
+          "scanning_mode": 0
+        }
+      ]
+    }
+  ],
+  "cataloguePath": "testdata/query-inspection/catalogue.grib2",
+  "catalogueSHA256": "3d71132ac72aeca9adab467c4f4dc2d669e75ca01e9e1008db525317663b9c18",
+  "catalogueRequests": [
+    {
+      "key": "missing",
+      "query": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "forecast_time": null
+      }
+    },
+    {
+      "key": "analysis-zero",
+      "query": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "forecast_time": 0,
+        "centre": null,
+        "first_surface": null,
+        "reference_time": null
+      }
+    },
+    {
+      "key": "encoded-A",
+      "query": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "forecast_time": 6,
+        "first_surface": {
+          "kind": 100,
+          "scale": 0,
+          "scaled_value": 85000
+        },
+        "reference_time": [
+          2007,
+          3,
+          23,
+          12,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "encoded-B",
+      "query": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 0,
+        "centre": 98,
+        "subcentre": 0,
+        "master_table": 4,
+        "local_table": 0,
+        "time_unit": 1,
+        "forecast_time": 6,
+        "first_surface": {
+          "kind": 100,
+          "scale": 1,
+          "scaled_value": 850000
+        },
+        "second_surface": {
+          "kind": 255,
+          "scale": null,
+          "scaled_value": null
+        },
+        "reference_time": [
+          2007,
+          3,
+          23,
+          12,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "key": "omitted-time",
+      "query": {
+        "discipline": 0,
+        "category": 0,
+        "parameter": 1,
+        "time_unit": 0
+      }
+    }
+  ],
+  "catalogueStation": {
+    "id": "inland 😀",
+    "latitude": 0.0,
+    "longitude": 10.5
+  },
+  "catalogueValues": [
+    101,
+    202,
+    303,
+    404,
+    606
+  ],
+  "catalogueOrigins": [
+    {
+      "message": 0,
+      "field": 0,
+      "byte_offset": 0,
+      "scanning_mode": 0
+    },
+    {
+      "message": 1,
+      "field": 0,
+      "byte_offset": 180,
+      "scanning_mode": 0
+    },
+    {
+      "message": 1,
+      "field": 1,
+      "byte_offset": 180,
+      "scanning_mode": 0
+    },
+    {
+      "message": 2,
+      "field": 0,
+      "byte_offset": 427,
+      "scanning_mode": 0
+    },
+    {
+      "message": 4,
+      "field": 0,
+      "byte_offset": 787,
+      "scanning_mode": 0
+    }
+  ],
+  "reference": "Weather values inherited from accepted consumer13 reference, no new scientific/reference run. Catalogue input/identities/constants inherited from accepted query-inspection fixture; new acceptance is JSON-to-typed-query interpretation, order-stable file binding, atomic selection and filesystem CSV delivery."
+}

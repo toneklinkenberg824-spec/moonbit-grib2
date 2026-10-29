@@ -60,6 +60,8 @@ jobs:
         run: python .github/scripts/check-message-spans.py --output "${{ runner.temp }}/grib2-message-spans"
       - name: Node original-message file delivery and receiver
         run: python .github/scripts/check-message-extract.py --work "${{ runner.temp }}/grib2-message-extract"
+      - name: Node named request-file station CSV receiver
+        run: python .github/scripts/check-request-file.py --work "${{ runner.temp }}/grib2-request-file"
       - name: Checkout compatible NyaCSV source
         run: |
           git clone --no-checkout https://github.com/moonbit-community/NyaCSV.git "${{ runner.temp }}/grib2-NyaCSV"

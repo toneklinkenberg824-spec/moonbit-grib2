@@ -1,0 +1,20 @@
+[
+  {
+    "key": " GFS,\"温度\"\r\n😀 ",
+    "query": {
+      "discipline": 0,
+      "category": 0,
+      "parameter": 0,
+      "centre": 7
+    }
+  },
+  {
+    "key": " IFS ",
+    "query": {
+      "discipline": 0,
+      "category": 0,
+      "parameter": 0,
+      "centre": 98
+    }
+  }
+]

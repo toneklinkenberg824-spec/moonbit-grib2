@@ -37,6 +37,14 @@ on a developer's global SDK or use paid services.
   container, exclusively creates output, verifies physical readback and hashes,
   and hands NOAA/IFS/multi-field outputs to existing inventory/11-column CSV hosts.
   Filesystem/error controls include an externally injected readback mismatch.
+- A Node named query-file receiver applies the same external JSON recipe to
+  NOAA/IFS inputs with opposite field order, then independently reads all eleven
+  CSV columns, exact labels, original identities and known archived values.
+  Real processes check omission/null/zero/negative lead, all encoded filters,
+  distinct raw surfaces, integral numeric input, unknown keys, late selection
+  failures, empty inputs, nonfinite station gaps and no-clobber output handling.
+  This is a new JSON/filesystem boundary; old query/scientific fixtures are reused
+  without rerunning their external reference generators.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture
