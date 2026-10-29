@@ -28,3 +28,8 @@ R10新增必要step：`Large ancillary JSON integer diagnostic receiver`。从�
 重建未改Node入口并真实消费附带5002位整数的站点JSON，独立读回4行11列CSV及3条完整关联结果。
 正/负/嵌套整数和既有1e400原片段保真；改坏坐标及NaN仍拒绝，全局整数转换位数限制保持。
 本地只修Python消费者，可复用本轮此前真实生产文件，记录原/副本SHA256；CI则完整新建、构建、生产及消费。
+
+R11新增必要step：`Regional raw-node file JSONL handoff`。新建独立Node/JS宿主工作区，读取真实
+多消息/多字段文件与bbox，以既有crop_iter交付原节点。Python从原始段/bitmap/整数bits及明确位置
+列表核全部field/point/end记录：7成功（35记录/21节点）、6失败无成功前缀、2个派生坏输出拒绝。
+核空/缺测/有效0、跨线/重复列/scan240/单点、字段索引与原Origin、UTF8/BOM；主库不改，本地不重复旧套件，原必要CI门仍执行。

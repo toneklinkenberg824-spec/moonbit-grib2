@@ -1,0 +1,329 @@
+{
+  "schema": "grib2-node-crop/1",
+  "fieldCount": 3,
+  "messageCount": 2,
+  "inputSHA256": "37003fbd1e15b3a59e728f65cc52ce1ac3429ae82174948b48a7729786ec15f8",
+  "lateUnsupportedSHA256": "de2fc8b20c4e37fed0dd289782dcccbe7e60ac2ea1f89852311fb2ab0841a3c8",
+  "templateSource": "testdata/singleton-axes/column-0.grib2",
+  "templateSHA256": "94ddcf3730870e8657f4e922a6e84ca3afba620459da8fe5aa395514521aa6af",
+  "product": {
+    "discipline": 0,
+    "category": 0,
+    "parameter": 0,
+    "centre": 98,
+    "subcentre": 0,
+    "master_table": 4,
+    "local_table": 0,
+    "reference_time": [
+      2007,
+      3,
+      23,
+      12,
+      0,
+      0
+    ],
+    "time_unit": 1,
+    "forecast_time": 0,
+    "first_surface": {
+      "kind": 103,
+      "scale": 0,
+      "scaled_value": 2
+    },
+    "second_surface": {
+      "kind": 255
+    }
+  },
+  "models": [
+    {
+      "name": "regional",
+      "rows": 2,
+      "cols": 3,
+      "north": 2,
+      "west": 350,
+      "dx": 10,
+      "dy": 1,
+      "cyclic": false,
+      "unique_columns": 3,
+      "values": [
+        0,
+        null,
+        30,
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "origin": {
+        "message": 0,
+        "field": 0,
+        "byte_offset": 0,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "global-duplicate-scan240",
+      "rows": 2,
+      "cols": 5,
+      "north": 2,
+      "west": 0,
+      "dx": 90,
+      "dy": 1,
+      "cyclic": true,
+      "unique_columns": 4,
+      "values": [
+        10,
+        20,
+        30,
+        40,
+        10,
+        50,
+        60,
+        70,
+        80,
+        50
+      ],
+      "source_indices": [
+        9,
+        6,
+        5,
+        2,
+        1,
+        8,
+        7,
+        4,
+        3,
+        0
+      ],
+      "origin": {
+        "message": 0,
+        "field": 1,
+        "byte_offset": 0,
+        "scanning_mode": 240
+      }
+    },
+    {
+      "name": "all-missing-point",
+      "rows": 1,
+      "cols": 1,
+      "north": 1,
+      "west": 10,
+      "dx": 0,
+      "dy": 0,
+      "cyclic": false,
+      "unique_columns": 1,
+      "values": [
+        null
+      ],
+      "source_indices": [
+        0
+      ],
+      "origin": {
+        "message": 1,
+        "field": 0,
+        "byte_offset": 333,
+        "scanning_mode": 0
+      }
+    }
+  ],
+  "successCases": [
+    {
+      "name": "regional-cross",
+      "index": 0,
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": 350,
+        "east": 0
+      },
+      "positions": [
+        0,
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "regional-meridian",
+      "index": 0,
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": 0,
+        "east": 0
+      },
+      "positions": [
+        1,
+        4
+      ]
+    },
+    {
+      "name": "regional-empty",
+      "index": 0,
+      "bounds": {
+        "south": 1.2,
+        "north": 1.8,
+        "west": 0,
+        "east": 360
+      },
+      "positions": []
+    },
+    {
+      "name": "global-full-bom",
+      "index": 1,
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": 0,
+        "east": 360
+      },
+      "positions": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "global-cross",
+      "index": 1,
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": 270,
+        "east": 90
+      },
+      "positions": [
+        0,
+        1,
+        3,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "name": "point-missing",
+      "index": 2,
+      "bounds": {
+        "south": 1,
+        "north": 1,
+        "west": 10,
+        "east": 10
+      },
+      "positions": [
+        0
+      ]
+    },
+    {
+      "name": "point-outside",
+      "index": 2,
+      "bounds": {
+        "south": 2,
+        "north": 3,
+        "west": 0,
+        "east": 360
+      },
+      "positions": []
+    }
+  ],
+  "negativeCases": [
+    {
+      "name": "bad-index-text",
+      "index": "not-int",
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": 350,
+        "east": 0
+      },
+      "event": {
+        "phase": "selection",
+        "code": "invalid-field-index",
+        "argument": "FIELD_INDEX"
+      }
+    },
+    {
+      "name": "index-out-of-range",
+      "index": "3",
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": 350,
+        "east": 0
+      },
+      "event": {
+        "phase": "selection",
+        "code": "field-index-out-of-range",
+        "field_count": 3
+      }
+    },
+    {
+      "name": "reversed-latitude",
+      "index": "0",
+      "bounds": {
+        "south": 2,
+        "north": 1,
+        "west": 0,
+        "east": 360
+      },
+      "event": {
+        "phase": "bounds",
+        "code": "invalid-request",
+        "message": "invalid bbox"
+      }
+    },
+    {
+      "name": "nonfinite-west",
+      "index": "0",
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": "NaN",
+        "east": 0
+      },
+      "event": {
+        "phase": "bounds",
+        "code": "invalid-request",
+        "message": "invalid bbox"
+      }
+    },
+    {
+      "name": "late-unsupported",
+      "index": "0",
+      "bounds": {
+        "south": 1,
+        "north": 2,
+        "west": 350,
+        "east": 0
+      },
+      "late": true,
+      "event": {
+        "phase": "decode",
+        "code": "unsupported-template",
+        "section": 3,
+        "template": 1
+      }
+    },
+    {
+      "name": "malformed-bounds",
+      "index": "0",
+      "malformed": true
+    }
+  ],
+  "receiverNegativeCases": [
+    "truncated-before-end-record",
+    "wrong-point-value"
+  ],
+  "expectationBasis": "Hand integer node arrays, bitmap, source scan indices and explicit crop position lists. Product from explicit unchanged3.0/4.0/5.0sectioncodes. No new algorithm, scientific reference generator, parser bug or third-party adoption claim."
+}

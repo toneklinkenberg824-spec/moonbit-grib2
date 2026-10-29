@@ -73,6 +73,12 @@ on a developer's global SDK or use paid services.
   output, strict coordinate/NaN rejection and the unchanged global integer limit.
   Only the optional Python station JSON parser changes; no coordinate, grid or
   core-library range is extended by this gate.
+- A regional raw-node file gate freshly builds the isolated Node/JS example and
+  consumes seven actual JSONL handoffs plus six expected failures. Independent
+  raw Sections/bitmap/integer payloads and frozen node-position lists verify all
+  header/point/end records, multi-field Origin, zero/nulls, scan240, duplicate
+  global columns, thin/empty crops and UTF8/BOM input. Truncated or changed-node
+  output is rejected; old core/host/library algorithms and public API stay fixed.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

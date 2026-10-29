@@ -227,6 +227,13 @@ let first = nodes.next() // GridPoint?；需要时继续 next()，或停止消�
 `moon run cmd/crop-iter --target js`（或 `wasm-gc`）运行合成公共API消费者，
 包括重复经线、bitmap、原扫描身份、前缀恢复及百万点字段仅取两个节点。
 
+`examples/node-crop-file`接收任意受支持的GRIB文件、bbox JSON及完整字段数组索引，将区域原始
+节点交付为stdout JSONL：完整field头（原grid、Product/Origin及请求bounds）、每个GridPoint、
+end总数/缺测数。空区域仍交付头尾；有效0与缺测null、原扫描索引及独立全球列保持。
+它先完成JSON解析、全文件解码、选场与bbox校验再输出，尾部坏字段不会留下成功前缀。
+使用crop_iter逐节点产生记录，输入/解码与宿主缓冲仍物化；IO中断可留下缺尾输出，不承诺原子回滚。
+这只增加Node/JS文件工作流，既有API/算法/模板保持；构建和实际Python完整读取见例程README及testdata/node-crop-file。
+
 ## 按层和预报批次取场，再采样站点
 
 同一参数可能同时出现在2米、850hPa、多个起报时次和预报时效中。`FieldQuery`支持参数代码、中心/子中心、表版本、6个参考时间分量、原始时效单位/整数和两组Surface筛选；`select_unique_field`要求唯一匹配，缺场或多场匹配返回`InvalidRequest`。

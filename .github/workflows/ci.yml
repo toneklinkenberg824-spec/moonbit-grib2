@@ -70,6 +70,8 @@ jobs:
         run: python .github/scripts/check-singleton-axes.py --work "${{ runner.temp }}/grib2-singleton-axes"
       - name: Large ancillary JSON integer diagnostic receiver
         run: python .github/scripts/check-ancillary-integer.py --work "${{ runner.temp }}/grib2-ancillary-integer"
+      - name: Regional raw-node file JSONL handoff
+        run: python .github/scripts/check-node-crop-file.py --work "${{ runner.temp }}/grib2-node-crop-file"
       - name: Checkout compatible NyaCSV source
         run: |
           git clone --no-checkout https://github.com/moonbit-community/NyaCSV.git "${{ runner.temp }}/grib2-NyaCSV"
