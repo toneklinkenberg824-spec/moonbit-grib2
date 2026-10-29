@@ -46,6 +46,22 @@ pub(all) struct Contributor {
   value : Double
 } derive(ToJson, @debug.Debug)
 
+pub(all) enum DifferenceFailure {
+  SamplingUnavailable
+  NonFiniteDifference
+} derive(Eq, @debug.Debug)
+pub impl ToJson for DifferenceFailure
+
+pub(all) enum FieldComparisonError {
+  ParameterMismatch
+  TableMismatch
+  SurfaceMismatch
+  LeftTime(ValidTimeError)
+  RightTime(ValidTimeError)
+  ValidTimeMismatch
+} derive(Eq, @debug.Debug)
+pub impl ToJson for FieldComparisonError
+
 pub struct FieldQuery {
   discipline : Int
   category : Int
@@ -127,6 +143,7 @@ pub struct GriddedField {
   // private fields
 }
 pub fn GriddedField::cols(Self) -> Int
+pub fn GriddedField::compare_stations(Self, Self, ArrayView[Station]) -> Result[Array[StationDifference], FieldComparisonError]
 pub fn GriddedField::crop(Self, BBox) -> Result[Array[GridPoint], GribError]
 pub fn GriddedField::crop_iter(Self, BBox) -> Result[Iter[GridPoint], GribError]
 pub fn GriddedField::get(Self, Int, Int) -> Double?
@@ -214,6 +231,14 @@ pub(all) struct Station {
   latitude : Double
   longitude : Double
 } derive(ToJson, @debug.Debug)
+
+pub(all) struct StationDifference {
+  station : Station
+  left : Result[Sample, SampleFailure]
+  right : Result[Sample, SampleFailure]
+  difference : Result[Double, DifferenceFailure]
+} derive(@debug.Debug)
+pub impl ToJson for StationDifference
 
 pub(all) struct Surface {
   kind : Int

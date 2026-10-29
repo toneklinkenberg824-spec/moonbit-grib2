@@ -1,0 +1,42 @@
+[
+  {
+    "id": "left-gap",
+    "latitude": 1,
+    "longitude": 10
+  },
+  {
+    "id": "right-gap",
+    "latitude": 0,
+    "longitude": 10
+  },
+  {
+    "id": "both-gap",
+    "latitude": 0.5,
+    "longitude": 10.5
+  },
+  {
+    "id": "interior",
+    "latitude": 0.5,
+    "longitude": 11.5
+  },
+  {
+    "id": "node",
+    "latitude": 0,
+    "longitude": 11
+  },
+  {
+    "id": "outside",
+    "latitude": 3,
+    "longitude": 10
+  },
+  {
+    "id": "invalid",
+    "latitude": 91,
+    "longitude": 10
+  },
+  {
+    "id": "  修订,\"港\"\r\n😀 ",
+    "latitude": 0.5,
+    "longitude": 11.5
+  }
+]

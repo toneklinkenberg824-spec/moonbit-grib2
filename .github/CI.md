@@ -52,6 +52,14 @@ on a developer's global SDK or use paid services.
   explicit time errors, unchanged raw metadata and encoded query distinctions.
   This opt-in fixed86400-second-day policy does not model leap seconds or add
   calendar/local units, external weather references or new template support.
+- A paired revision station comparison gate checks30 public comparisons per
+  target and a complete two-file Node receiver. Independent original packed bits
+  and Fraction stencils check both full sampling outcomes, provenance, missing
+  reasons, signed differences and overflow. Encoded parameter/table/surface and
+  existing valid-time compatibility, different grids and pre-output failures are
+  checked without changing the old sampler/calendar or adding a physical model.
+  An initial fixture-scale error is retained in the separate R08 report; corrected
+  finite large inputs must still produce an explicit subtraction overflow.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

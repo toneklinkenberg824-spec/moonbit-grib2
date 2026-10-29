@@ -64,6 +64,8 @@ jobs:
         run: python .github/scripts/check-request-file.py --work "${{ runner.temp }}/grib2-request-file"
       - name: Fixed-unit forecast valid time and file receiver
         run: python .github/scripts/check-valid-time.py --work "${{ runner.temp }}/grib2-valid-time"
+      - name: Paired revision station comparison and file receiver
+        run: python .github/scripts/check-revision-comparison.py --work "${{ runner.temp }}/grib2-revision-comparison"
       - name: Checkout compatible NyaCSV source
         run: |
           git clone --no-checkout https://github.com/moonbit-community/NyaCSV.git "${{ runner.temp }}/grib2-NyaCSV"

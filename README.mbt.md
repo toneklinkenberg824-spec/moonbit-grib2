@@ -171,6 +171,21 @@ ValidTime含year/month/day/hour/minute/second，按前推公历、年份1..9999�
 有效时刻或明确时间错误；单字段时间失败保留为结果，完整解码失败不输出成功前缀。
 公共API已由外部消费者在JS/Wasm-GC核对，文件入口仅Node/JS，完整合同与实文件步骤见该例程README。
 
+### 对比同一时刻的两次预报修订
+
+`left.compare_stations(right, stations)` 返回 `Result[Array[StationDifference],FieldComparisonError]`。
+先核对双方参数、中心/表及完整Surface原码，再分别按现有valid_time政策要求有效民用时刻相等；
+参考时间与原lead/单位可不同。编码兼容不等于模式/物理基准等价，调用者须选择业务上可比较的量。
+空站点也先校验；已有原码查询、时间范围和单位政策不变。
+
+每条结果保留station及双方完整 `Result[Sample,SampleFailure]`，并给right−left的
+`Result[Double,DifferenceFailure]`。一方缺测不补0，双方失败均保留；减法非有限明确报告。
+网格可不同，分别按旧站点算法采样，保留各自格点/权重来源；不做网格相减、重网格或模式校准。
+例如两次修订在同站点采样40与45.5，则差5.5；0仍为有效差值。
+独立Node例程 `examples/node-revision-compare` 读取两文件/各自字段索引和一份站点JSON，
+输出完整双方身份、公共时刻与有序paired rows；全解码/选择/兼容检查失败没有成功前缀。
+构建、JSON/错误合同和实文件步骤见该例程README。纯API双目标可用，宿主入口仅Node/JS，结果仍完整物化。
+
 ### 按需提取区域原始节点
 
 导出或预览一个大区域时，可用 `crop_iter()` 逐个产生节点，取到所需前缀后停止，
