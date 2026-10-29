@@ -1,0 +1,3137 @@
+{
+  "models": [
+    {
+      "name": "column-0",
+      "index": 0,
+      "path": "testdata/singleton-axes/column-0.grib2",
+      "bytes": 182,
+      "sha256": "94ddcf3730870e8657f4e922a6e84ca3afba620459da8fe5aa395514521aa6af",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 0,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 0,
+        "field": 0,
+        "byte_offset": 0,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "row-0",
+      "index": 1,
+      "path": "testdata/singleton-axes/row-0.grib2",
+      "bytes": 182,
+      "sha256": "7f52b2589df6aa447b79fc8040a7ac86ed570877a2c00992276311efbd3c7171",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 0,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 1,
+        "field": 0,
+        "byte_offset": 182,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "column-16",
+      "index": 2,
+      "path": "testdata/singleton-axes/column-16.grib2",
+      "bytes": 182,
+      "sha256": "8c7bff7eba50d159ea65145b3461412cd56110ba46c9bc08df2f3ac1344eb85a",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 16,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 2,
+        "field": 0,
+        "byte_offset": 364,
+        "scanning_mode": 16
+      }
+    },
+    {
+      "name": "row-16",
+      "index": 3,
+      "path": "testdata/singleton-axes/row-16.grib2",
+      "bytes": 182,
+      "sha256": "35203daae2b4a50da11843da3d1bd8ee976c2f0f17837f774f53301f6b83165f",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 16,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 3,
+        "field": 0,
+        "byte_offset": 546,
+        "scanning_mode": 16
+      }
+    },
+    {
+      "name": "column-32",
+      "index": 4,
+      "path": "testdata/singleton-axes/column-32.grib2",
+      "bytes": 182,
+      "sha256": "9c56b44a8d68c0886496227bc5d158bb63c6ffaf0f9ea1405facb3a3e8e246d9",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 32,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 4,
+        "field": 0,
+        "byte_offset": 728,
+        "scanning_mode": 32
+      }
+    },
+    {
+      "name": "row-32",
+      "index": 5,
+      "path": "testdata/singleton-axes/row-32.grib2",
+      "bytes": 182,
+      "sha256": "09327e9e511e778c331efb3a4710325b489931ca9481c7fc483bfb2fa7139e83",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 32,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 5,
+        "field": 0,
+        "byte_offset": 910,
+        "scanning_mode": 32
+      }
+    },
+    {
+      "name": "column-48",
+      "index": 6,
+      "path": "testdata/singleton-axes/column-48.grib2",
+      "bytes": 182,
+      "sha256": "d68b1b50479a04b4199692ca14571a75180bbde3189c65d2de6bb26e94b1ff31",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 48,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 6,
+        "field": 0,
+        "byte_offset": 1092,
+        "scanning_mode": 48
+      }
+    },
+    {
+      "name": "row-48",
+      "index": 7,
+      "path": "testdata/singleton-axes/row-48.grib2",
+      "bytes": 182,
+      "sha256": "7e3585f495255c9d977b835d4da524d30b21d55c723bd647f1a5cf376a063f7d",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 48,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 7,
+        "field": 0,
+        "byte_offset": 1274,
+        "scanning_mode": 48
+      }
+    },
+    {
+      "name": "column-64",
+      "index": 8,
+      "path": "testdata/singleton-axes/column-64.grib2",
+      "bytes": 182,
+      "sha256": "ff65af84d444ae4cfd533edc91624a4b75b82c41773c20435e1654c75548baa0",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 64,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 8,
+        "field": 0,
+        "byte_offset": 1456,
+        "scanning_mode": 64
+      }
+    },
+    {
+      "name": "row-64",
+      "index": 9,
+      "path": "testdata/singleton-axes/row-64.grib2",
+      "bytes": 182,
+      "sha256": "f7adb33c563644932914361ff7ceb51f69e6ef2c894fda3075c59e63ffd431a7",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 64,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 9,
+        "field": 0,
+        "byte_offset": 1638,
+        "scanning_mode": 64
+      }
+    },
+    {
+      "name": "column-80",
+      "index": 10,
+      "path": "testdata/singleton-axes/column-80.grib2",
+      "bytes": 182,
+      "sha256": "c5e5b4a0e7c1eba4a7ac10ac7aff0352b5f6ccbb7178a3b68420f0620916134a",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 80,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 10,
+        "field": 0,
+        "byte_offset": 1820,
+        "scanning_mode": 80
+      }
+    },
+    {
+      "name": "row-80",
+      "index": 11,
+      "path": "testdata/singleton-axes/row-80.grib2",
+      "bytes": 182,
+      "sha256": "ca276ec2693650dc9ab8ddc767f3d8c6dc0a1b969fd910c69183d3cbf0812a2a",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 80,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 11,
+        "field": 0,
+        "byte_offset": 2002,
+        "scanning_mode": 80
+      }
+    },
+    {
+      "name": "column-96",
+      "index": 12,
+      "path": "testdata/singleton-axes/column-96.grib2",
+      "bytes": 182,
+      "sha256": "0d056b0ab811347755373f39e54daad38638a8df89b80f7f05bf2cbb88c4de18",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 96,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 12,
+        "field": 0,
+        "byte_offset": 2184,
+        "scanning_mode": 96
+      }
+    },
+    {
+      "name": "row-96",
+      "index": 13,
+      "path": "testdata/singleton-axes/row-96.grib2",
+      "bytes": 182,
+      "sha256": "a56f3d24e3cf8f5d73d15f6ea813bd2f468153ab0643e10fde1bbf1d73bf22ab",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 96,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 13,
+        "field": 0,
+        "byte_offset": 2366,
+        "scanning_mode": 96
+      }
+    },
+    {
+      "name": "column-112",
+      "index": 14,
+      "path": "testdata/singleton-axes/column-112.grib2",
+      "bytes": 182,
+      "sha256": "432afc2586f3a2c08e93185b1f4416bc06effc50f6d06dcbf642dcefaeec98b9",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 112,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 14,
+        "field": 0,
+        "byte_offset": 2548,
+        "scanning_mode": 112
+      }
+    },
+    {
+      "name": "row-112",
+      "index": 15,
+      "path": "testdata/singleton-axes/row-112.grib2",
+      "bytes": 182,
+      "sha256": "44341a82b4d37fab6e11a0fcd665ac3e3ae25da4500e826de9a1149000294af4",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 112,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 15,
+        "field": 0,
+        "byte_offset": 2730,
+        "scanning_mode": 112
+      }
+    },
+    {
+      "name": "column-128",
+      "index": 16,
+      "path": "testdata/singleton-axes/column-128.grib2",
+      "bytes": 182,
+      "sha256": "184705d10579d0de65f3e9f0dfd6a795ca2306cdb0316ef754d3c976d0df78a7",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 128,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 16,
+        "field": 0,
+        "byte_offset": 2912,
+        "scanning_mode": 128
+      }
+    },
+    {
+      "name": "row-128",
+      "index": 17,
+      "path": "testdata/singleton-axes/row-128.grib2",
+      "bytes": 182,
+      "sha256": "1e1db746589245de6807cadc7311339c0de2c9c99d5ffb739f923a04e4635006",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 128,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 17,
+        "field": 0,
+        "byte_offset": 3094,
+        "scanning_mode": 128
+      }
+    },
+    {
+      "name": "column-144",
+      "index": 18,
+      "path": "testdata/singleton-axes/column-144.grib2",
+      "bytes": 182,
+      "sha256": "c8af8e16aee4bb77a38cdf652d2d80a57ae13940466ac8fe681b3bb76d417b05",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 144,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 18,
+        "field": 0,
+        "byte_offset": 3276,
+        "scanning_mode": 144
+      }
+    },
+    {
+      "name": "row-144",
+      "index": 19,
+      "path": "testdata/singleton-axes/row-144.grib2",
+      "bytes": 182,
+      "sha256": "e3c87a7244c8234b52f2eb2d9396f52685bab310ab92070c418f031defa4194a",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 144,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 19,
+        "field": 0,
+        "byte_offset": 3458,
+        "scanning_mode": 144
+      }
+    },
+    {
+      "name": "column-160",
+      "index": 20,
+      "path": "testdata/singleton-axes/column-160.grib2",
+      "bytes": 182,
+      "sha256": "22740a76722827df6140822f51d8b34fbff74f63511f12980954234e7712b440",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 160,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 20,
+        "field": 0,
+        "byte_offset": 3640,
+        "scanning_mode": 160
+      }
+    },
+    {
+      "name": "row-160",
+      "index": 21,
+      "path": "testdata/singleton-axes/row-160.grib2",
+      "bytes": 182,
+      "sha256": "0013c607000012985ac319f9ee1109228bb2c8a4d3e9dfa17b23a0d7f8ce8cbf",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 160,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 21,
+        "field": 0,
+        "byte_offset": 3822,
+        "scanning_mode": 160
+      }
+    },
+    {
+      "name": "column-176",
+      "index": 22,
+      "path": "testdata/singleton-axes/column-176.grib2",
+      "bytes": 182,
+      "sha256": "326d765a0cd41eeb607b50613ce4de7d67c7ff215a83a74baa4392feac65b6ec",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 176,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 22,
+        "field": 0,
+        "byte_offset": 4004,
+        "scanning_mode": 176
+      }
+    },
+    {
+      "name": "row-176",
+      "index": 23,
+      "path": "testdata/singleton-axes/row-176.grib2",
+      "bytes": 182,
+      "sha256": "c608669b7a758b94f0b74e2db0a16623859a81afe48b2f0bda9164b272a3f14f",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 176,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 23,
+        "field": 0,
+        "byte_offset": 4186,
+        "scanning_mode": 176
+      }
+    },
+    {
+      "name": "column-192",
+      "index": 24,
+      "path": "testdata/singleton-axes/column-192.grib2",
+      "bytes": 182,
+      "sha256": "55a4e5d4b7b483c778fef88415393c28807a282eecaf638b4c3b6c718e6e8ce3",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 192,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 24,
+        "field": 0,
+        "byte_offset": 4368,
+        "scanning_mode": 192
+      }
+    },
+    {
+      "name": "row-192",
+      "index": 25,
+      "path": "testdata/singleton-axes/row-192.grib2",
+      "bytes": 182,
+      "sha256": "b6eb816a5ea6748d47bca43ae088380f41a08dd8bd85ae061c925fa7244712fb",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 192,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 25,
+        "field": 0,
+        "byte_offset": 4550,
+        "scanning_mode": 192
+      }
+    },
+    {
+      "name": "column-208",
+      "index": 26,
+      "path": "testdata/singleton-axes/column-208.grib2",
+      "bytes": 182,
+      "sha256": "6a0a96b8fd4161ea532adf6034d4cad0254f01f25d14c10fe5f987c747fadd8f",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 208,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 26,
+        "field": 0,
+        "byte_offset": 4732,
+        "scanning_mode": 208
+      }
+    },
+    {
+      "name": "row-208",
+      "index": 27,
+      "path": "testdata/singleton-axes/row-208.grib2",
+      "bytes": 182,
+      "sha256": "e848c147e30f3c6405bbfc9682bde19b16105af17b04e78c87eae999b62b32dc",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 208,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 27,
+        "field": 0,
+        "byte_offset": 4914,
+        "scanning_mode": 208
+      }
+    },
+    {
+      "name": "column-224",
+      "index": 28,
+      "path": "testdata/singleton-axes/column-224.grib2",
+      "bytes": 182,
+      "sha256": "a3d5d6e71840851cea755269cd74bfc80e5ac8cfd3bdbce04ae743678f0cb093",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 1000000,
+      "scanning_mode": 224,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 28,
+        "field": 0,
+        "byte_offset": 5096,
+        "scanning_mode": 224
+      }
+    },
+    {
+      "name": "row-224",
+      "index": 29,
+      "path": "testdata/singleton-axes/row-224.grib2",
+      "bytes": 182,
+      "sha256": "6fab453f22e0f90b1270f737ec8bd33fc8ab8d4574506b4cb1a64aa139e84056",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 224,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 29,
+        "field": 0,
+        "byte_offset": 5278,
+        "scanning_mode": 224
+      }
+    },
+    {
+      "name": "column-240",
+      "index": 30,
+      "path": "testdata/singleton-axes/column-240.grib2",
+      "bytes": 182,
+      "sha256": "adcd401b9cdd094364765e5d89e918340a7d52ed2ed0fee849178961190657c5",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 240,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 30,
+        "field": 0,
+        "byte_offset": 5460,
+        "scanning_mode": 240
+      }
+    },
+    {
+      "name": "row-240",
+      "index": 31,
+      "path": "testdata/singleton-axes/row-240.grib2",
+      "bytes": 182,
+      "sha256": "129701a162b735e0105daf6841bfa23094abe167477a2b98e5a3b2978d6ba663",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": null,
+      "scanning_mode": 240,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        2,
+        1,
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 31,
+        "field": 0,
+        "byte_offset": 5642,
+        "scanning_mode": 240
+      }
+    },
+    {
+      "name": "point-zero",
+      "index": 32,
+      "path": "testdata/singleton-axes/point-zero.grib2",
+      "bytes": 180,
+      "sha256": "bfb786ebe36210e9d2d35bfe70f5fb744e4c6db57762894b3b2953e8943869df",
+      "rows": 1,
+      "cols": 1,
+      "north": 1,
+      "west": 10,
+      "dx": 0,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 0,
+      "raw_dy": 0,
+      "scanning_mode": 0,
+      "values": [
+        7
+      ],
+      "source_indices": [
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 1,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 32,
+        "field": 0,
+        "byte_offset": 5824,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "point-missing",
+      "index": 33,
+      "path": "testdata/singleton-axes/point-missing.grib2",
+      "bytes": 180,
+      "sha256": "c251f1b6214b470c62dde4685a16b470a72f5c5a945d373d10a4c37d548d1754",
+      "rows": 1,
+      "cols": 1,
+      "north": 1,
+      "west": 0,
+      "dx": 0,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": null,
+      "scanning_mode": 0,
+      "values": [
+        9
+      ],
+      "source_indices": [
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 359.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 0
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 0
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 0
+        },
+        {
+          "id": "off-column",
+          "latitude": 1,
+          "longitude": 1e-10
+        }
+      ],
+      "origin": {
+        "message": 33,
+        "field": 0,
+        "byte_offset": 6004,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "point-all-missing",
+      "index": 34,
+      "path": "testdata/singleton-axes/point-all-missing.grib2",
+      "bytes": 180,
+      "sha256": "8491b41b2b0f7a4c71d41474b2e5974c23a23655df3d5d8fd2ea286351b40f80",
+      "rows": 1,
+      "cols": 1,
+      "north": 1,
+      "west": 10,
+      "dx": 0,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 0,
+      "scanning_mode": 0,
+      "values": [
+        null
+      ],
+      "source_indices": [
+        0
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 1,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 34,
+        "field": 0,
+        "byte_offset": 6184,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "column-gap",
+      "index": 35,
+      "path": "testdata/singleton-axes/column-gap.grib2",
+      "bytes": 182,
+      "sha256": "6b74392fe7c1003fade3d14e5453478dc349ea3c49ee6d20014e30657f58b6df",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 0,
+      "values": [
+        10,
+        null,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 35,
+        "field": 0,
+        "byte_offset": 6364,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "row-gap",
+      "index": 36,
+      "path": "testdata/singleton-axes/row-gap.grib2",
+      "bytes": 182,
+      "sha256": "fb901400d5200febe2dfd1f5213ff90506df713636d02a5be15e057277214b24",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 0,
+      "values": [
+        40,
+        null,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 36,
+        "field": 0,
+        "byte_offset": 6546,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "global-row",
+      "index": 37,
+      "path": "testdata/singleton-axes/global-row.grib2",
+      "bytes": 183,
+      "sha256": "1b322e8d1cd1db6b3f075758a9e2930ed2985cf7c4ff313e3ca7c243a361cfcf",
+      "rows": 1,
+      "cols": 4,
+      "north": 0,
+      "west": 0,
+      "dx": 90,
+      "dy": 0,
+      "cyclic": true,
+      "raw_dx": 90000000,
+      "raw_dy": null,
+      "scanning_mode": 0,
+      "values": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 0.25,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 0,
+          "longitude": 359.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 0,
+          "longitude": 0.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 0
+        },
+        {
+          "id": "off-row",
+          "latitude": -1e-10,
+          "longitude": 0
+        },
+        {
+          "id": "seam",
+          "latitude": 0,
+          "longitude": 315
+        }
+      ],
+      "origin": {
+        "message": 37,
+        "field": 0,
+        "byte_offset": 6728,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "pole-row",
+      "index": 38,
+      "path": "testdata/singleton-axes/pole-row.grib2",
+      "bytes": 183,
+      "sha256": "4cdedc6a513d660629b3a2b15549d309b6bbc591b0583ecae4634486ff080a8b",
+      "rows": 1,
+      "cols": 4,
+      "north": 90,
+      "west": 0,
+      "dx": 90,
+      "dy": 0,
+      "cyclic": true,
+      "raw_dx": 90000000,
+      "raw_dy": 0,
+      "scanning_mode": 0,
+      "values": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 90,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 90.25,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 90,
+          "longitude": 359.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 90,
+          "longitude": 0.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 0
+        },
+        {
+          "id": "off-row",
+          "latitude": 89.9999999999,
+          "longitude": 0
+        },
+        {
+          "id": "seam",
+          "latitude": 90,
+          "longitude": 315
+        }
+      ],
+      "origin": {
+        "message": 38,
+        "field": 0,
+        "byte_offset": 6911,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "pole-vector",
+      "index": 39,
+      "path": "testdata/singleton-axes/pole-vector.grib2",
+      "bytes": 183,
+      "sha256": "80d45eb51c32f3d48dd315052804a502656900e61318ee3bcb6245625d6e4520",
+      "rows": 1,
+      "cols": 4,
+      "north": 90,
+      "west": 0,
+      "dx": 90,
+      "dy": 0,
+      "cyclic": true,
+      "raw_dx": 90000000,
+      "raw_dy": null,
+      "scanning_mode": 0,
+      "values": [
+        10,
+        20,
+        30,
+        40
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": 2,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 90,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 90.25,
+          "longitude": 0
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 90,
+          "longitude": 359.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 90,
+          "longitude": 0.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 0
+        },
+        {
+          "id": "off-row",
+          "latitude": 89.9999999999,
+          "longitude": 0
+        },
+        {
+          "id": "seam",
+          "latitude": 90,
+          "longitude": 315
+        }
+      ],
+      "origin": {
+        "message": 39,
+        "field": 0,
+        "byte_offset": 7094,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "basic-angle-column",
+      "index": 40,
+      "path": "testdata/singleton-axes/basic-angle-column.grib2",
+      "bytes": 182,
+      "sha256": "c714932f18966c0fc5fc2a11628b86dffd7f7b81d09b24e4620db81309c581ec",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 2,
+      "scanning_mode": 0,
+      "values": [
+        3,
+        6,
+        9
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 40,
+        "field": 0,
+        "byte_offset": 7277,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "legacy-positive-row",
+      "index": 41,
+      "path": "testdata/singleton-axes/legacy-positive-row.grib2",
+      "bytes": 182,
+      "sha256": "baeebf6e37a2ed3e51b6d823ffcb3eaca1c1b473db47fedb948fff117bd85b84",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 1000000,
+      "scanning_mode": 0,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 41,
+        "field": 0,
+        "byte_offset": 7459,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "legacy-positive-global-column",
+      "index": 42,
+      "path": "testdata/singleton-axes/legacy-positive-global-column.grib2",
+      "bytes": 182,
+      "sha256": "f627c4e8ab2dbc4e2704a6395637a9c689ec2acbcc3aeeff29ff00921ffc4ed7",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 360,
+      "dy": 1,
+      "cyclic": true,
+      "raw_dx": 360000000,
+      "raw_dy": 1000000,
+      "scanning_mode": 0,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "seam",
+          "latitude": 2,
+          "longitude": 325
+        }
+      ],
+      "origin": {
+        "message": 42,
+        "field": 0,
+        "byte_offset": 7641,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "bad-missing-nonsingleton",
+      "index": 43,
+      "path": "testdata/singleton-axes/bad-missing-nonsingleton.grib2",
+      "bytes": 183,
+      "sha256": "9337ab18ef04b88c5eceaeaea22fe850c4be9ce49a60c8e152fc8bc8819cf538",
+      "rows": 2,
+      "cols": 2,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 0,
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 43,
+        "field": 0,
+        "byte_offset": 7823,
+        "scanning_mode": 0
+      },
+      "error": "missing grid increments"
+    },
+    {
+      "name": "bad-zero-nonsingleton",
+      "index": 44,
+      "path": "testdata/singleton-axes/bad-zero-nonsingleton.grib2",
+      "bytes": 183,
+      "sha256": "31d02444a9a929b8ed0c18efc63c917fa4b43ebdfe828ece28cc655ad3c2514d",
+      "rows": 2,
+      "cols": 2,
+      "north": 2,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 0,
+      "values": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 44,
+        "field": 0,
+        "byte_offset": 8006,
+        "scanning_mode": 0
+      },
+      "error": "invalid coordinate extent or increments"
+    },
+    {
+      "name": "bad-column-endpoint",
+      "index": 45,
+      "path": "testdata/singleton-axes/bad-column-endpoint.grib2",
+      "bytes": 182,
+      "sha256": "bb7dbddcbf629753c600c9483309b4cc524ca4b8ac1cafd644ced0edefb1d5bc",
+      "rows": 3,
+      "cols": 1,
+      "north": 2,
+      "west": 10,
+      "dx": 0,
+      "dy": 1,
+      "cyclic": false,
+      "raw_dx": null,
+      "raw_dy": 1000000,
+      "scanning_mode": 0,
+      "values": [
+        10,
+        20,
+        30
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 2,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 2.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 2,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1.5,
+          "longitude": 10
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-column",
+          "latitude": 2,
+          "longitude": 10.0000000001
+        }
+      ],
+      "origin": {
+        "message": 45,
+        "field": 0,
+        "byte_offset": 8189,
+        "scanning_mode": 0
+      },
+      "error": "missing grid increments"
+    },
+    {
+      "name": "bad-row-endpoint",
+      "index": 46,
+      "path": "testdata/singleton-axes/bad-row-endpoint.grib2",
+      "bytes": 182,
+      "sha256": "f37166466e9eea2b4ae3c71dab61230d34a596c43f846cd110932e6f37ea6f8b",
+      "rows": 1,
+      "cols": 3,
+      "north": 1,
+      "west": 10,
+      "dx": 1,
+      "dy": 0,
+      "cyclic": false,
+      "raw_dx": 1000000,
+      "raw_dy": 0,
+      "scanning_mode": 0,
+      "values": [
+        40,
+        50,
+        60
+      ],
+      "source_indices": [
+        0,
+        1,
+        2
+      ],
+      "category": 0,
+      "queries": [
+        {
+          "id": "node",
+          "latitude": 1,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lat",
+          "latitude": 1.25,
+          "longitude": 10
+        },
+        {
+          "id": "outside-lon",
+          "latitude": 1,
+          "longitude": 9.75
+        },
+        {
+          "id": "midpoint",
+          "latitude": 1,
+          "longitude": 10.5
+        },
+        {
+          "id": "bad",
+          "latitude": 91,
+          "longitude": 10
+        },
+        {
+          "id": "off-row",
+          "latitude": 0.9999999999,
+          "longitude": 10
+        }
+      ],
+      "origin": {
+        "message": 46,
+        "field": 0,
+        "byte_offset": 8371,
+        "scanning_mode": 0
+      },
+      "error": "invalid coordinate extent or increments"
+    }
+  ],
+  "supportedFields": 43,
+  "allSupportedBytes": 7823,
+  "allSupportedSHA256": "81c5778e2a4f8440bf4916a18d1c86c63700b5b726912799a3f39ed28b691afc",
+  "templateSHA256": "a12d6da2e2120ef0339d6c8b2a55dd5eb22cffca8c3e40bae617c7f7c32fa621",
+  "handValues": {
+    "columnMidpoint": 15,
+    "rowMidpoint": 45,
+    "point": 7,
+    "globalSeam": 25,
+    "scalarPole": 25,
+    "vectorPoleFailure": "unsupported-polar-vector"
+  },
+  "policy": "Only unused singleton axes may normalize0/missing spacing to0 when encoded endpoints agree (longitude0/360 alias permitted).Exact coordinate required on that axis,defined other axis uses old interpolation.No off-line/area extrapolation.Positive original spacing retained.",
+  "oracle": "Hand integer nodes,explicit1D source directions and rational half weights;independent raw byte validation before library outputs.No scientific generator."
+}

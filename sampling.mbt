@@ -89,9 +89,23 @@ pub fn GriddedField::sample_result(
   if !finite(lat) || !finite(lon) || lat < -90.0 || lat > 90.0 {
     return Err(InvalidStation)
   }
-  let y = (self.north - lat) / self.dy
+  let y = if self.nrows == 1 && self.dy == 0.0 {
+    if lat != self.north {
+      return Err(OutsideGrid)
+    }
+    0.0
+  } else {
+    (self.north - lat) / self.dy
+  }
   let longitude = wrap(lon)
-  let x = wrap(longitude - self.west) / self.dx
+  let x = if self.ncols == 1 && self.dx == 0.0 {
+    if longitude != self.west {
+      return Err(OutsideGrid)
+    }
+    0.0
+  } else {
+    wrap(longitude - self.west) / self.dx
+  }
   // Inverting origin-step arithmetic need not recover an exact integer.
   // Restore exact public nodes before rejecting a rounded edge coordinate.
   // Keep candidates as Double: fine angular units can put outside queries beyond Int.

@@ -60,6 +60,13 @@ on a developer's global SDK or use paid services.
   checked without changing the old sampler/calendar or adding a physical model.
   An initial fixture-scale error is retained in the separate R08 report; corrected
   finite large inputs must still produce an explicit subtraction overflow.
+- A singleton regular-grid axis gate checks43 small fields through JS/Wasm-GC,
+  four targeted root regressions per backend and the unchanged real Node file
+  receiver. Original bytes, integer node directions and Fraction weights verify
+  all scan modes for each line orientation, masks/points/full sample provenance,
+  crops, narrow support and old positive-step/polar/budget/error behavior.
+  It accepts0/missing increments only on an endpoint-consistent singleton axis,
+  never infers unused coverage or extrapolates off that represented point/line.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

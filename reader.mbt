@@ -84,13 +84,31 @@ pub fn read_fields(
         }
         basic.to_double() / subdiv.to_double()
       }
-      if u32(g, 63) == 0xffffffffU || u32(g, 67) == 0xffffffffU {
+      let angle_num = if basic == 0U { 1UL } else { basic.to_uint64() }
+      let angle_den = if basic == 0U { 1000000UL } else { subdiv.to_uint64() }
+      let first_lon_ticks = u32(g, 50).to_uint64()
+      let last_lon_ticks = u32(g, 59).to_uint64()
+      let lon_difference = if first_lon_ticks >= last_lon_ticks {
+        first_lon_ticks - last_lon_ticks
+      } else {
+        last_lon_ticks - first_lon_ticks
+      }
+      // A singleton axis has no interval. Its endpoints must encode the same
+      // position, including the exact0/360 longitude alias. Products of two
+      // UInt32 quantities fit UInt64; no floating tolerance admits a new span.
+      let singleton_i = ni == 1UL &&
+        (
+          first_lon_ticks == last_lon_ticks ||
+          lon_difference * angle_num == 360UL * angle_den
+        )
+      let singleton_j = nj == 1UL && sm32(g, 46) == sm32(g, 55)
+      let missing_di = u32(g, 63) == 0xffffffffU
+      let missing_dj = u32(g, 67) == 0xffffffffU
+      if (missing_di && !singleton_i) || (missing_dj && !singleton_j) {
         return Err(InvalidGrid("missing grid increments"))
       }
       // Validate in encoded angular ticks before wrapping or rounding to Double.
       // The positive Int point budget bounds each span below Int64::MAX_VALUE.
-      let angle_num = if basic == 0U { 1UL } else { basic.to_uint64() }
-      let angle_den = if basic == 0U { 1000000UL } else { subdiv.to_uint64() }
       let lat_limit = (90UL * angle_den / angle_num).reinterpret_as_int64()
       let lon_limit = 360UL * angle_den / angle_num
       let first_lat = sm32(g, 46).to_int64()
@@ -114,8 +132,8 @@ pub fn read_fields(
           InvalidGrid("encoded coordinates or extent outside physical domain"),
         )
       }
-      let dx = u32(g, 63).to_double() * unit
-      let dy = u32(g, 67).to_double() * unit
+      let dx = if missing_di { 0.0 } else { u32(g, 63).to_double() * unit }
+      let dy = if missing_dj { 0.0 } else { u32(g, 67).to_double() * unit }
       // At a legal pole the bounded integer numerator is exact in binary64;
       // divide last so unit roundoff cannot move exactly90 outside its domain.
       let north = north_ticks.to_double() *
@@ -132,8 +150,8 @@ pub fn read_fields(
       )
       if !finite(dx) ||
         !finite(dy) ||
-        dx <= 0.0 ||
-        dy <= 0.0 ||
+        (dx <= 0.0 && !singleton_i) ||
+        (dy <= 0.0 && !singleton_j) ||
         north > 90.000002 ||
         north - (nr - 1).to_double() * dy < -90.000002 ||
         (nc - 1).to_double() * dx > 360.000002 {
