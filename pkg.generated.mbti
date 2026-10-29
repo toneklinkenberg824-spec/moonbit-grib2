@@ -188,6 +188,7 @@ pub(all) struct Product {
   first_surface : Surface
   second_surface : Surface
 } derive(Eq, ToJson, @debug.Debug)
+pub fn Product::valid_time(Self) -> Result[ValidTime, ValidTimeError]
 
 pub(all) struct Sample {
   station : Station
@@ -219,6 +220,23 @@ pub(all) struct Surface {
   scale : Int?
   scaled_value : UInt?
 } derive(Eq, ToJson, @debug.Debug)
+
+pub(all) struct ValidTime {
+  year : Int
+  month : Int
+  day : Int
+  hour : Int
+  minute : Int
+  second : Int
+} derive(Eq, ToJson, @debug.Debug)
+
+pub(all) enum ValidTimeError {
+  MissingForecastTime
+  UnsupportedTimeUnit(Int)
+  InvalidReferenceTime
+  UnsupportedLeapSecond
+  TimeOutOfRange
+} derive(Eq, @debug.Debug)
 
 // Type aliases
 

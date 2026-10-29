@@ -45,6 +45,13 @@ on a developer's global SDK or use paid services.
   failures, empty inputs, nonfinite station gaps and no-clobber output handling.
   This is a new JSON/filesystem boundary; old query/scientific fixtures are reused
   without rerunning their external reference generators.
+- A fixed-unit forecast valid-time gate compares51 pre-frozen calendar cases and
+  a43-field raw file through an independent public workspace on JS/Wasm-GC, plus
+  a Node arbitrary-file JSON receiver. Python datetime and independent Section1/4
+  reads check Gregorian bounds, century/leap carries, negative and wide leads,
+  explicit time errors, unchanged raw metadata and encoded query distinctions.
+  This opt-in fixed86400-second-day policy does not model leap seconds or add
+  calendar/local units, external weather references or new template support.
 - The NyaCSV job uses the unchanged public dependency at commit
   `fe4448e1e45a25f6fca151320c766519e80162c9`, never a floating registry version.
   Both backends compile and run the real consumer; independent fixture

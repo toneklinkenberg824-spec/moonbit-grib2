@@ -89,7 +89,7 @@ bytes由宿主提供。完整准确签名见pkg.generated.mbti。
 - read_message要求恰好一个字段；多消息/字段用read_fields，不会静默丢字段。
 - get返回原格点Double?，values返回含NaN的独立副本，mask返回独立布尔副本。
 - point/crop保留坐标、原始点序号与可选值；crop是节点筛选，不是重采样。
-- product保留数值参数、中心/表版本、UTC参考分量、时效原单位/可选数值及垂直层原缩放值，不猜地方表名称或日历。
+- product保留数值参数、中心/表版本、UTC参考分量、时效原单位/可选数值及垂直层原缩放值，不猜地方表名称或改写原码。
 - sample/sample_stations保留贡献格点与权重；缺测JSON显式null。
 - 每字段默认最多10,000,000点，可用max_points调整；坏次序/长度/点数和预算超限均显式报错。
 
@@ -155,6 +155,21 @@ section区域非空且首段为1，各段header至少5字节，声明段长至�
 成功JSON包含各命名组的Product/Origin及请求/站点/行/空值计数，无站点时也先校验选择并保留组元数据。
 站点Double解析、缺测和CSV语义沿用旧入口。构建、完整schema和错误合同见该例程README。
 输入/字段/采样/CSV仍同步物化，创建后IO失败可能留下新文件，不承诺回滚、流式或新模板支持。
+
+### 显式推导预报有效时刻
+
+`field.product().valid_time()` 返回 `Result[ValidTime,ValidTimeError]`，用于预报时间轴或报表。
+ValidTime含year/month/day/hour/minute/second，按前推公历、年份1..9999、每天86400秒计算。
+支持GRIB固定单位0分钟、1小时、2天、10三小时、11六小时、12十二小时、13秒，保留负时效。
+例如2024-02-28 23:59:30加1分钟得到2024-02-29 00:00:30；乘加先扩大为Int64，超出年份范围报错。
+这是显式的新历法政策，原Product、解码输入范围、原码查询和采样语义保持。
+
+缺失lead、不支持单位、非法参考、参考second60、结果越界分别返回类型化错误，按此顺序检查。
+月/年/normal/世纪、reserved/local/missing单位不推测换算，即便lead0也不接受。
+不插入或累计闰秒，无时区/DST或物理UTC/TAI间隔承诺；6小时与360分钟可推导同一结果，取场仍区分原码。
+独立Node例程 `examples/node-valid-time` 接收任意受支持输入文件，输出每字段原Origin/Product和
+有效时刻或明确时间错误；单字段时间失败保留为结果，完整解码失败不输出成功前缀。
+公共API已由外部消费者在JS/Wasm-GC核对，文件入口仅Node/JS，完整合同与实文件步骤见该例程README。
 
 ### 按需提取区域原始节点
 

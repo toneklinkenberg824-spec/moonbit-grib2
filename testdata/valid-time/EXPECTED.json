@@ -1,0 +1,1156 @@
+{
+  "cases": [
+    {
+      "name": "minute-leap",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 0,
+      "lead": 1,
+      "expected": [
+        2024,
+        2,
+        29,
+        0,
+        0,
+        30
+      ],
+      "origin": {
+        "message": 0,
+        "field": 0,
+        "byte_offset": 0,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "hour-leap",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 1,
+      "lead": 1,
+      "expected": [
+        2024,
+        2,
+        29,
+        0,
+        59,
+        30
+      ],
+      "origin": {
+        "message": 1,
+        "field": 0,
+        "byte_offset": 179,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "day-leap",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 2,
+      "lead": 1,
+      "expected": [
+        2024,
+        2,
+        29,
+        23,
+        59,
+        30
+      ],
+      "origin": {
+        "message": 2,
+        "field": 0,
+        "byte_offset": 358,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "three-hours",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 10,
+      "lead": 1,
+      "expected": [
+        2024,
+        2,
+        29,
+        2,
+        59,
+        30
+      ],
+      "origin": {
+        "message": 3,
+        "field": 0,
+        "byte_offset": 537,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "six-hours",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 11,
+      "lead": 1,
+      "expected": [
+        2024,
+        2,
+        29,
+        5,
+        59,
+        30
+      ],
+      "origin": {
+        "message": 4,
+        "field": 0,
+        "byte_offset": 716,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "twelve-hours",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 12,
+      "lead": 1,
+      "expected": [
+        2024,
+        2,
+        29,
+        11,
+        59,
+        30
+      ],
+      "origin": {
+        "message": 5,
+        "field": 0,
+        "byte_offset": 895,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "seconds",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 13,
+      "lead": 30,
+      "expected": [
+        2024,
+        2,
+        29,
+        0,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 6,
+        "field": 0,
+        "byte_offset": 1074,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "analysis-zero",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 13,
+      "lead": 0,
+      "expected": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "origin": {
+        "message": 7,
+        "field": 0,
+        "byte_offset": 1253,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "negative-seconds",
+      "reference": [
+        2024,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 13,
+      "lead": -1,
+      "expected": [
+        2024,
+        2,
+        29,
+        23,
+        59,
+        59
+      ],
+      "origin": {
+        "message": 8,
+        "field": 0,
+        "byte_offset": 1432,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "negative-hour",
+      "reference": [
+        2000,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": -1,
+      "expected": [
+        1999,
+        12,
+        31,
+        23,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 9,
+        "field": 0,
+        "byte_offset": 1611,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "century-common",
+      "reference": [
+        1900,
+        2,
+        28,
+        0,
+        0,
+        0
+      ],
+      "unit": 2,
+      "lead": 1,
+      "expected": [
+        1900,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 10,
+        "field": 0,
+        "byte_offset": 1790,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "century-leap",
+      "reference": [
+        2000,
+        2,
+        28,
+        0,
+        0,
+        0
+      ],
+      "unit": 2,
+      "lead": 1,
+      "expected": [
+        2000,
+        2,
+        29,
+        0,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 11,
+        "field": 0,
+        "byte_offset": 1969,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "year-rollover",
+      "reference": [
+        2023,
+        12,
+        31,
+        23,
+        59,
+        59
+      ],
+      "unit": 13,
+      "lead": 1,
+      "expected": [
+        2024,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 12,
+        "field": 0,
+        "byte_offset": 2148,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "pre-gregorian-proleptic",
+      "reference": [
+        1500,
+        2,
+        28,
+        0,
+        0,
+        0
+      ],
+      "unit": 2,
+      "lead": 1,
+      "expected": [
+        1500,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 13,
+        "field": 0,
+        "byte_offset": 2327,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "min-year",
+      "reference": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 13,
+      "lead": 0,
+      "expected": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 14,
+        "field": 0,
+        "byte_offset": 2506,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "max-year",
+      "reference": [
+        9999,
+        12,
+        31,
+        23,
+        59,
+        59
+      ],
+      "unit": 13,
+      "lead": 0,
+      "expected": [
+        9999,
+        12,
+        31,
+        23,
+        59,
+        59
+      ],
+      "origin": {
+        "message": 15,
+        "field": 0,
+        "byte_offset": 2685,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "lower-range",
+      "reference": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 13,
+      "lead": -1,
+      "error": "out-of-range",
+      "origin": {
+        "message": 16,
+        "field": 0,
+        "byte_offset": 2864,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "upper-range",
+      "reference": [
+        9999,
+        12,
+        31,
+        23,
+        59,
+        59
+      ],
+      "unit": 13,
+      "lead": 1,
+      "error": "out-of-range",
+      "origin": {
+        "message": 17,
+        "field": 0,
+        "byte_offset": 3043,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "wide-int-positive",
+      "reference": [
+        2024,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 2,
+      "lead": 2147483647,
+      "error": "out-of-range",
+      "origin": {
+        "message": 18,
+        "field": 0,
+        "byte_offset": 3222,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "wide-int-negative",
+      "reference": [
+        2024,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 2,
+      "lead": -2147483648,
+      "error": "out-of-range"
+    },
+    {
+      "name": "large-seconds",
+      "reference": [
+        1970,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 13,
+      "lead": 2147483647,
+      "expected": [
+        2038,
+        1,
+        19,
+        3,
+        14,
+        7
+      ],
+      "origin": {
+        "message": 19,
+        "field": 0,
+        "byte_offset": 3401,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "large-negative-seconds",
+      "reference": [
+        1970,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 13,
+      "lead": -2147483648,
+      "expected": [
+        1901,
+        12,
+        13,
+        20,
+        45,
+        52
+      ]
+    },
+    {
+      "name": "same-instant-hours",
+      "reference": [
+        2024,
+        2,
+        29,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 6,
+      "expected": [
+        2024,
+        2,
+        29,
+        6,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 20,
+        "field": 0,
+        "byte_offset": 3580,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "same-instant-minutes",
+      "reference": [
+        2024,
+        2,
+        29,
+        0,
+        0,
+        0
+      ],
+      "unit": 0,
+      "lead": 360,
+      "expected": [
+        2024,
+        2,
+        29,
+        6,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 21,
+        "field": 0,
+        "byte_offset": 3759,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "missing-lead",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 1,
+      "lead": null,
+      "error": "missing-forecast-time",
+      "origin": {
+        "message": 22,
+        "field": 0,
+        "byte_offset": 3938,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "missing-first",
+      "reference": [],
+      "unit": 255,
+      "lead": null,
+      "error": "missing-forecast-time"
+    },
+    {
+      "name": "unit-before-reference",
+      "reference": [],
+      "unit": 3,
+      "lead": 0,
+      "error": "unsupported-time-unit"
+    },
+    {
+      "name": "short-reference",
+      "reference": [
+        2024,
+        2
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time"
+    },
+    {
+      "name": "long-reference",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time"
+    },
+    {
+      "name": "invalid-common-leap",
+      "reference": [
+        1900,
+        2,
+        29,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 23,
+        "field": 0,
+        "byte_offset": 4117,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "invalid-century",
+      "reference": [
+        2100,
+        2,
+        29,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 24,
+        "field": 0,
+        "byte_offset": 4296,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "invalid-month",
+      "reference": [
+        2024,
+        13,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 25,
+        "field": 0,
+        "byte_offset": 4475,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "invalid-day",
+      "reference": [
+        2024,
+        4,
+        31,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 26,
+        "field": 0,
+        "byte_offset": 4654,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "zero-year",
+      "reference": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time"
+    },
+    {
+      "name": "large-reference-year",
+      "reference": [
+        65535,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 27,
+        "field": 0,
+        "byte_offset": 4833,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "invalid-hour",
+      "reference": [
+        2024,
+        1,
+        1,
+        24,
+        0,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 28,
+        "field": 0,
+        "byte_offset": 5012,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "invalid-minute",
+      "reference": [
+        2024,
+        1,
+        1,
+        0,
+        60,
+        0
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 29,
+        "field": 0,
+        "byte_offset": 5191,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "invalid-second",
+      "reference": [
+        2024,
+        1,
+        1,
+        0,
+        0,
+        61
+      ],
+      "unit": 1,
+      "lead": 0,
+      "error": "invalid-reference-time",
+      "origin": {
+        "message": 30,
+        "field": 0,
+        "byte_offset": 5370,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "leap-second",
+      "reference": [
+        2016,
+        12,
+        31,
+        23,
+        59,
+        60
+      ],
+      "unit": 13,
+      "lead": 1,
+      "error": "unsupported-leap-second",
+      "origin": {
+        "message": 31,
+        "field": 0,
+        "byte_offset": 5549,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "civil-leap-boundary",
+      "reference": [
+        2016,
+        12,
+        31,
+        23,
+        59,
+        59
+      ],
+      "unit": 13,
+      "lead": 1,
+      "expected": [
+        2017,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "origin": {
+        "message": 32,
+        "field": 0,
+        "byte_offset": 5728,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-3",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 3,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 33,
+        "field": 0,
+        "byte_offset": 5907,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-4",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 4,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 34,
+        "field": 0,
+        "byte_offset": 6086,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-5",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 5,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 35,
+        "field": 0,
+        "byte_offset": 6265,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-6",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 6,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 36,
+        "field": 0,
+        "byte_offset": 6444,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-7",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 7,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 37,
+        "field": 0,
+        "byte_offset": 6623,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-8",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 8,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 38,
+        "field": 0,
+        "byte_offset": 6802,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-9",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 9,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 39,
+        "field": 0,
+        "byte_offset": 6981,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-14",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 14,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 40,
+        "field": 0,
+        "byte_offset": 7160,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-192",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 192,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 41,
+        "field": 0,
+        "byte_offset": 7339,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported-255",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": 255,
+      "lead": 0,
+      "error": "unsupported-time-unit",
+      "origin": {
+        "message": 42,
+        "field": 0,
+        "byte_offset": 7518,
+        "scanning_mode": 0
+      }
+    },
+    {
+      "name": "unsupported--1",
+      "reference": [
+        2024,
+        2,
+        28,
+        23,
+        59,
+        30
+      ],
+      "unit": -1,
+      "lead": 0,
+      "error": "unsupported-time-unit"
+    }
+  ],
+  "fileCases": [
+    "minute-leap",
+    "hour-leap",
+    "day-leap",
+    "three-hours",
+    "six-hours",
+    "twelve-hours",
+    "seconds",
+    "analysis-zero",
+    "negative-seconds",
+    "negative-hour",
+    "century-common",
+    "century-leap",
+    "year-rollover",
+    "pre-gregorian-proleptic",
+    "min-year",
+    "max-year",
+    "lower-range",
+    "upper-range",
+    "wide-int-positive",
+    "large-seconds",
+    "same-instant-hours",
+    "same-instant-minutes",
+    "missing-lead",
+    "invalid-common-leap",
+    "invalid-century",
+    "invalid-month",
+    "invalid-day",
+    "large-reference-year",
+    "invalid-hour",
+    "invalid-minute",
+    "invalid-second",
+    "leap-second",
+    "civil-leap-boundary",
+    "unsupported-3",
+    "unsupported-4",
+    "unsupported-5",
+    "unsupported-6",
+    "unsupported-7",
+    "unsupported-8",
+    "unsupported-9",
+    "unsupported-14",
+    "unsupported-192",
+    "unsupported-255"
+  ],
+  "fileBytes": 7697,
+  "fileSHA256": "ae670aceec93ec5f0e0009cc14cfab6f863d4683f5707d913ed053e0d082a1dd",
+  "baseMessageSHA256": "a12d6da2e2120ef0339d6c8b2a55dd5eb22cffca8c3e40bae617c7f7c32fa621",
+  "policy": "Opt-in proleptic Gregorian civil arithmetic,years1..9999,86400-second days,seconds0..59. No leap-second insertion or physical elapsed-UTC/TAI claim. No calendar months/years or local/reserved time units.",
+  "manualOracle": "Each expected component/error was written before implementation. Python datetime independently cross-checks only this new calendar contract,not weather/scientific generators."
+}
